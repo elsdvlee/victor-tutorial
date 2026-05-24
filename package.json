@@ -1,0 +1,12 @@
+{
+  "version": "3.0.0",
+  "type": "module",
+  "scripts": {
+    "lint:markdown": "markdownlint-cli2",
+    "lint:markdown:fix": "markdownlint-cli2 --fix"
+  },
+  "devDependencies": {
+    "changefrog": "^1.1.0",
+    "markdownlint-cli2": "^0.18.1"
+  }
+}

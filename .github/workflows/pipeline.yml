@@ -1,0 +1,72 @@
+name: Implementation process pipeline
+run-name: ${{ github.actor }} is running the pipeline
+on: [push]
+
+jobs:
+  Set-Up-Repo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v5
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 22
+      - name: Set up repo
+        run: ./scripts/set-up-repo.sh
+      - uses: EndBug/add-and-commit@v9
+        with:
+          add: in-shacl/shacl.ttl
+          message: "Add SHACL"
+      - uses: EndBug/add-and-commit@v9
+        with:
+          add: README.md original-README.md
+          message: "Add AP and SHACL links to README"
+      - uses: EndBug/add-and-commit@v9
+        with:
+          add: template.xlsx in-shacl/template.schema.json example-data
+          message: "Add template Excel, template schema, and example data"
+
+  Generate-RDF-Build-Miravi:
+    runs-on: ubuntu-latest
+    needs: Set-Up-Repo
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+          ref: ${{ github.ref.name }}
+      - name: Check if there is any data available
+        id: check_data
+        uses: andstor/file-existence-action@v3
+        with:
+          files: data/*.xlsx
+      - uses: actions/setup-node@v6
+        if: steps.check_data.outputs.files_exists == 'true'
+        with:
+          node-version: 22
+      - name: "Generate RDF and build Miravi"
+        if: steps.check_data.outputs.files_exists == 'true'
+        run: ./scripts/generate-rdf-build-miravi.sh https://raw.githubusercontent.com/${{ github.repository }}/refs/heads/main/output/
+      - name: Clone gh-pages branch of this repo
+        uses: actions/checkout@v5
+        with:
+          ref: gh-pages
+          path: gh-pages
+      - name: Move Miravi dist directory to correct folder in gh-pages
+        if: steps.check_data.outputs.files_exists == 'true'
+        run: ./scripts/move-miravi-dist.sh ${{ github.ref_name }} ${{ steps.check_data.outputs.files_exists }}
+      - name: Move output and mappings to root of repo
+        run: |
+          rm -rf output mappings
+          mv dist/output .
+          mv dist/mappings .
+      - uses: EndBug/add-and-commit@v9
+        if: steps.check_data.outputs.files_exists == 'true'
+        with:
+          add: output/* mappings
+          message: "Add generated RDF and mappings"
+      - uses: EndBug/add-and-commit@v9
+        with:
+          cwd: gh-pages
+          add: "*"
+          message: "Add Miravi build coming from branch ${{ github.ref.name }}"

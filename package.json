@@ -1,0 +1,11 @@
+{
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "lint:markdown": "markdownlint-cli2",
+    "lint:markdown:fix": "markdownlint-cli2 --fix"
+  },
+  "devDependencies": {
+    "markdownlint-cli2": "^0.18.1"
+  }
+}

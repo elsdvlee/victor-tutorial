@@ -1,0 +1,841 @@
+@prefix : <http://base.example.com/> .
+@prefix d2rq: <http://www.wiwiss.fu-berlin.de/suhl/bizer/D2RQ/0.1#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix ex: <http://example.org/> .
+@prefix exr: <http://example.org/relation/> .
+@prefix fnml: <http://semweb.mmlab.be/ns/fnml#> .
+@prefix fno: <https://w3id.org/function/ontology#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rml: <http://w3id.org/rml/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+
+<http://example.com/a2/code/Adresvoorstelling_1> a <http://www.w3.org/ns/locn#Address>;
+  <http://www.w3.org/ns/locn#addressArea> "a2_adresgebied_1"@nl;
+  <http://www.w3.org/ns/locn#adminUnitL1> "a2_administratieveEenheidNiveau1_1"@nl;
+  <http://www.w3.org/ns/locn#adminUnitL2> "a2_administratieveEenheidNiveau2_1"@nl;
+  <http://www.w3.org/ns/locn#fullAddress> "a2_volledigAdres_1"@nl;
+  <http://www.w3.org/ns/locn#locatorDesignator> "a2_locatieaanduiding_1";
+  <http://www.w3.org/ns/locn#locatorName> "a2_locatienaam_1"@nl;
+  <http://www.w3.org/ns/locn#poBox> "a2_postbus_1";
+  <http://www.w3.org/ns/locn#postCode> "a2_postcode_1";
+  <http://www.w3.org/ns/locn#postName> "a2_postnaam_1"@nl;
+  <http://www.w3.org/ns/locn#thoroughfare> "a2_straatnaam_1"@nl;
+  <https://vocab.belgif.be/ns/address#AddressRepresentation.boxNumber> "a2_busnummer_1";
+  <https://vocab.belgif.be/ns/address#AddressRepresentation.houseNumber> "a2_huisnummer_1";
+  <https://vocab.belgif.be/ns/address#country> "a2_land_1"@nl;
+  <https://vocab.belgif.be/ns/address#municipalityName> "a2_gemeentenaam_1"@nl .
+
+<http://example.com/a2/code/Adresvoorstelling_2> a <http://www.w3.org/ns/locn#Address>;
+  <http://www.w3.org/ns/locn#addressArea> "a2_adresgebied_2"@nl;
+  <http://www.w3.org/ns/locn#adminUnitL1> "a2_administratieveEenheidNiveau1_2"@nl;
+  <http://www.w3.org/ns/locn#adminUnitL2> "a2_administratieveEenheidNiveau2_2"@nl;
+  <http://www.w3.org/ns/locn#fullAddress> "a2_volledigAdres_2"@nl;
+  <http://www.w3.org/ns/locn#locatorDesignator> "a2_locatieaanduiding_2";
+  <http://www.w3.org/ns/locn#locatorName> "a2_locatienaam_2"@nl;
+  <http://www.w3.org/ns/locn#poBox> "a2_postbus_2";
+  <http://www.w3.org/ns/locn#postCode> "a2_postcode_2";
+  <http://www.w3.org/ns/locn#postName> "a2_postnaam_2"@nl;
+  <http://www.w3.org/ns/locn#thoroughfare> "a2_straatnaam_2"@nl;
+  <https://vocab.belgif.be/ns/address#AddressRepresentation.boxNumber> "a2_busnummer_2";
+  <https://vocab.belgif.be/ns/address#AddressRepresentation.houseNumber> "a2_huisnummer_2";
+  <https://vocab.belgif.be/ns/address#country> "a2_land_2"@nl;
+  <https://vocab.belgif.be/ns/address#municipalityName> "a2_gemeentenaam_2"@nl .
+
+<http://example.com/a2/code/Adresvoorstelling_3> a <http://www.w3.org/ns/locn#Address>;
+  <http://www.w3.org/ns/locn#addressArea> "a2_adresgebied_3"@nl;
+  <http://www.w3.org/ns/locn#adminUnitL1> "a2_administratieveEenheidNiveau1_3"@nl;
+  <http://www.w3.org/ns/locn#adminUnitL2> "a2_administratieveEenheidNiveau2_3"@nl;
+  <http://www.w3.org/ns/locn#fullAddress> "a2_volledigAdres_3"@nl;
+  <http://www.w3.org/ns/locn#locatorDesignator> "a2_locatieaanduiding_3";
+  <http://www.w3.org/ns/locn#locatorName> "a2_locatienaam_3"@nl;
+  <http://www.w3.org/ns/locn#poBox> "a2_postbus_3";
+  <http://www.w3.org/ns/locn#postCode> "a2_postcode_3";
+  <http://www.w3.org/ns/locn#postName> "a2_postnaam_3"@nl;
+  <http://www.w3.org/ns/locn#thoroughfare> "a2_straatnaam_3"@nl;
+  <https://vocab.belgif.be/ns/address#AddressRepresentation.boxNumber> "a2_busnummer_3";
+  <https://vocab.belgif.be/ns/address#AddressRepresentation.houseNumber> "a2_huisnummer_3";
+  <https://vocab.belgif.be/ns/address#country> "a2_land_3"@nl;
+  <https://vocab.belgif.be/ns/address#municipalityName> "a2_gemeentenaam_3"@nl .
+
+<http://example.com/a2/code/Adresvoorstelling_4> a <http://www.w3.org/ns/locn#Address>;
+  <http://www.w3.org/ns/locn#addressArea> "a2_adresgebied_4"@nl;
+  <http://www.w3.org/ns/locn#adminUnitL1> "a2_administratieveEenheidNiveau1_4"@nl;
+  <http://www.w3.org/ns/locn#adminUnitL2> "a2_administratieveEenheidNiveau2_4"@nl;
+  <http://www.w3.org/ns/locn#fullAddress> "a2_volledigAdres_4"@nl;
+  <http://www.w3.org/ns/locn#locatorDesignator> "a2_locatieaanduiding_4";
+  <http://www.w3.org/ns/locn#locatorName> "a2_locatienaam_4"@nl;
+  <http://www.w3.org/ns/locn#poBox> "a2_postbus_4";
+  <http://www.w3.org/ns/locn#postCode> "a2_postcode_4";
+  <http://www.w3.org/ns/locn#postName> "a2_postnaam_4"@nl;
+  <http://www.w3.org/ns/locn#thoroughfare> "a2_straatnaam_4"@nl;
+  <https://vocab.belgif.be/ns/address#AddressRepresentation.boxNumber> "a2_busnummer_4";
+  <https://vocab.belgif.be/ns/address#AddressRepresentation.houseNumber> "a2_huisnummer_4";
+  <https://vocab.belgif.be/ns/address#country> "a2_land_4"@nl;
+  <https://vocab.belgif.be/ns/address#municipalityName> "a2_gemeentenaam_4"@nl .
+
+<http://example.com/a2/code/Adresvoorstelling_5> a <http://www.w3.org/ns/locn#Address>;
+  <http://www.w3.org/ns/locn#addressArea> "a2_adresgebied_5"@nl;
+  <http://www.w3.org/ns/locn#adminUnitL1> "a2_administratieveEenheidNiveau1_5"@nl;
+  <http://www.w3.org/ns/locn#adminUnitL2> "a2_administratieveEenheidNiveau2_5"@nl;
+  <http://www.w3.org/ns/locn#fullAddress> "a2_volledigAdres_5"@nl;
+  <http://www.w3.org/ns/locn#locatorDesignator> "a2_locatieaanduiding_5", "a2_locatieaanduiding_5b";
+  <http://www.w3.org/ns/locn#locatorName> "a2_locatienaam_5"@nl, "a2_locatienaam_5b"@nl;
+  <http://www.w3.org/ns/locn#poBox> "a2_postbus_5";
+  <http://www.w3.org/ns/locn#postCode> "a2_postcode_5";
+  <http://www.w3.org/ns/locn#postName> "a2_postnaam_5"@nl;
+  <http://www.w3.org/ns/locn#thoroughfare> "a2_straatnaam_5"@nl;
+  <https://vocab.belgif.be/ns/address#AddressRepresentation.boxNumber> "a2_busnummer_5";
+  <https://vocab.belgif.be/ns/address#AddressRepresentation.houseNumber> "a2_huisnummer_5";
+  <https://vocab.belgif.be/ns/address#country> "a2_land_5"@nl;
+  <https://vocab.belgif.be/ns/address#municipalityName> "a2_gemeentenaam_5"@nl .
+
+<http://example.com/a2/code/Competentie_1> a <https://ec.europa.eu/esco/lod/static/model.html#Skill>;
+  dc:description "a2_beschrijving_1"@nl;
+  dc:title "a2_naam_1"@nl;
+  dc:type <http://example.com/a2/code/Doelgroep_2> .
+
+<http://example.com/a2/code/Competentie_2> a <https://ec.europa.eu/esco/lod/static/model.html#Skill>;
+  dc:description "a2_beschrijving_2"@nl;
+  dc:title "a2_naam_2"@nl;
+  dc:type <http://example.com/a2/code/Doelgroep_3> .
+
+<http://example.com/a2/code/Competentie_3> a <https://ec.europa.eu/esco/lod/static/model.html#Skill>;
+  dc:description "a2_beschrijving_3"@nl;
+  dc:title "a2_naam_3"@nl;
+  dc:type <http://example.com/a2/code/Doelgroep_3> .
+
+<http://example.com/a2/code/Competentie_4> a <https://ec.europa.eu/esco/lod/static/model.html#Skill>;
+  dc:description "a2_beschrijving_4"@nl;
+  dc:title "a2_naam_4"@nl;
+  dc:type <http://example.com/a2/code/Doelgroep_4> .
+
+<http://example.com/a2/code/Competentie_5> a <https://ec.europa.eu/esco/lod/static/model.html#Skill>;
+  dc:description "a2_beschrijving_5"@nl;
+  dc:title "a2_naam_5"@nl;
+  dc:type <http://example.com/a2/code/Doelgroep_2> .
+
+<http://example.com/a2/code/CreatiefWerk_1> a <https://schema.org/CreativeWork>;
+  <https://schema.org/author> <http://example.com/a2_auteur_1>, <http://example.com/a2_producent_1>;
+  <https://schema.org/copyrightHolder> <http://example.com/a2_auteursrechtHouder_1>;
+  <https://schema.org/copyrightYear> "2024-07-20"^^<http://www.w3.org/2001/XMLSchema#date>;
+  <https://schema.org/datePublished> "2015-05-28T22:20:40.086Z"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+  <https://schema.org/inLanguage> <http://example.com/a2/code/Doelgroep_1>;
+  <https://schema.org/license> <http://example.com/a2/code/Licentie_1>;
+  <https://schema.org/publisher> <http://example.com/a2_uitgever_1>;
+  <https://schema.org/timeRequired> <http://example.com/a2_vereisteTijd_1>;
+  <https://schema.org/version> "a2_versie_1"@nl .
+
+<http://example.com/a2/code/CreatiefWerk_2> a <https://schema.org/CreativeWork>;
+  <https://schema.org/author> <http://example.com/a2_auteur_2>, <http://example.com/a2_producent_2>;
+  <https://schema.org/copyrightHolder> <http://example.com/a2_auteursrechtHouder_2>;
+  <https://schema.org/copyrightYear> "2029-11-16"^^<http://www.w3.org/2001/XMLSchema#date>;
+  <https://schema.org/datePublished> "2027-05-30T14:26:49.854Z"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+  <https://schema.org/inLanguage> <http://example.com/a2/code/Doelgroep_4>;
+  <https://schema.org/license> <http://example.com/a2/code/Licentie_1>;
+  <https://schema.org/publisher> <http://example.com/a2_uitgever_2>;
+  <https://schema.org/timeRequired> <http://example.com/a2_vereisteTijd_2>;
+  <https://schema.org/version> "a2_versie_2"@nl .
+
+<http://example.com/a2/code/CreatiefWerk_3> a <https://schema.org/CreativeWork>;
+  <https://schema.org/author> <http://example.com/a2_auteur_3>, <http://example.com/a2_producent_3>;
+  <https://schema.org/copyrightHolder> <http://example.com/a2_auteursrechtHouder_3>;
+  <https://schema.org/copyrightYear> "2026-11-22"^^<http://www.w3.org/2001/XMLSchema#date>;
+  <https://schema.org/datePublished> "2020-08-22T12:50:09.465Z"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+  <https://schema.org/inLanguage> <http://example.com/a2/code/Doelgroep_4>;
+  <https://schema.org/license> <http://example.com/a2/code/Licentie_3>;
+  <https://schema.org/publisher> <http://example.com/a2_uitgever_3>;
+  <https://schema.org/timeRequired> <http://example.com/a2_vereisteTijd_3>;
+  <https://schema.org/version> "a2_versie_3"@nl .
+
+<http://example.com/a2/code/CreatiefWerk_4> a <https://schema.org/CreativeWork>;
+  <https://schema.org/author> <http://example.com/a2_auteur_4>, <http://example.com/a2_producent_4>;
+  <https://schema.org/copyrightHolder> <http://example.com/a2_auteursrechtHouder_4>;
+  <https://schema.org/copyrightYear> "2022-01-03"^^<http://www.w3.org/2001/XMLSchema#date>;
+  <https://schema.org/datePublished> "2010-12-14T00:04:56.525Z"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+  <https://schema.org/inLanguage> <http://example.com/a2/code/Doelgroep_2>;
+  <https://schema.org/license> <http://example.com/a2/code/Licentie_2>;
+  <https://schema.org/publisher> <http://example.com/a2_uitgever_4>;
+  <https://schema.org/timeRequired> <http://example.com/a2_vereisteTijd_4>;
+  <https://schema.org/version> "a2_versie_4"@nl .
+
+<http://example.com/a2/code/CreatiefWerk_5> a <https://schema.org/CreativeWork>;
+  <https://schema.org/author> <http://example.com/a2_auteur_5>, <http://example.com/a2_auteur_5b>,
+    <http://example.com/a2_producent_5>, <http://example.com/a2_producent_5b>;
+  <https://schema.org/copyrightHolder> <http://example.com/a2_auteursrechtHouder_5>,
+    <http://example.com/a2_auteursrechtHouder_5b>;
+  <https://schema.org/copyrightYear> "2015-08-30"^^<http://www.w3.org/2001/XMLSchema#date>;
+  <https://schema.org/datePublished> "2027-12-14T08:54:28.343Z"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+  <https://schema.org/inLanguage> <http://example.com/a2/code/Doelgroep_1>;
+  <https://schema.org/license> <http://example.com/a2/code/Licentie_2>, <http://example.com/a2/code/Licentie_3>;
+  <https://schema.org/publisher> <http://example.com/a2_uitgever_5>, <http://example.com/a2_uitgever_5b>;
+  <https://schema.org/timeRequired> <http://example.com/a2_vereisteTijd_5>;
+  <https://schema.org/version> "a2_versie_5"@nl .
+
+<http://example.com/a2/code/Doel_1> a <http://data.europa.eu/snb/model/elm/LearningAchievement>;
+  <http://purl.org/dc/elements/1.1/creator> <http://example.com/a2_gedefinieerdDoor_1>;
+  <http://purl.org/dc/elements/1.1/description> "a2_beschrijving_1"@nl;
+  <http://purl.org/dc/elements/1.1/source> <http://example.com/a2/code/Doelgroep_2>;
+  <http://purl.org/dc/elements/1.1/subject> <http://example.com/a2/code/Doelgroep_5>;
+  dc:audience <http://example.com/a2_doelgroep_1>;
+  dc:educationLevel <http://example.com/a2/code/Doelgroep_2>;
+  dc:hasPart <http://example.com/a2/code/Doel_3>;
+  dc:type <http://example.com/a2/code/Doelgroep_4>;
+  dc:valid <http://example.com/a2_geldigheid_1>;
+  skos:broader <http://example.com/a2/code/Doel_4>;
+  skos:narrower <http://example.com/a2/code/Doel_1>;
+  skos:related <http://example.com/a2/code/Doel_1>;
+  <http://www.w3.org/ns/adms#identifier> <http://example.com/a2/code/Identificator_1>;
+  <https://schema.org/assesses> <http://example.com/a2/code/Competentie_1> .
+
+<http://example.com/a2/code/Doel_2> a <http://data.europa.eu/snb/model/elm/LearningAchievement>;
+  <http://purl.org/dc/elements/1.1/creator> <http://example.com/a2_gedefinieerdDoor_2>;
+  <http://purl.org/dc/elements/1.1/description> "a2_beschrijving_2"@nl;
+  <http://purl.org/dc/elements/1.1/source> <http://example.com/a2/code/Doelgroep_5>;
+  <http://purl.org/dc/elements/1.1/subject> <http://example.com/a2/code/Doelgroep_4>;
+  dc:audience <http://example.com/a2_doelgroep_2>;
+  dc:educationLevel <http://example.com/a2/code/Doelgroep_4>;
+  dc:hasPart <http://example.com/a2/code/Doel_3>;
+  dc:type <http://example.com/a2/code/Doelgroep_3>;
+  dc:valid <http://example.com/a2_geldigheid_2>;
+  skos:broader <http://example.com/a2/code/Doel_5>;
+  skos:narrower <http://example.com/a2/code/Doel_4>;
+  skos:related <http://example.com/a2/code/Doel_4>;
+  <http://www.w3.org/ns/adms#identifier> <http://example.com/a2/code/Identificator_3>;
+  <https://schema.org/assesses> <http://example.com/a2/code/Competentie_1> .
+
+<http://example.com/a2/code/Doel_3> a <http://data.europa.eu/snb/model/elm/LearningAchievement>;
+  <http://purl.org/dc/elements/1.1/creator> <http://example.com/a2_gedefinieerdDoor_3>;
+  <http://purl.org/dc/elements/1.1/description> "a2_beschrijving_3"@nl;
+  <http://purl.org/dc/elements/1.1/source> <http://example.com/a2/code/Doelgroep_3>;
+  <http://purl.org/dc/elements/1.1/subject> <http://example.com/a2/code/Doelgroep_1>;
+  dc:audience <http://example.com/a2_doelgroep_3>;
+  dc:educationLevel <http://example.com/a2/code/Doelgroep_1>;
+  dc:hasPart <http://example.com/a2/code/Doel_5>;
+  dc:type <http://example.com/a2/code/Doelgroep_4>;
+  dc:valid <http://example.com/a2_geldigheid_3>;
+  skos:broader <http://example.com/a2/code/Doel_3>;
+  skos:narrower <http://example.com/a2/code/Doel_4>;
+  skos:related <http://example.com/a2/code/Doel_1>;
+  <http://www.w3.org/ns/adms#identifier> <http://example.com/a2/code/Identificator_4>;
+  <https://schema.org/assesses> <http://example.com/a2/code/Competentie_4> .
+
+<http://example.com/a2/code/Doel_4> a <http://data.europa.eu/snb/model/elm/LearningAchievement>;
+  <http://purl.org/dc/elements/1.1/creator> <http://example.com/a2_gedefinieerdDoor_4>;
+  <http://purl.org/dc/elements/1.1/description> "a2_beschrijving_4"@nl;
+  <http://purl.org/dc/elements/1.1/source> <http://example.com/a2/code/Doelgroep_2>;
+  <http://purl.org/dc/elements/1.1/subject> <http://example.com/a2/code/Doelgroep_3>;
+  dc:audience <http://example.com/a2_doelgroep_4>;
+  dc:educationLevel <http://example.com/a2/code/Doelgroep_1>;
+  dc:hasPart <http://example.com/a2/code/Doel_5>;
+  dc:type <http://example.com/a2/code/Doelgroep_4>;
+  dc:valid <http://example.com/a2_geldigheid_4>;
+  skos:broader <http://example.com/a2/code/Doel_1>;
+  skos:narrower <http://example.com/a2/code/Doel_3>;
+  skos:related <http://example.com/a2/code/Doel_3>;
+  <http://www.w3.org/ns/adms#identifier> <http://example.com/a2/code/Identificator_2>;
+  <https://schema.org/assesses> <http://example.com/a2/code/Competentie_2> .
+
+<http://example.com/a2/code/Doel_5> a <http://data.europa.eu/snb/model/elm/LearningAchievement>;
+  <http://purl.org/dc/elements/1.1/creator> <http://example.com/a2_gedefinieerdDoor_5>,
+    <http://example.com/a2_gedefinieerdDoor_5b>;
+  <http://purl.org/dc/elements/1.1/description> "a2_beschrijving_5"@nl;
+  <http://purl.org/dc/elements/1.1/source> <http://example.com/a2/code/Doelgroep_2>,
+    <http://example.com/a2/code/Doelgroep_4>;
+  <http://purl.org/dc/elements/1.1/subject> <http://example.com/a2/code/Doelgroep_3>,
+    <http://example.com/a2/code/Doelgroep_4>;
+  dc:audience <http://example.com/a2_doelgroep_5>;
+  dc:educationLevel <http://example.com/a2/code/Doelgroep_1>, <http://example.com/a2/code/Doelgroep_2>;
+  dc:hasPart <http://example.com/a2/code/Doel_4>, <http://example.com/a2/code/Doel_5>;
+  dc:type <http://example.com/a2/code/Doelgroep_2>, <http://example.com/a2/code/Doelgroep_3>;
+  dc:valid <http://example.com/a2_geldigheid_5>;
+  skos:broader <http://example.com/a2/code/Doel_4>;
+  skos:narrower <http://example.com/a2/code/Doel_1>, <http://example.com/a2/code/Doel_2>;
+  skos:related <http://example.com/a2/code/Doel_2>, <http://example.com/a2/code/Doel_3>;
+  <http://www.w3.org/ns/adms#identifier> <http://example.com/a2/code/Identificator_3>;
+  <https://schema.org/assesses> <http://example.com/a2/code/Competentie_4>, <http://example.com/a2/code/Competentie_5> .
+
+<http://example.com/a2/code/Doelgroep_1> a skos:Concept;
+  <http://purl.org/dc/elements/1.1/type> <http://example.com/a2/code/Doelgroep_3>;
+  dc:educationLevel <http://example.com/a2/code/Doelgroep_2>;
+  dc:type <http://example.com/a2/code/Doelgroep_5> .
+
+<http://example.com/a2/code/Doelgroep_2> a skos:Concept;
+  <http://purl.org/dc/elements/1.1/type> <http://example.com/a2/code/Doelgroep_2>;
+  dc:educationLevel <http://example.com/a2/code/Doelgroep_4>;
+  dc:type <http://example.com/a2/code/Doelgroep_3> .
+
+<http://example.com/a2/code/Doelgroep_3> a skos:Concept;
+  <http://purl.org/dc/elements/1.1/type> <http://example.com/a2/code/Doelgroep_1>;
+  dc:educationLevel <http://example.com/a2/code/Doelgroep_4>;
+  dc:type <http://example.com/a2/code/Doelgroep_4> .
+
+<http://example.com/a2/code/Doelgroep_4> a skos:Concept;
+  <http://purl.org/dc/elements/1.1/type> <http://example.com/a2/code/Doelgroep_1>;
+  dc:educationLevel <http://example.com/a2/code/Doelgroep_2>;
+  dc:type <http://example.com/a2/code/Doelgroep_1> .
+
+<http://example.com/a2/code/Doelgroep_5> a skos:Concept;
+  <http://purl.org/dc/elements/1.1/type> <http://example.com/a2/code/Doelgroep_1>, <http://example.com/a2/code/Doelgroep_2>;
+  dc:educationLevel <http://example.com/a2/code/Doelgroep_1>, <http://example.com/a2/code/Doelgroep_5>;
+  dc:type <http://example.com/a2/code/Doelgroep_1>, <http://example.com/a2/code/Doelgroep_4> .
+
+<http://example.com/a2/code/Geldbedrag_1> a <https://schema.org/MonetaryAmount>;
+  <http://www.cidoc-crm.org/cidoc-crm/P180_has_currency> <http://example.com/a2_valuta_1> .
+
+<http://example.com/a2/code/Geldbedrag_2> a <https://schema.org/MonetaryAmount>;
+  <http://www.cidoc-crm.org/cidoc-crm/P180_has_currency> <http://example.com/a2_valuta_2> .
+
+<http://example.com/a2/code/Geldbedrag_3> a <https://schema.org/MonetaryAmount>;
+  <http://www.cidoc-crm.org/cidoc-crm/P180_has_currency> <http://example.com/a2_valuta_3> .
+
+<http://example.com/a2/code/Geldbedrag_4> a <https://schema.org/MonetaryAmount>;
+  <http://www.cidoc-crm.org/cidoc-crm/P180_has_currency> <http://example.com/a2_valuta_4> .
+
+<http://example.com/a2/code/Geldbedrag_5> a <https://schema.org/MonetaryAmount>;
+  <http://www.cidoc-crm.org/cidoc-crm/P180_has_currency> <http://example.com/a2_valuta_5> .
+
+<http://example.com/a2/code/Identificator_1> a <http://www.w3.org/ns/adms#Identifier>;
+  dc:creator <http://example.com/a2_toegekendDoor_1> .
+
+<http://example.com/a2/code/Identificator_2> a <http://www.w3.org/ns/adms#Identifier>;
+  dc:creator <http://example.com/a2_toegekendDoor_2> .
+
+<http://example.com/a2/code/Identificator_3> a <http://www.w3.org/ns/adms#Identifier>;
+  dc:creator <http://example.com/a2_toegekendDoor_3> .
+
+<http://example.com/a2/code/Identificator_4> a <http://www.w3.org/ns/adms#Identifier>;
+  dc:creator <http://example.com/a2_toegekendDoor_4> .
+
+<http://example.com/a2/code/Identificator_5> a <http://www.w3.org/ns/adms#Identifier>;
+  dc:creator <http://example.com/a2_toegekendDoor_5> .
+
+<http://example.com/a2/code/KwantitatieveWaarde_1> a <https://schema.org/QuantitativeValue>;
+  <https://schema.org/unitCode> <http://example.com/a2_eenheid_1>;
+  <https://schema.org/value> "a2_waarde_1"^^rdfs:Literal .
+
+<http://example.com/a2/code/KwantitatieveWaarde_2> a <https://schema.org/QuantitativeValue>;
+  <https://schema.org/unitCode> <http://example.com/a2_eenheid_2>;
+  <https://schema.org/value> "a2_waarde_2"^^rdfs:Literal .
+
+<http://example.com/a2/code/KwantitatieveWaarde_3> a <https://schema.org/QuantitativeValue>;
+  <https://schema.org/unitCode> <http://example.com/a2_eenheid_3>;
+  <https://schema.org/value> "a2_waarde_3"^^rdfs:Literal .
+
+<http://example.com/a2/code/KwantitatieveWaarde_4> a <https://schema.org/QuantitativeValue>;
+  <https://schema.org/unitCode> <http://example.com/a2_eenheid_4>;
+  <https://schema.org/value> "a2_waarde_4"^^rdfs:Literal .
+
+<http://example.com/a2/code/KwantitatieveWaarde_5> a <https://schema.org/QuantitativeValue>;
+  <https://schema.org/unitCode> <http://example.com/a2_eenheid_5>;
+  <https://schema.org/value> "a2_waarde_5"^^rdfs:Literal .
+
+<http://example.com/a2/code/Leeractiviteit_1> a <http://data.europa.eu/snb/model/elm/LearningActivity>;
+  <http://data.europa.eu/snb/model/elm/directedBy> <http://example.com/a2_ingerichtDoor_1>;
+  <http://data.europa.eu/snb/model/elm/hasPart> <http://example.com/a2/code/Leeractiviteit_4>;
+  <http://data.europa.eu/snb/model/elm/isPartOf> <http://example.com/a2/code/Leeractiviteit_5>;
+  <http://data.europa.eu/snb/model/elm/location> <http://example.com/a2/code/Adresvoorstelling_4>;
+  <http://data.europa.eu/snb/model/elm/specifiedBy> <http://example.com/a2/code/Leeractiviteitspecificatie_3>;
+  <http://data.europa.eu/snb/model/elm/workload> <http://example.com/a2_werklast_1>;
+  dc:contributor <http://example.com/a2/code/Doel_3>;
+  dc:references <http://example.com/a2/code/Leermiddel_1>;
+  dc:temporal <http://example.com/a2_periode_1>;
+  dc:type <http://example.com/a2/code/Doelgroep_2> .
+
+<http://example.com/a2/code/Leeractiviteit_2> a <http://data.europa.eu/snb/model/elm/LearningActivity>;
+  <http://data.europa.eu/snb/model/elm/directedBy> <http://example.com/a2_ingerichtDoor_2>;
+  <http://data.europa.eu/snb/model/elm/hasPart> <http://example.com/a2/code/Leeractiviteit_1>;
+  <http://data.europa.eu/snb/model/elm/isPartOf> <http://example.com/a2/code/Leeractiviteit_4>;
+  <http://data.europa.eu/snb/model/elm/location> <http://example.com/a2/code/Adresvoorstelling_2>;
+  <http://data.europa.eu/snb/model/elm/specifiedBy> <http://example.com/a2/code/Leeractiviteitspecificatie_4>;
+  <http://data.europa.eu/snb/model/elm/workload> <http://example.com/a2_werklast_2>;
+  dc:contributor <http://example.com/a2/code/Doel_4>;
+  dc:references <http://example.com/a2/code/Leermiddel_4>;
+  dc:temporal <http://example.com/a2_periode_2>;
+  dc:type <http://example.com/a2/code/Doelgroep_3> .
+
+<http://example.com/a2/code/Leeractiviteit_3> a <http://data.europa.eu/snb/model/elm/LearningActivity>;
+  <http://data.europa.eu/snb/model/elm/directedBy> <http://example.com/a2_ingerichtDoor_3>;
+  <http://data.europa.eu/snb/model/elm/hasPart> <http://example.com/a2/code/Leeractiviteit_5>;
+  <http://data.europa.eu/snb/model/elm/isPartOf> <http://example.com/a2/code/Leeractiviteit_5>;
+  <http://data.europa.eu/snb/model/elm/location> <http://example.com/a2/code/Adresvoorstelling_5>;
+  <http://data.europa.eu/snb/model/elm/specifiedBy> <http://example.com/a2/code/Leeractiviteitspecificatie_5>;
+  <http://data.europa.eu/snb/model/elm/workload> <http://example.com/a2_werklast_3>;
+  dc:contributor <http://example.com/a2/code/Doel_2>;
+  dc:references <http://example.com/a2/code/Leermiddel_5>;
+  dc:temporal <http://example.com/a2_periode_3>;
+  dc:type <http://example.com/a2/code/Doelgroep_5> .
+
+<http://example.com/a2/code/Leeractiviteit_4> a <http://data.europa.eu/snb/model/elm/LearningActivity>;
+  <http://data.europa.eu/snb/model/elm/directedBy> <http://example.com/a2_ingerichtDoor_4>;
+  <http://data.europa.eu/snb/model/elm/hasPart> <http://example.com/a2/code/Leeractiviteit_4>;
+  <http://data.europa.eu/snb/model/elm/isPartOf> <http://example.com/a2/code/Leeractiviteit_5>;
+  <http://data.europa.eu/snb/model/elm/location> <http://example.com/a2/code/Adresvoorstelling_2>;
+  <http://data.europa.eu/snb/model/elm/specifiedBy> <http://example.com/a2/code/Leeractiviteitspecificatie_2>;
+  <http://data.europa.eu/snb/model/elm/workload> <http://example.com/a2_werklast_4>;
+  dc:contributor <http://example.com/a2/code/Doel_2>;
+  dc:references <http://example.com/a2/code/Leermiddel_2>;
+  dc:temporal <http://example.com/a2_periode_4>;
+  dc:type <http://example.com/a2/code/Doelgroep_4> .
+
+<http://example.com/a2/code/Leeractiviteit_5> a <http://data.europa.eu/snb/model/elm/LearningActivity>;
+  <http://data.europa.eu/snb/model/elm/directedBy> <http://example.com/a2_ingerichtDoor_5>,
+    <http://example.com/a2_ingerichtDoor_5b>;
+  <http://data.europa.eu/snb/model/elm/hasPart> <http://example.com/a2/code/Leeractiviteit_1>,
+    <http://example.com/a2/code/Leeractiviteit_3>;
+  <http://data.europa.eu/snb/model/elm/isPartOf> <http://example.com/a2/code/Leeractiviteit_1>,
+    <http://example.com/a2/code/Leeractiviteit_3>;
+  <http://data.europa.eu/snb/model/elm/location> <http://example.com/a2/code/Adresvoorstelling_5>;
+  <http://data.europa.eu/snb/model/elm/specifiedBy> <http://example.com/a2/code/Leeractiviteitspecificatie_4>;
+  <http://data.europa.eu/snb/model/elm/workload> <http://example.com/a2_werklast_5>;
+  dc:contributor <http://example.com/a2/code/Doel_2>, <http://example.com/a2/code/Doel_3>;
+  dc:references <http://example.com/a2/code/Leermiddel_1>, <http://example.com/a2/code/Leermiddel_5>;
+  dc:temporal <http://example.com/a2_periode_5>, <http://example.com/a2_periode_5b>;
+  dc:type <http://example.com/a2/code/Doelgroep_1>, <http://example.com/a2/code/Doelgroep_2> .
+
+<http://example.com/a2/code/Leeractiviteitspecificatie_1> a <http://data.europa.eu/snb/model/elm/LearningActivitySpecification>;
+  <http://data.europa.eu/snb/model/elm/contactHour> <http://example.com/a2/code/Openingsurenspecificatie_5>;
+  <http://data.europa.eu/snb/model/elm/generalisationOf> <http://example.com/a2/code/Leeractiviteitspecificatie_1>;
+  <http://data.europa.eu/snb/model/elm/hasPart> <http://example.com/a2/code/Leeractiviteitspecificatie_4>;
+  <http://data.europa.eu/snb/model/elm/isPartOf> <http://example.com/a2/code/Leeractiviteitspecificatie_1>;
+  <http://data.europa.eu/snb/model/elm/specialisationOf> <http://example.com/a2/code/Leeractiviteitspecificatie_3>;
+  dc:contributor <http://example.com/a2/code/Doel_3>;
+  dc:language <http://example.com/a2/code/Doelgroep_3>;
+  dc:references <http://example.com/a2/code/Leermiddel_1>;
+  dc:type <http://example.com/a2/code/Doelgroep_3> .
+
+<http://example.com/a2/code/Leeractiviteitspecificatie_2> a <http://data.europa.eu/snb/model/elm/LearningActivitySpecification>;
+  <http://data.europa.eu/snb/model/elm/contactHour> <http://example.com/a2/code/Openingsurenspecificatie_5>;
+  <http://data.europa.eu/snb/model/elm/generalisationOf> <http://example.com/a2/code/Leeractiviteitspecificatie_1>;
+  <http://data.europa.eu/snb/model/elm/hasPart> <http://example.com/a2/code/Leeractiviteitspecificatie_1>;
+  <http://data.europa.eu/snb/model/elm/isPartOf> <http://example.com/a2/code/Leeractiviteitspecificatie_5>;
+  <http://data.europa.eu/snb/model/elm/specialisationOf> <http://example.com/a2/code/Leeractiviteitspecificatie_1>;
+  dc:contributor <http://example.com/a2/code/Doel_4>;
+  dc:language <http://example.com/a2/code/Doelgroep_2>;
+  dc:references <http://example.com/a2/code/Leermiddel_4>;
+  dc:type <http://example.com/a2/code/Doelgroep_4> .
+
+<http://example.com/a2/code/Leeractiviteitspecificatie_3> a <http://data.europa.eu/snb/model/elm/LearningActivitySpecification>;
+  <http://data.europa.eu/snb/model/elm/contactHour> <http://example.com/a2/code/Openingsurenspecificatie_2>;
+  <http://data.europa.eu/snb/model/elm/generalisationOf> <http://example.com/a2/code/Leeractiviteitspecificatie_4>;
+  <http://data.europa.eu/snb/model/elm/hasPart> <http://example.com/a2/code/Leeractiviteitspecificatie_2>;
+  <http://data.europa.eu/snb/model/elm/isPartOf> <http://example.com/a2/code/Leeractiviteitspecificatie_2>;
+  <http://data.europa.eu/snb/model/elm/specialisationOf> <http://example.com/a2/code/Leeractiviteitspecificatie_2>;
+  dc:contributor <http://example.com/a2/code/Doel_5>;
+  dc:language <http://example.com/a2/code/Doelgroep_1>;
+  dc:references <http://example.com/a2/code/Leermiddel_1>;
+  dc:type <http://example.com/a2/code/Doelgroep_5> .
+
+<http://example.com/a2/code/Leeractiviteitspecificatie_4> a <http://data.europa.eu/snb/model/elm/LearningActivitySpecification>;
+  <http://data.europa.eu/snb/model/elm/contactHour> <http://example.com/a2/code/Openingsurenspecificatie_3>;
+  <http://data.europa.eu/snb/model/elm/generalisationOf> <http://example.com/a2/code/Leeractiviteitspecificatie_2>;
+  <http://data.europa.eu/snb/model/elm/hasPart> <http://example.com/a2/code/Leeractiviteitspecificatie_4>;
+  <http://data.europa.eu/snb/model/elm/isPartOf> <http://example.com/a2/code/Leeractiviteitspecificatie_1>;
+  <http://data.europa.eu/snb/model/elm/specialisationOf> <http://example.com/a2/code/Leeractiviteitspecificatie_2>;
+  dc:contributor <http://example.com/a2/code/Doel_4>;
+  dc:language <http://example.com/a2/code/Doelgroep_3>;
+  dc:references <http://example.com/a2/code/Leermiddel_4>;
+  dc:type <http://example.com/a2/code/Doelgroep_2> .
+
+<http://example.com/a2/code/Leeractiviteitspecificatie_5> a <http://data.europa.eu/snb/model/elm/LearningActivitySpecification>;
+  <http://data.europa.eu/snb/model/elm/contactHour> <http://example.com/a2/code/Openingsurenspecificatie_1>,
+    <http://example.com/a2/code/Openingsurenspecificatie_5>;
+  <http://data.europa.eu/snb/model/elm/generalisationOf> <http://example.com/a2/code/Leeractiviteitspecificatie_1>,
+    <http://example.com/a2/code/Leeractiviteitspecificatie_2>;
+  <http://data.europa.eu/snb/model/elm/hasPart> <http://example.com/a2/code/Leeractiviteitspecificatie_2>;
+  <http://data.europa.eu/snb/model/elm/isPartOf> <http://example.com/a2/code/Leeractiviteitspecificatie_2>,
+    <http://example.com/a2/code/Leeractiviteitspecificatie_4>;
+  <http://data.europa.eu/snb/model/elm/specialisationOf> <http://example.com/a2/code/Leeractiviteitspecificatie_3>,
+    <http://example.com/a2/code/Leeractiviteitspecificatie_4>;
+  dc:contributor <http://example.com/a2/code/Doel_3>, <http://example.com/a2/code/Doel_5>;
+  dc:language <http://example.com/a2/code/Doelgroep_2>, <http://example.com/a2/code/Doelgroep_5>;
+  dc:references <http://example.com/a2/code/Leermiddel_1>, <http://example.com/a2/code/Leermiddel_5>;
+  dc:type <http://example.com/a2/code/Doelgroep_1> .
+
+<http://example.com/a2/code/LeermiddelElement_1> a <https://schema.org/CreativeWork>;
+  <https://schema.org/isPartOf> <http://example.com/a2/code/Leermiddel_1> .
+
+<http://example.com/a2/code/LeermiddelElement_2> a <https://schema.org/CreativeWork>;
+  <https://schema.org/isPartOf> <http://example.com/a2/code/Leermiddel_1> .
+
+<http://example.com/a2/code/LeermiddelElement_3> a <https://schema.org/CreativeWork>;
+  <https://schema.org/isPartOf> <http://example.com/a2/code/Leermiddel_1> .
+
+<http://example.com/a2/code/LeermiddelElement_4> a <https://schema.org/CreativeWork>;
+  <https://schema.org/isPartOf> <http://example.com/a2/code/Leermiddel_4> .
+
+<http://example.com/a2/code/LeermiddelElement_5> a <https://schema.org/CreativeWork>;
+  <https://schema.org/isPartOf> <http://example.com/a2/code/Leermiddel_5> .
+
+<http://example.com/a2/code/LeermiddelVerzameling_1> a <https://schema.org/CreativeWorkSeries>;
+  <https://schema.org/hasPart> <http://example.com/a2/code/Leermiddel_5> .
+
+<http://example.com/a2/code/LeermiddelVerzameling_2> a <https://schema.org/CreativeWorkSeries>;
+  <https://schema.org/hasPart> <http://example.com/a2/code/Leermiddel_5> .
+
+<http://example.com/a2/code/LeermiddelVerzameling_3> a <https://schema.org/CreativeWorkSeries>;
+  <https://schema.org/hasPart> <http://example.com/a2/code/Leermiddel_2> .
+
+<http://example.com/a2/code/LeermiddelVerzameling_4> a <https://schema.org/CreativeWorkSeries>;
+  <https://schema.org/hasPart> <http://example.com/a2/code/Leermiddel_3> .
+
+<http://example.com/a2/code/LeermiddelVerzameling_5> a <https://schema.org/CreativeWorkSeries>;
+  <https://schema.org/hasPart> <http://example.com/a2/code/Leermiddel_1>, <http://example.com/a2/code/Leermiddel_3> .
+
+<http://example.com/a2/code/Leermiddel_1> a <https://schema.org/LearningResource>;
+  <http://purl.org/dc/elements/1.1/description> "a2_beschrijving_1"@nl;
+  <http://purl.org/dc/elements/1.1/source> <http://example.com/a2/code/Doelgroep_5>;
+  <http://purl.org/dc/elements/1.1/subject> <http://example.com/a2/code/Doelgroep_1>;
+  dc:educationLevel <http://example.com/a2/code/Doelgroep_3>;
+  dc:format <http://example.com/a2/code/Doelgroep_2>;
+  dc:instructionalMethod "a2_instructie_1"@nl;
+  dc:language <http://example.com/a2/code/Doelgroep_1>;
+  dc:requires "a2_vereiste_1"@nl;
+  dc:title "a2_naam_1"@nl;
+  dc:type <http://example.com/a2/code/Doelgroep_3>;
+  <https://schema.org/accessibilityFeature> <http://example.com/a2/code/Doelgroep_3>;
+  <https://schema.org/assesses> <http://example.com/a2/code/Competentie_4>;
+  <https://schema.org/educationalUse> <http://example.com/a2/code/Doel_4>;
+  <https://schema.org/estimatedCost> <http://example.com/a2/code/Geldbedrag_1>;
+  <https://schema.org/hasPart> <http://example.com/a2/code/LeermiddelElement_5>;
+  <https://schema.org/interactivityType> <http://example.com/a2/code/Doelgroep_1>;
+  <https://schema.org/isPartOf> <http://example.com/a2/code/LeermiddelVerzameling_2>;
+  <https://schema.org/keywords> "a2_sleutelwoord_1"@nl;
+  <https://schema.org/material> "a2_benodigdMateriaal_1"@nl;
+  <https://schema.org/result> <http://example.com/a2/code/Doelgroep_4> .
+
+<http://example.com/a2/code/Leermiddel_2> a <https://schema.org/LearningResource>;
+  <http://purl.org/dc/elements/1.1/description> "a2_beschrijving_2"@nl;
+  <http://purl.org/dc/elements/1.1/source> <http://example.com/a2/code/Doelgroep_4>;
+  <http://purl.org/dc/elements/1.1/subject> <http://example.com/a2/code/Doelgroep_3>;
+  dc:educationLevel <http://example.com/a2/code/Doelgroep_4>;
+  dc:format <http://example.com/a2/code/Doelgroep_4>;
+  dc:instructionalMethod "a2_instructie_2"@nl;
+  dc:language <http://example.com/a2/code/Doelgroep_1>;
+  dc:requires "a2_vereiste_2"@nl;
+  dc:title "a2_naam_2"@nl;
+  dc:type <http://example.com/a2/code/Doelgroep_1>;
+  <https://schema.org/accessibilityFeature> <http://example.com/a2/code/Doelgroep_3>;
+  <https://schema.org/assesses> <http://example.com/a2/code/Competentie_2>;
+  <https://schema.org/educationalUse> <http://example.com/a2/code/Doel_5>;
+  <https://schema.org/estimatedCost> <http://example.com/a2/code/Geldbedrag_5>;
+  <https://schema.org/hasPart> <http://example.com/a2/code/LeermiddelElement_1>;
+  <https://schema.org/interactivityType> <http://example.com/a2/code/Doelgroep_1>;
+  <https://schema.org/isPartOf> <http://example.com/a2/code/LeermiddelVerzameling_5>;
+  <https://schema.org/keywords> "a2_sleutelwoord_2"@nl;
+  <https://schema.org/material> "a2_benodigdMateriaal_2"@nl;
+  <https://schema.org/result> <http://example.com/a2/code/Doelgroep_1> .
+
+<http://example.com/a2/code/Leermiddel_3> a <https://schema.org/LearningResource>;
+  <http://purl.org/dc/elements/1.1/description> "a2_beschrijving_3"@nl;
+  <http://purl.org/dc/elements/1.1/source> <http://example.com/a2/code/Doelgroep_4>;
+  <http://purl.org/dc/elements/1.1/subject> <http://example.com/a2/code/Doelgroep_4>;
+  dc:educationLevel <http://example.com/a2/code/Doelgroep_3>;
+  dc:format <http://example.com/a2/code/Doelgroep_2>;
+  dc:instructionalMethod "a2_instructie_3"@nl;
+  dc:language <http://example.com/a2/code/Doelgroep_2>;
+  dc:requires "a2_vereiste_3"@nl;
+  dc:title "a2_naam_3"@nl;
+  dc:type <http://example.com/a2/code/Doelgroep_2>;
+  <https://schema.org/accessibilityFeature> <http://example.com/a2/code/Doelgroep_2>;
+  <https://schema.org/assesses> <http://example.com/a2/code/Competentie_1>;
+  <https://schema.org/educationalUse> <http://example.com/a2/code/Doel_2>;
+  <https://schema.org/estimatedCost> <http://example.com/a2/code/Geldbedrag_3>;
+  <https://schema.org/hasPart> <http://example.com/a2/code/LeermiddelElement_2>;
+  <https://schema.org/interactivityType> <http://example.com/a2/code/Doelgroep_1>;
+  <https://schema.org/isPartOf> <http://example.com/a2/code/LeermiddelVerzameling_1>;
+  <https://schema.org/keywords> "a2_sleutelwoord_3"@nl;
+  <https://schema.org/material> "a2_benodigdMateriaal_3"@nl;
+  <https://schema.org/result> <http://example.com/a2/code/Doelgroep_5> .
+
+<http://example.com/a2/code/Leermiddel_4> a <https://schema.org/LearningResource>;
+  <http://purl.org/dc/elements/1.1/description> "a2_beschrijving_4"@nl;
+  <http://purl.org/dc/elements/1.1/source> <http://example.com/a2/code/Doelgroep_5>;
+  <http://purl.org/dc/elements/1.1/subject> <http://example.com/a2/code/Doelgroep_4>;
+  dc:educationLevel <http://example.com/a2/code/Doelgroep_2>;
+  dc:format <http://example.com/a2/code/Doelgroep_4>;
+  dc:instructionalMethod "a2_instructie_4"@nl;
+  dc:language <http://example.com/a2/code/Doelgroep_3>;
+  dc:requires "a2_vereiste_4"@nl;
+  dc:title "a2_naam_4"@nl;
+  dc:type <http://example.com/a2/code/Doelgroep_2>;
+  <https://schema.org/accessibilityFeature> <http://example.com/a2/code/Doelgroep_2>;
+  <https://schema.org/assesses> <http://example.com/a2/code/Competentie_1>;
+  <https://schema.org/educationalUse> <http://example.com/a2/code/Doel_5>;
+  <https://schema.org/estimatedCost> <http://example.com/a2/code/Geldbedrag_4>;
+  <https://schema.org/hasPart> <http://example.com/a2/code/LeermiddelElement_4>;
+  <https://schema.org/interactivityType> <http://example.com/a2/code/Doelgroep_5>;
+  <https://schema.org/isPartOf> <http://example.com/a2/code/LeermiddelVerzameling_2>;
+  <https://schema.org/keywords> "a2_sleutelwoord_4"@nl;
+  <https://schema.org/material> "a2_benodigdMateriaal_4"@nl;
+  <https://schema.org/result> <http://example.com/a2/code/Doelgroep_5> .
+
+<http://example.com/a2/code/Leermiddel_5> a <https://schema.org/LearningResource>;
+  <http://purl.org/dc/elements/1.1/description> "a2_beschrijving_5"@nl;
+  <http://purl.org/dc/elements/1.1/source> <http://example.com/a2/code/Doelgroep_4>;
+  <http://purl.org/dc/elements/1.1/subject> <http://example.com/a2/code/Doelgroep_1>,
+    <http://example.com/a2/code/Doelgroep_2>;
+  dc:educationLevel <http://example.com/a2/code/Doelgroep_3>, <http://example.com/a2/code/Doelgroep_4>;
+  dc:format <http://example.com/a2/code/Doelgroep_2>, <http://example.com/a2/code/Doelgroep_4>;
+  dc:instructionalMethod "a2_instructie_5"@nl;
+  dc:language <http://example.com/a2/code/Doelgroep_1>, <http://example.com/a2/code/Doelgroep_2>;
+  dc:requires "a2_vereiste_5"@nl, "a2_vereiste_5b"@nl;
+  dc:title "a2_naam_5"@nl;
+  dc:type <http://example.com/a2/code/Doelgroep_2>;
+  <https://schema.org/accessibilityFeature> <http://example.com/a2/code/Doelgroep_4>;
+  <https://schema.org/assesses> <http://example.com/a2/code/Competentie_2>, <http://example.com/a2/code/Competentie_4>;
+  <https://schema.org/educationalUse> <http://example.com/a2/code/Doel_3>, <http://example.com/a2/code/Doel_5>;
+  <https://schema.org/estimatedCost> <http://example.com/a2/code/Geldbedrag_4>;
+  <https://schema.org/hasPart> <http://example.com/a2/code/LeermiddelElement_1>, <http://example.com/a2/code/LeermiddelElement_4>;
+  <https://schema.org/interactivityType> <http://example.com/a2/code/Doelgroep_1>, <http://example.com/a2/code/Doelgroep_3>;
+  <https://schema.org/isPartOf> <http://example.com/a2/code/LeermiddelVerzameling_1>,
+    <http://example.com/a2/code/LeermiddelVerzameling_4>;
+  <https://schema.org/keywords> "a2_sleutelwoord_5"@nl, "a2_sleutelwoord_5b"@nl;
+  <https://schema.org/material> "a2_benodigdMateriaal_5"@nl, "a2_benodigdMateriaal_5b"@nl;
+  <https://schema.org/result> <http://example.com/a2/code/Doelgroep_3>, <http://example.com/a2/code/Doelgroep_5> .
+
+<http://example.com/a2/code/Licentie_1> a dc:LicenseDocument;
+  dc:type <http://example.com/a2/code/Doelgroep_5> .
+
+<http://example.com/a2/code/Licentie_2> a dc:LicenseDocument;
+  dc:type <http://example.com/a2/code/Doelgroep_4> .
+
+<http://example.com/a2/code/Licentie_3> a dc:LicenseDocument;
+  dc:type <http://example.com/a2/code/Doelgroep_3> .
+
+<http://example.com/a2/code/Licentie_4> a dc:LicenseDocument;
+  dc:type <http://example.com/a2/code/Doelgroep_5> .
+
+<http://example.com/a2/code/Licentie_5> a dc:LicenseDocument;
+  dc:type <http://example.com/a2/code/Doelgroep_3> .
+
+<http://example.com/a2/code/Openingsurenspecificatie_1> a <http://schema.org/OpeningHoursSpecification>;
+  <http://schema.org/closes> "09:09:08"^^<http://www.w3.org/2001/XMLSchema#time>;
+  <http://schema.org/dayOfWeek> "http://example.com/au/dagVanDeWeek_1"^^<http://www.w3.org/2001/XMLSchema#anyURI>;
+  <http://schema.org/opens> "15:23:53"^^<http://www.w3.org/2001/XMLSchema#time>;
+  <http://schema.org/validFrom> "2008-06-15T15:57:21.226Z"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+  <http://schema.org/validThrough> "2018-04-09T22:44:20.099Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+
+<http://example.com/a2/code/Openingsurenspecificatie_2> a <http://schema.org/OpeningHoursSpecification>;
+  <http://schema.org/closes> "08:38:34"^^<http://www.w3.org/2001/XMLSchema#time>;
+  <http://schema.org/dayOfWeek> "http://example.com/au/dagVanDeWeek_2"^^<http://www.w3.org/2001/XMLSchema#anyURI>;
+  <http://schema.org/opens> "09:21:54"^^<http://www.w3.org/2001/XMLSchema#time>;
+  <http://schema.org/validFrom> "2022-09-11T11:53:40.532Z"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+  <http://schema.org/validThrough> "2001-10-06T13:17:50.542Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+
+<http://example.com/a2/code/Openingsurenspecificatie_3> a <http://schema.org/OpeningHoursSpecification>;
+  <http://schema.org/closes> "07:05:13"^^<http://www.w3.org/2001/XMLSchema#time>;
+  <http://schema.org/dayOfWeek> "http://example.com/au/dagVanDeWeek_3"^^<http://www.w3.org/2001/XMLSchema#anyURI>;
+  <http://schema.org/opens> "22:45:41"^^<http://www.w3.org/2001/XMLSchema#time>;
+  <http://schema.org/validFrom> "2017-01-11T06:32:21.224Z"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+  <http://schema.org/validThrough> "2004-10-31T22:41:39.361Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+
+<http://example.com/a2/code/Openingsurenspecificatie_4> a <http://schema.org/OpeningHoursSpecification>;
+  <http://schema.org/closes> "04:40:41"^^<http://www.w3.org/2001/XMLSchema#time>;
+  <http://schema.org/dayOfWeek> "http://example.com/au/dagVanDeWeek_4"^^<http://www.w3.org/2001/XMLSchema#anyURI>;
+  <http://schema.org/opens> "12:18:04"^^<http://www.w3.org/2001/XMLSchema#time>;
+  <http://schema.org/validFrom> "2002-03-29T16:36:59.732Z"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+  <http://schema.org/validThrough> "2014-06-06T20:44:35.512Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+
+<http://example.com/a2/code/Openingsurenspecificatie_5> a <http://schema.org/OpeningHoursSpecification>;
+  <http://schema.org/closes> "11:19:39"^^<http://www.w3.org/2001/XMLSchema#time>;
+  <http://schema.org/dayOfWeek> "http://example.com/au/dagVanDeWeek_5"^^<http://www.w3.org/2001/XMLSchema#anyURI>;
+  <http://schema.org/opens> "14:41:46"^^<http://www.w3.org/2001/XMLSchema#time>;
+  <http://schema.org/validFrom> "2030-09-05T22:16:18.933Z"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+  <http://schema.org/validThrough> "2028-04-17T03:19:49.690Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+
+<http://example.com/a2/code/Periode_1> a <http://www.w3.org/2006/time#ProperInterval>;
+  <http://www.w3.org/2006/time#hasBeginning> <http://example.com/a2_van_1>;
+  <http://www.w3.org/2006/time#hasEnd> <http://example.com/a2_tot_1> .
+
+<http://example.com/a2/code/Periode_2> a <http://www.w3.org/2006/time#ProperInterval>;
+  <http://www.w3.org/2006/time#hasBeginning> <http://example.com/a2_van_2>;
+  <http://www.w3.org/2006/time#hasEnd> <http://example.com/a2_tot_2> .
+
+<http://example.com/a2/code/Periode_3> a <http://www.w3.org/2006/time#ProperInterval>;
+  <http://www.w3.org/2006/time#hasBeginning> <http://example.com/a2_van_3>;
+  <http://www.w3.org/2006/time#hasEnd> <http://example.com/a2_tot_3> .
+
+<http://example.com/a2/code/Periode_4> a <http://www.w3.org/2006/time#ProperInterval>;
+  <http://www.w3.org/2006/time#hasBeginning> <http://example.com/a2_van_4>;
+  <http://www.w3.org/2006/time#hasEnd> <http://example.com/a2_tot_4> .
+
+<http://example.com/a2/code/Periode_5> a <http://www.w3.org/2006/time#ProperInterval>;
+  <http://www.w3.org/2006/time#hasBeginning> <http://example.com/a2_van_5>;
+  <http://www.w3.org/2006/time#hasEnd> <http://example.com/a2_tot_5> .
+
+<http://example.com/a2_auteur_1> a dc:Agent .
+
+<http://example.com/a2_auteur_2> a dc:Agent .
+
+<http://example.com/a2_auteur_3> a dc:Agent .
+
+<http://example.com/a2_auteur_4> a dc:Agent .
+
+<http://example.com/a2_auteur_5> a dc:Agent .
+
+<http://example.com/a2_auteur_5b> a dc:Agent .
+
+<http://example.com/a2_auteursrechtHouder_1> a dc:Agent .
+
+<http://example.com/a2_auteursrechtHouder_2> a dc:Agent .
+
+<http://example.com/a2_auteursrechtHouder_3> a dc:Agent .
+
+<http://example.com/a2_auteursrechtHouder_4> a dc:Agent .
+
+<http://example.com/a2_auteursrechtHouder_5> a dc:Agent .
+
+<http://example.com/a2_auteursrechtHouder_5b> a dc:Agent .
+
+<http://example.com/a2_doelgroep_1> a <https://schema.org/Audience> .
+
+<http://example.com/a2_doelgroep_2> a <https://schema.org/Audience> .
+
+<http://example.com/a2_doelgroep_3> a <https://schema.org/Audience> .
+
+<http://example.com/a2_doelgroep_4> a <https://schema.org/Audience> .
+
+<http://example.com/a2_doelgroep_5> a <https://schema.org/Audience> .
+
+<http://example.com/a2_eenheid_1> a <https://qudt.org/schema/qudt/Unit> .
+
+<http://example.com/a2_eenheid_2> a <https://qudt.org/schema/qudt/Unit> .
+
+<http://example.com/a2_eenheid_3> a <https://qudt.org/schema/qudt/Unit> .
+
+<http://example.com/a2_eenheid_4> a <https://qudt.org/schema/qudt/Unit> .
+
+<http://example.com/a2_eenheid_5> a <https://qudt.org/schema/qudt/Unit> .
+
+<http://example.com/a2_gedefinieerdDoor_1> a dc:Agent .
+
+<http://example.com/a2_gedefinieerdDoor_2> a dc:Agent .
+
+<http://example.com/a2_gedefinieerdDoor_3> a dc:Agent .
+
+<http://example.com/a2_gedefinieerdDoor_4> a dc:Agent .
+
+<http://example.com/a2_gedefinieerdDoor_5> a dc:Agent .
+
+<http://example.com/a2_gedefinieerdDoor_5b> a dc:Agent .
+
+<http://example.com/a2_geldigheid_1> a <http://data.europa.eu/m8g/PeriodOfTime> .
+
+<http://example.com/a2_geldigheid_2> a <http://data.europa.eu/m8g/PeriodOfTime> .
+
+<http://example.com/a2_geldigheid_3> a <http://data.europa.eu/m8g/PeriodOfTime> .
+
+<http://example.com/a2_geldigheid_4> a <http://data.europa.eu/m8g/PeriodOfTime> .
+
+<http://example.com/a2_geldigheid_5> a <http://data.europa.eu/m8g/PeriodOfTime> .
+
+<http://example.com/a2_ingerichtDoor_1> a dc:Agent .
+
+<http://example.com/a2_ingerichtDoor_2> a dc:Agent .
+
+<http://example.com/a2_ingerichtDoor_3> a dc:Agent .
+
+<http://example.com/a2_ingerichtDoor_4> a dc:Agent .
+
+<http://example.com/a2_ingerichtDoor_5> a dc:Agent .
+
+<http://example.com/a2_ingerichtDoor_5b> a dc:Agent .
+
+<http://example.com/a2_periode_1> a <http://data.europa.eu/m8g/PeriodOfTime> .
+
+<http://example.com/a2_periode_2> a <http://data.europa.eu/m8g/PeriodOfTime> .
+
+<http://example.com/a2_periode_3> a <http://data.europa.eu/m8g/PeriodOfTime> .
+
+<http://example.com/a2_periode_4> a <http://data.europa.eu/m8g/PeriodOfTime> .
+
+<http://example.com/a2_periode_5> a <http://data.europa.eu/m8g/PeriodOfTime> .
+
+<http://example.com/a2_periode_5b> a <http://data.europa.eu/m8g/PeriodOfTime> .
+
+<http://example.com/a2_producent_1> a dc:Agent .
+
+<http://example.com/a2_producent_2> a dc:Agent .
+
+<http://example.com/a2_producent_3> a dc:Agent .
+
+<http://example.com/a2_producent_4> a dc:Agent .
+
+<http://example.com/a2_producent_5> a dc:Agent .
+
+<http://example.com/a2_producent_5b> a dc:Agent .
+
+<http://example.com/a2_toegekendDoor_1> a dc:Agent .
+
+<http://example.com/a2_toegekendDoor_2> a dc:Agent .
+
+<http://example.com/a2_toegekendDoor_3> a dc:Agent .
+
+<http://example.com/a2_toegekendDoor_4> a dc:Agent .
+
+<http://example.com/a2_toegekendDoor_5> a dc:Agent .
+
+<http://example.com/a2_tot_1> a <http://www.w3.org/2006/time#Instant> .
+
+<http://example.com/a2_tot_2> a <http://www.w3.org/2006/time#Instant> .
+
+<http://example.com/a2_tot_3> a <http://www.w3.org/2006/time#Instant> .
+
+<http://example.com/a2_tot_4> a <http://www.w3.org/2006/time#Instant> .
+
+<http://example.com/a2_tot_5> a <http://www.w3.org/2006/time#Instant> .
+
+<http://example.com/a2_uitgever_1> a dc:Agent .
+
+<http://example.com/a2_uitgever_2> a dc:Agent .
+
+<http://example.com/a2_uitgever_3> a dc:Agent .
+
+<http://example.com/a2_uitgever_4> a dc:Agent .
+
+<http://example.com/a2_uitgever_5> a dc:Agent .
+
+<http://example.com/a2_uitgever_5b> a dc:Agent .
+
+<http://example.com/a2_valuta_1> a <http://qudt.org/schema/qudt/CurrencyUnit> .
+
+<http://example.com/a2_valuta_2> a <http://qudt.org/schema/qudt/CurrencyUnit> .
+
+<http://example.com/a2_valuta_3> a <http://qudt.org/schema/qudt/CurrencyUnit> .
+
+<http://example.com/a2_valuta_4> a <http://qudt.org/schema/qudt/CurrencyUnit> .
+
+<http://example.com/a2_valuta_5> a <http://qudt.org/schema/qudt/CurrencyUnit> .
+
+<http://example.com/a2_van_1> a <http://www.w3.org/2006/time#Instant> .
+
+<http://example.com/a2_van_2> a <http://www.w3.org/2006/time#Instant> .
+
+<http://example.com/a2_van_3> a <http://www.w3.org/2006/time#Instant> .
+
+<http://example.com/a2_van_4> a <http://www.w3.org/2006/time#Instant> .
+
+<http://example.com/a2_van_5> a <http://www.w3.org/2006/time#Instant> .
+
+<http://example.com/a2_vereisteTijd_1> a <http://www.w3.org/2006/time#Duration> .
+
+<http://example.com/a2_vereisteTijd_2> a <http://www.w3.org/2006/time#Duration> .
+
+<http://example.com/a2_vereisteTijd_3> a <http://www.w3.org/2006/time#Duration> .
+
+<http://example.com/a2_vereisteTijd_4> a <http://www.w3.org/2006/time#Duration> .
+
+<http://example.com/a2_vereisteTijd_5> a <http://www.w3.org/2006/time#Duration> .
+
+<http://example.com/a2_werklast_1> a <http://www.w3.org/2006/time#Duration> .
+
+<http://example.com/a2_werklast_2> a <http://www.w3.org/2006/time#Duration> .
+
+<http://example.com/a2_werklast_3> a <http://www.w3.org/2006/time#Duration> .
+
+<http://example.com/a2_werklast_4> a <http://www.w3.org/2006/time#Duration> .
+
+<http://example.com/a2_werklast_5> a <http://www.w3.org/2006/time#Duration> .

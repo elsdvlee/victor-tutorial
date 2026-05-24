@@ -1,0 +1,571 @@
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix schemas: <https://schema.org/> .
+@prefix shacl: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/toolchain4#> rdfs:member <https://data.vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/toolchain4#AdresseerbaarObjectShape>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/toolchain4#SplitsingShape>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/toolchain4#VeranderingsgebeurtenisShape>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/toolchain4#FormeleOrganisatieShape>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/toolchain4#OrganisatieShape>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/toolchain4#AgentShape>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/toolchain4#VestigingShape>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/toolchain4#LidmaatschapShape>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/toolchain4#FormeelKaderShape>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/toolchain4#PlaatsShape>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/toolchain4#PlaatscodeShape>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/toolchain4#RechtspersoonlijkheidtypeShape>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/toolchain4#OrganisatiestatusShape>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/toolchain4#VervangingShape>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/toolchain4#Organisatie-eenheidShape>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/toolchain4#HoedanigheidShape>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/toolchain4#PositieShape>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/toolchain4#OprichtingShape>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/toolchain4#StopzettingShape>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/toolchain4#StopzettingtypeShape>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/toolchain4#PubliekeOrganisatieShape>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/toolchain4#SamenwerkingsverbandShape>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/toolchain4#RechtstoestandtypeShape>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/toolchain4#OrganisatieclassificatieShape>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/toolchain4#GeregistreerdeOrganisatieShape>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/toolchain4#RechtsvormtypeShape>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/toolchain4#OrganisatietypeShape>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/toolchain4#OrganisatieactiviteitShape>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/toolchain4#RolShape>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/toolchain4#FusieShape>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/toolchain4#PersoonShape>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/toolchain4#StringShape>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/toolchain4#ContactinfoShape> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/toolchain4#AdresseerbaarObjectShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <https://data.vlaanderen.be/ns/adres#AdresseerbaarObject> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/toolchain4#AgentShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/toolchain4#Agent.HeeftGeregistreerdeOrganisatie>;
+    shacl:class <http://www.w3.org/ns/regorg#RegisteredOrganization>;
+    shacl:description "Verwijst naar de geregistreerde organisatie waarmee de agent geassocieerd is."@nl;
+    shacl:name "heeft geregistreerde organisatie"@nl;
+    shacl:path <http://www.w3.org/ns/regorg#hasRegisteredOrganization>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/toolchain4#Agent.RapporteertAan>;
+    shacl:class dc:Agent;
+    shacl:description "Verwijst naar de Agent waaraan de Agent verantwoording aflegt."@nl;
+    shacl:name "rapporteert aan"@nl;
+    shacl:path org:reportsTo
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/toolchain4#Agent.Houdt>;
+    shacl:class org:Post;
+    shacl:description "Geeft aan welke positie een agent heeft (typisch bij de organisatie waar de positie is gedefinieerd)."@nl;
+    shacl:name "houdt"@nl;
+    shacl:path org:holds
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/toolchain4#Agent.IsHoofdVan>;
+    shacl:class org:Organization;
+    shacl:description "Verwijst naar de organisatie waaraan een agent aan het hoofd staat of leiding geeft."@nl;
+    shacl:name "is hoofd van"@nl;
+    shacl:path org:headOf
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/toolchain4#Agent.IsLidVan>;
+    shacl:class org:Organization;
+    shacl:description "Niet nader bepaald lidmaatschap van een agent van een organisatie."@nl;
+    shacl:name "is lid van"@nl;
+    shacl:path org:memberOf
+  ];
+  shacl:targetClass dc:Agent .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/toolchain4#ContactinfoShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass schema:ContactPoint .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/toolchain4#FormeelKaderShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/toolchain4#FormeelKader.Naam>;
+    shacl:class rdf:langString;
+    shacl:description "Naam vh formeel kader."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "naam"@nl;
+    shacl:path dc:title
+  ];
+  shacl:targetClass <http://purl.org/vocab/cpsv#FormalFramework> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/toolchain4#FormeleOrganisatieShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass org:FormalOrganization .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/toolchain4#FusieShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <https://data.vlaanderen.be/ns/organisatie#Fusie> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/toolchain4#GeregistreerdeOrganisatieShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/toolchain4#GeregistreerdeOrganisatie.Rechtspersoonlijkheid>;
+    shacl:class skos:Concept;
+    shacl:description "Geeft aan of de rechtspersoonlijkheid van de geregistreerde organisatie deze is van een natuurlijk persoon of van een rechtspersoon."@nl;
+    shacl:maxCount "1";
+    shacl:name "rechtspersoonlijkheid"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/organisatie#rechtspersoonlijkheid>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/toolchain4#GeregistreerdeOrganisatie.Rechtstoestand>;
+    shacl:class skos:Concept;
+    shacl:description "Status van de geregistreerde organisatie."@nl;
+    shacl:maxCount "1";
+    shacl:name "rechtstoestand"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/organisatie#rechtstoestand>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/toolchain4#GeregistreerdeOrganisatie.Rechtsvorm>;
+    shacl:class skos:Concept;
+    shacl:description "Juridisch statuut van de geregistreerde organisatie."@nl;
+    shacl:maxCount "1";
+    shacl:name "rechtsvorm"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/organisatie#rechtsvorm>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/toolchain4#GeregistreerdeOrganisatie.Registratie>;
+    shacl:class <http://www.w3.org/ns/adms#Identifier>;
+    shacl:description "Identificator dat de organisatie verkreeg bij registratie."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "registratie"@nl;
+    shacl:path <http://www.w3.org/ns/regorg#registration>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/toolchain4#GeregistreerdeOrganisatie.WettelijkeNaam>;
+    shacl:class rdf:langString;
+    shacl:description "Wettelijk geregistreerde naam vd organisatie."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "wettelijke naam"@nl;
+    shacl:path <http://www.w3.org/ns/regorg#legalName>
+  ];
+  shacl:targetClass <http://www.w3.org/ns/regorg#RegisteredOrganization> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/toolchain4#HoedanigheidShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/toolchain4#Hoedanigheid.Contactinfo>;
+    shacl:class schema:ContactPoint;
+    shacl:description "Informatie zoals email, telefoon… die toelaat de hoedanigheid te contacteren."@nl;
+    shacl:name "contactinfo"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/organisatie#contactinfo>
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/organisatie#Hoedanigheid> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/toolchain4#LidmaatschapShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/toolchain4#Lidmaatschap.LidVanTot>;
+    shacl:class <http://data.europa.eu/m8g/PeriodOfTime>;
+    shacl:description "Periode waarin de agent lid was vd organisatie."@nl;
+    shacl:maxCount "1";
+    shacl:name "lid van tot"@nl;
+    shacl:path org:memberDuring
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/toolchain4#Lidmaatschap.Rol>;
+    shacl:class org:Role;
+    shacl:description "Rol die de agent vervult als lid van de organisatie."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "rol"@nl;
+    shacl:path org:role
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/toolchain4#Lidmaatschap.Lid>;
+    shacl:class dc:Agent;
+    shacl:description "Lidmaatschap van een agent (van een organisatie)."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "lid"@nl;
+    shacl:path org:member
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/toolchain4#Lidmaatschap.IsLidmaatschapBij>;
+    shacl:class org:Organization;
+    shacl:description "Organisatie waarop het lidmaatschap (van een agent) betrekking heeft."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "is lidmaatschap bij"@nl;
+    shacl:path org:organization
+  ];
+  shacl:targetClass org:Membership .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/toolchain4#OprichtingShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <http://data.europa.eu/m8g/FoundationEvent> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/toolchain4#Organisatie-eenheidShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/toolchain4#Organisatie-eenheid.IsEenheidVan>;
+    shacl:class org:Organization;
+    shacl:description "Organisatie waarvan de organisatie-eenheid deel uitmaakt."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "is eenheid van"@nl;
+    shacl:path org:unitOf
+  ];
+  shacl:targetClass org:OrganizationalUnit .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/toolchain4#OrganisatieShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/toolchain4#Organisatie.Homepage>;
+    shacl:datatype xsd:string;
+    shacl:description "Adres vd homepage van de website vd organisatie."@nl;
+    shacl:maxCount "1";
+    shacl:name "homepage"@nl;
+    shacl:path foaf:homepage
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/toolchain4#Organisatie.Contactinfo>;
+    shacl:class schema:ContactPoint;
+    shacl:description "Informatie zoals email, telefoon... die toelaat de Organisatie te contacteren."@nl;
+    shacl:name "contactinfo"@nl;
+    shacl:path schema:contactPoint
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/toolchain4#Organisatie.Doel>;
+    shacl:class rdf:langString;
+    shacl:description "Bestaansreden vd organisatie."@nl;
+    shacl:name "doel"@nl;
+    shacl:path org:purpose
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/toolchain4#Organisatie.Logo>;
+    shacl:class schemas:MediaObject;
+    shacl:description "Verwijzing naar het logo vd organisatie."@nl;
+    shacl:maxCount "1";
+    shacl:name "logo"@nl;
+    shacl:path schema:logo
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/toolchain4#Organisatie.Status>;
+    shacl:class skos:Concept;
+    shacl:description "Toestand vd organisatie."@nl;
+    shacl:name "status"@nl;
+    shacl:path <http://www.w3.org/ns/regorg#orgStatus>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/toolchain4#Organisatie.Type>;
+    shacl:class skos:Concept;
+    shacl:description "Soort organisatie."@nl;
+    shacl:name "type"@nl;
+    shacl:path <http://www.w3.org/ns/regorg#orgType>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/toolchain4#Organisatie.Voorkeursnaam>;
+    shacl:class rdf:langString;
+    shacl:description "Naam waarmee de organisatie bij voorkeur wordt aangeduid."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "voorkeursnaam"@nl;
+    shacl:path skos:prefLabel
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/toolchain4#Organisatie.Activiteit>;
+    shacl:class skos:Concept;
+    shacl:description "Type activiteit die door de organisatie wordt uitgeoefend."@nl;
+    shacl:maxCount "1";
+    shacl:name "activiteit"@nl;
+    shacl:path <http://www.w3.org/ns/regorg#orgActivity>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/toolchain4#Organisatie.AlternatieveNaam>;
+    shacl:class rdf:langString;
+    shacl:description "Andere naam waaronder de organisatie bekend is."@nl;
+    shacl:name "alternatieve naam"@nl;
+    shacl:path skos:altLabel
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/toolchain4#Organisatie.Beschrijving>;
+    shacl:class rdf:langString;
+    shacl:description "Beschrijving van de organisatie."@nl;
+    shacl:maxCount "1";
+    shacl:name "beschrijving"@nl;
+    shacl:path dc:description
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/toolchain4#Organisatie.Classificatie>;
+    shacl:class skos:Concept;
+    shacl:description "Rangschikking van de organisatie in een classificatiesysteem."@nl;
+    shacl:name "classificatie"@nl;
+    shacl:path org:classification
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/toolchain4#Organisatie.HeeftGeregistreerdeVestiging>;
+    shacl:class org:Site;
+    shacl:description "Verwijst naar de wettelijk geregistreerde vestiging van de organisatie. Is voor een formele organisatie doorgaans verplicht."@nl;
+    shacl:name "heeft geregistreerde vestiging"@nl;
+    shacl:path org:hasRegisteredSite
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/toolchain4#Organisatie.HeeftPrimaireVestiging>;
+    shacl:class org:Site;
+    shacl:description "Verwijst naar de belangrijkste vestiging van de organisatie, niet noodzakelijk het formele hoofdkwartier maar wel de vestiging waarop de organisatie standaard kan worden gecontacteerd."@nl;
+    shacl:name "heeft primaire vestiging"@nl;
+    shacl:path org:hasPrimarySite
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/toolchain4#Organisatie.HeeftSuborganisatie>;
+    shacl:class org:Organization;
+    shacl:description "Organisatie die dochter of onderdeel is van de organisatie."@nl;
+    shacl:name "heeft suborganisatie"@nl;
+    shacl:path org:hasSubOrganization
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/toolchain4#Organisatie.Heeft>;
+    shacl:class org:Post;
+    shacl:description "Verwijst naar een positie in de organisatie."@nl;
+    shacl:name "heeft"@nl;
+    shacl:path org:hasPost
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/toolchain4#Organisatie.IsGeassocieerdMet>;
+    shacl:class org:Organization;
+    shacl:description "Niet nader bepaalde relatie met een andere organisatie."@nl;
+    shacl:name "is geassocieerd met"@nl;
+    shacl:path org:linkedTo
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/toolchain4#Organisatie.HeeftVestiging>;
+    shacl:class org:Site;
+    shacl:description "Verwijst naar een plek waar de organisatie op een of andere manier, desnoods indirect, aanwezig is."@nl;
+    shacl:name "heeft vestiging"@nl;
+    shacl:path org:hasSite
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/toolchain4#Organisatie.IsSuborganisatieVan>;
+    shacl:class org:Organization;
+    shacl:description "Organisatie die deze organisatie omvat."@nl;
+    shacl:name "is suborganisatie van"@nl;
+    shacl:path org:subOrganizationOf
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/toolchain4#Organisatie.IsHetResultaatVan>;
+    shacl:class org:ChangeEvent;
+    shacl:description "Verwijst naar het veranderingsmoment dat tot de huidige organisatie heeft geleid."@nl;
+    shacl:name "is het resultaat van"@nl;
+    shacl:path org:resultedFrom
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/toolchain4#Organisatie.IsVeranderdDoor>;
+    shacl:class org:ChangeEvent;
+    shacl:description "Verwijst naar het veranderingsmoment dat deze organisatie heeft veranderd."@nl;
+    shacl:name "is veranderd door"@nl;
+    shacl:path org:changedBy
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/toolchain4#Organisatie.HeeftEenheid>;
+    shacl:class org:OrganizationalUnit;
+    shacl:description "Verwijst naar een organisatie-eenheid die deel uitmaakt van de organisatie, bv een afdeling."@nl;
+    shacl:name "heeft eenheid"@nl;
+    shacl:path org:hasUnit
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/toolchain4#Organisatie.HeeftAlsLid>;
+    shacl:class dc:Agent;
+    shacl:description "Agent die lid is (van een organisatie)."@nl;
+    shacl:name "heeft als lid"@nl;
+    shacl:path org:hasMember
+  ];
+  shacl:targetClass org:Organization .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/toolchain4#OrganisatieactiviteitShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/toolchain4#OrganisatieclassificatieShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/toolchain4#OrganisatiestatusShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/toolchain4#OrganisatietypeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/toolchain4#PersoonShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/toolchain4#Persoon.HeeftStandplaats>;
+    shacl:class org:Site;
+    shacl:description "Verwijzing naar een vestiging waar een persoon gestationeerd is."@nl;
+    shacl:name "heeft standplaats"@nl;
+    shacl:path org:basedAt
+  ];
+  shacl:targetClass <http://www.w3.org/ns/person#Person> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/toolchain4#PlaatsShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/toolchain4#Plaats.Plaatsnaam>;
+    shacl:datatype rdf:langString;
+    shacl:description "Naam van de plaats of van het gebied."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "plaatsnaam"@nl;
+    shacl:path rdfs:label
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/toolchain4#Plaats.Geometrie>;
+    shacl:class <http://www.w3.org/ns/locn#Geometry>;
+    shacl:description "Geometrie van de plaats of het gebied."@nl;
+    shacl:maxCount "1";
+    shacl:name "geometrie"@nl;
+    shacl:path <http://www.w3.org/ns/locn#geometry>
+  ];
+  shacl:targetClass dc:Location .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/toolchain4#PlaatscodeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/toolchain4#PositieShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/toolchain4#Positie.Rol>;
+    shacl:class org:Role;
+    shacl:description "Geeft de aard weer vd functie."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "rol"@nl;
+    shacl:path org:role
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/toolchain4#Positie.RapporteertAan>;
+    shacl:class org:Post;
+    shacl:description "Verwijst naar de positie waaraan een positie verantwoording aflegt."@nl;
+    shacl:name "rapporteert aan"@nl;
+    shacl:path org:reportsTo
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/toolchain4#Positie.IsPositieIn>;
+    shacl:class org:Organization;
+    shacl:description "Organisatie waar de positie bestaat."@nl;
+    shacl:name "is positie in"@nl;
+    shacl:path org:postIn
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/toolchain4#Positie.WordtIngevuldDoor>;
+    shacl:class dc:Agent;
+    shacl:description "Geeft aan welke agent een positie heeft (typisch bij de organisatie waar de positie is gedefinieerd)."@nl;
+    shacl:name "wordt ingevuld door"@nl;
+    shacl:path org:heldBy
+  ];
+  shacl:targetClass org:Post .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/toolchain4#PubliekeOrganisatieShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/toolchain4#PubliekeOrganisatie.Werkingsgebied>;
+    shacl:class dc:Location;
+    shacl:description "Administratief gebied dat de Publieke Organisatie dekt."@nl;
+    shacl:name "werkingsgebied"@nl;
+    shacl:path dc:spatial
+  ];
+  shacl:targetClass <http://data.europa.eu/m8g/PublicOrganisation> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/toolchain4#RechtspersoonlijkheidtypeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/toolchain4#RechtstoestandtypeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/toolchain4#RechtsvormtypeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/toolchain4#RolShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass org:Role .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/toolchain4#SamenwerkingsverbandShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass org:OrganizationalCollaboration .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/toolchain4#SplitsingShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <https://data.vlaanderen.be/ns/organisatie#Splitsing> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/toolchain4#StopzettingShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/toolchain4#Stopzetting.RedenStopzetting>;
+    shacl:class skos:Concept;
+    shacl:description "Reden waarom de organisatie is stopgezet."@nl;
+    shacl:maxCount "1";
+    shacl:name "reden stopzetting"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/organisatie#redenStopzetting>
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/organisatie#Stopzetting> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/toolchain4#StopzettingtypeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/toolchain4#StringShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass xsd:string .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/toolchain4#VeranderingsgebeurtenisShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/toolchain4#Veranderingsgebeurtenis.Datum>;
+    shacl:datatype rdfs:Literal;
+    shacl:description "Datum waarop de gebeurtenis plaatsvond."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "datum"@nl;
+    shacl:path dc:date
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/toolchain4#Veranderingsgebeurtenis.HeeftResulterendeOrganisatie>;
+    shacl:class org:Organization;
+    shacl:description "Organisatie die uit de verandering voortkwam."@nl;
+    shacl:name "heeft resulterende organisatie"@nl;
+    shacl:path org:resultingOrganization
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/toolchain4#Veranderingsgebeurtenis.HeeftOorspronkelijkeOrganisatie>;
+    shacl:class org:Organization;
+    shacl:description "Organisatie voor deze de verandering onderging."@nl;
+    shacl:name "heeft oorspronkelijke organisatie"@nl;
+    shacl:path org:originalOrganization
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/toolchain4#Veranderingsgebeurtenis.VindtPlaatsBinnen>;
+    shacl:class <http://purl.org/vocab/cpsv#FormalFramework>;
+    shacl:description "Verwijst naar het formeel kader dat tot het veranderingsmoment heeft geleid."@nl;
+    shacl:name "vindt plaats binnen"@nl;
+    shacl:path <http://data.europa.eu/m8g/hasFormalFramework>
+  ];
+  shacl:targetClass org:ChangeEvent .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/toolchain4#VervangingShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <https://data.vlaanderen.be/ns/organisatie#Vervanging> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/toolchain4#VestigingShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/toolchain4#Vestiging.Vestigingsadres>;
+    shacl:class schema:ContactPoint;
+    shacl:description "Adres vd vestiging."@nl;
+    shacl:maxCount "1";
+    shacl:name "vestigingsadres"@nl;
+    shacl:path org:siteAddress
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/toolchain4#Vestiging.HeeftGeregistreerdeVestiging>;
+    shacl:class org:Organization;
+    shacl:description "Verwijst naar de wettelijk geregistreerde vestiging van de organisatie. Is voor een formele organisatie doorgaans verplicht."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "heeft geregistreerde vestiging"@nl;
+    shacl:path org:hasRegisteredSite
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/toolchain4#Vestiging.HeeftPrimaireVestiging>;
+    shacl:class org:Organization;
+    shacl:description "Verwijst naar de belangrijkste vestiging van de organisatie, niet noodzakelijk het formele hoofdkwartier maar wel de vestiging waarop de organisatie standaard kan worden gecontacteerd."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "heeft primaire vestiging"@nl;
+    shacl:path org:hasPrimarySite
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/toolchain4#Vestiging.HeeftVestiging>;
+    shacl:class org:Organization;
+    shacl:description "Verwijst naar een plek waar de organisatie op een of andere manier, desnoods indirect, aanwezig is."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "heeft vestiging"@nl;
+    shacl:path org:hasSite
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/toolchain4#Vestiging.BestaatUit>;
+    shacl:class <https://data.vlaanderen.be/ns/adres#AdresseerbaarObject>;
+    shacl:description "Adresseerbaar object dat met de vestiging overeenstemt."@nl;
+    shacl:name "bestaat uit"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/organisatie#bestaatUit>
+  ];
+  shacl:targetClass org:Site .

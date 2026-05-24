@@ -1,0 +1,6 @@
+# Join Positie → rapporteertAan → Positie2
+SELECT DISTINCT ?Positie_url ?Positie2_url WHERE {
+  ?Positie_url a <http://www.w3.org/ns/org#Post> .
+  ?Positie2_url a <http://www.w3.org/ns/org#Post> .
+  ?Positie_url <http://www.w3.org/ns/org#reportsTo> ?Positie2_url .
+}

@@ -1,0 +1,5 @@
+# PubliekeOrganisatie 
+SELECT DISTINCT ?PubliekeOrganisatie_url ?werkingsgebied_url WHERE {
+  ?PubliekeOrganisatie_url a <http://data.europa.eu/m8g/PublicOrganisation> .
+  OPTIONAL { ?PubliekeOrganisatie_url <http://purl.org/dc/terms/spatial> ?werkingsgebied_url . }
+}

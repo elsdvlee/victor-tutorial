@@ -1,0 +1,8 @@
+# Positie 
+SELECT DISTINCT ?Positie_url ?rol_url ?rapporteertAan_url ?isPositieIn_url ?wordtIngevuldDoor_url WHERE {
+  ?Positie_url a <http://www.w3.org/ns/org#Post> .
+  ?Positie_url <http://www.w3.org/ns/org#role> ?rol_url . 
+  OPTIONAL { ?Positie_url <http://www.w3.org/ns/org#reportsTo> ?rapporteertAan_url . }
+  OPTIONAL { ?Positie_url <http://www.w3.org/ns/org#postIn> ?isPositieIn_url . }
+  OPTIONAL { ?Positie_url <http://www.w3.org/ns/org#heldBy> ?wordtIngevuldDoor_url . }
+}

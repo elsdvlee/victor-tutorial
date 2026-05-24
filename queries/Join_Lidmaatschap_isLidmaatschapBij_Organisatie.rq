@@ -1,0 +1,6 @@
+# Join Lidmaatschap → isLidmaatschapBij → Organisatie
+SELECT DISTINCT ?Lidmaatschap_url ?Organisatie_url WHERE {
+  ?Lidmaatschap_url a <http://www.w3.org/ns/org#Membership> .
+  ?Organisatie_url a <http://www.w3.org/ns/org#Organization> .
+  ?Lidmaatschap_url <http://www.w3.org/ns/org#organization> ?Organisatie_url .
+}

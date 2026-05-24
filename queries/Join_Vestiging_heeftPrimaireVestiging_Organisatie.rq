@@ -1,0 +1,6 @@
+# Join Vestiging → heeftPrimaireVestiging → Organisatie
+SELECT DISTINCT ?Vestiging_url ?Organisatie_url WHERE {
+  ?Vestiging_url a <http://www.w3.org/ns/org#Site> .
+  ?Organisatie_url a <http://www.w3.org/ns/org#Organization> .
+  ?Vestiging_url <http://www.w3.org/ns/org#hasPrimarySite> ?Organisatie_url .
+}

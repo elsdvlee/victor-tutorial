@@ -1,0 +1,8 @@
+# Lidmaatschap 
+SELECT DISTINCT ?Lidmaatschap_url ?lidVanTot_url ?rol_url ?lid_url ?isLidmaatschapBij_url WHERE {
+  ?Lidmaatschap_url a <http://www.w3.org/ns/org#Membership> .
+  OPTIONAL { ?Lidmaatschap_url <http://www.w3.org/ns/org#memberDuring> ?lidVanTot_url . }
+  ?Lidmaatschap_url <http://www.w3.org/ns/org#role> ?rol_url . 
+  ?Lidmaatschap_url <http://www.w3.org/ns/org#member> ?lid_url . 
+  ?Lidmaatschap_url <http://www.w3.org/ns/org#organization> ?isLidmaatschapBij_url . 
+}

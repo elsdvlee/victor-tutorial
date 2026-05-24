@@ -1,0 +1,6 @@
+# Join Organisatie → heeftEenheid → Organisatieeenheid
+SELECT DISTINCT ?Organisatie_url ?Organisatieeenheid_url WHERE {
+  ?Organisatie_url a <http://www.w3.org/ns/org#Organization> .
+  ?Organisatieeenheid_url a <http://www.w3.org/ns/org#OrganizationalUnit> .
+  ?Organisatie_url <http://www.w3.org/ns/org#hasUnit> ?Organisatieeenheid_url .
+}

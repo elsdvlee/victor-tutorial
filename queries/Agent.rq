@@ -1,0 +1,9 @@
+# Agent 
+SELECT DISTINCT ?Agent_url ?heeftGeregistreerdeOrganisatie_url ?rapporteertAan_url ?houdt_url ?isHoofdVan_url ?isLidVan_url WHERE {
+  ?Agent_url a <http://purl.org/dc/terms/Agent> .
+  OPTIONAL { ?Agent_url <http://www.w3.org/ns/regorg#hasRegisteredOrganization> ?heeftGeregistreerdeOrganisatie_url . }
+  OPTIONAL { ?Agent_url <http://www.w3.org/ns/org#reportsTo> ?rapporteertAan_url . }
+  OPTIONAL { ?Agent_url <http://www.w3.org/ns/org#holds> ?houdt_url . }
+  OPTIONAL { ?Agent_url <http://www.w3.org/ns/org#headOf> ?isHoofdVan_url . }
+  OPTIONAL { ?Agent_url <http://www.w3.org/ns/org#memberOf> ?isLidVan_url . }
+}

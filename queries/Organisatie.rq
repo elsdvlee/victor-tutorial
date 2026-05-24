@@ -1,0 +1,26 @@
+# Organisatie 
+SELECT DISTINCT ?Organisatie_url ?homepage ?contactinfo_url ?doel ?logo_url ?status_url ?type_url ?voorkeursnaam ?activiteit_url ?alternatieveNaam ?beschrijving ?classificatie_url ?heeftGeregistreerdeVestiging_url ?heeftPrimaireVestiging_url ?heeftSuborganisatie_url ?heeft_url ?isGeassocieerdMet_url ?heeftVestiging_url ?isSuborganisatieVan_url ?isHetResultaatVan_url ?isVeranderdDoor_url ?heeftEenheid_url ?heeftAlsLid_url WHERE {
+  ?Organisatie_url a <http://www.w3.org/ns/org#Organization> .
+  OPTIONAL { ?Organisatie_url <http://xmlns.com/foaf/0.1/homepage> ?homepage . }
+  OPTIONAL { ?Organisatie_url <http://schema.org/contactPoint> ?contactinfo_url . }
+  OPTIONAL { ?Organisatie_url <http://www.w3.org/ns/org#purpose> ?doel . }
+  OPTIONAL { ?Organisatie_url <http://schema.org/logo> ?logo_url . }
+  OPTIONAL { ?Organisatie_url <http://www.w3.org/ns/regorg#orgStatus> ?status_url . }
+  OPTIONAL { ?Organisatie_url <http://www.w3.org/ns/regorg#orgType> ?type_url . }
+  ?Organisatie_url <http://www.w3.org/2004/02/skos/core#prefLabel> ?voorkeursnaam . 
+  OPTIONAL { ?Organisatie_url <http://www.w3.org/ns/regorg#orgActivity> ?activiteit_url . }
+  OPTIONAL { ?Organisatie_url <http://www.w3.org/2004/02/skos/core#altLabel> ?alternatieveNaam . }
+  OPTIONAL { ?Organisatie_url <http://purl.org/dc/terms/description> ?beschrijving . }
+  OPTIONAL { ?Organisatie_url <http://www.w3.org/ns/org#classification> ?classificatie_url . }
+  OPTIONAL { ?Organisatie_url <http://www.w3.org/ns/org#hasRegisteredSite> ?heeftGeregistreerdeVestiging_url . }
+  OPTIONAL { ?Organisatie_url <http://www.w3.org/ns/org#hasPrimarySite> ?heeftPrimaireVestiging_url . }
+  OPTIONAL { ?Organisatie_url <http://www.w3.org/ns/org#hasSubOrganization> ?heeftSuborganisatie_url . }
+  OPTIONAL { ?Organisatie_url <http://www.w3.org/ns/org#hasPost> ?heeft_url . }
+  OPTIONAL { ?Organisatie_url <http://www.w3.org/ns/org#linkedTo> ?isGeassocieerdMet_url . }
+  OPTIONAL { ?Organisatie_url <http://www.w3.org/ns/org#hasSite> ?heeftVestiging_url . }
+  OPTIONAL { ?Organisatie_url <http://www.w3.org/ns/org#subOrganizationOf> ?isSuborganisatieVan_url . }
+  OPTIONAL { ?Organisatie_url <http://www.w3.org/ns/org#resultedFrom> ?isHetResultaatVan_url . }
+  OPTIONAL { ?Organisatie_url <http://www.w3.org/ns/org#changedBy> ?isVeranderdDoor_url . }
+  OPTIONAL { ?Organisatie_url <http://www.w3.org/ns/org#hasUnit> ?heeftEenheid_url . }
+  OPTIONAL { ?Organisatie_url <http://www.w3.org/ns/org#hasMember> ?heeftAlsLid_url . }
+}

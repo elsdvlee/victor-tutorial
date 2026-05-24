@@ -1,0 +1,9 @@
+# Vestiging 
+SELECT DISTINCT ?Vestiging_url ?vestigingsadres_url ?heeftGeregistreerdeVestiging_url ?heeftPrimaireVestiging_url ?heeftVestiging_url ?bestaatUit_url WHERE {
+  ?Vestiging_url a <http://www.w3.org/ns/org#Site> .
+  OPTIONAL { ?Vestiging_url <http://www.w3.org/ns/org#siteAddress> ?vestigingsadres_url . }
+  ?Vestiging_url <http://www.w3.org/ns/org#hasRegisteredSite> ?heeftGeregistreerdeVestiging_url . 
+  ?Vestiging_url <http://www.w3.org/ns/org#hasPrimarySite> ?heeftPrimaireVestiging_url . 
+  ?Vestiging_url <http://www.w3.org/ns/org#hasSite> ?heeftVestiging_url . 
+  OPTIONAL { ?Vestiging_url <https://data.vlaanderen.be/ns/organisatie#bestaatUit> ?bestaatUit_url . }
+}

@@ -1,0 +1,5 @@
+# FormeelKader 
+SELECT DISTINCT ?FormeelKader_url ?naam WHERE {
+  ?FormeelKader_url a <http://purl.org/vocab/cpsv#FormalFramework> .
+  ?FormeelKader_url <http://purl.org/dc/terms/title> ?naam . 
+}

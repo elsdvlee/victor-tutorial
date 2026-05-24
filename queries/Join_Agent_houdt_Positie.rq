@@ -1,0 +1,6 @@
+# Join Agent → houdt → Positie
+SELECT DISTINCT ?Agent_url ?Positie_url WHERE {
+  ?Agent_url a <http://purl.org/dc/terms/Agent> .
+  ?Positie_url a <http://www.w3.org/ns/org#Post> .
+  ?Agent_url <http://www.w3.org/ns/org#holds> ?Positie_url .
+}

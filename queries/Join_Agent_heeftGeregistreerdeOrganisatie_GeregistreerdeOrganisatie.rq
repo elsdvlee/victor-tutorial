@@ -1,0 +1,6 @@
+# Join Agent → heeftGeregistreerdeOrganisatie → GeregistreerdeOrganisatie
+SELECT DISTINCT ?Agent_url ?GeregistreerdeOrganisatie_url WHERE {
+  ?Agent_url a <http://purl.org/dc/terms/Agent> .
+  ?GeregistreerdeOrganisatie_url a <http://www.w3.org/ns/regorg#RegisteredOrganization> .
+  ?Agent_url <http://www.w3.org/ns/regorg#hasRegisteredOrganization> ?GeregistreerdeOrganisatie_url .
+}

@@ -1,0 +1,8 @@
+# Veranderingsgebeurtenis 
+SELECT DISTINCT ?Veranderingsgebeurtenis_url ?datum ?heeftResulterendeOrganisatie_url ?heeftOorspronkelijkeOrganisatie_url ?vindtPlaatsBinnen_url WHERE {
+  ?Veranderingsgebeurtenis_url a <http://www.w3.org/ns/org#ChangeEvent> .
+  ?Veranderingsgebeurtenis_url <http://purl.org/dc/terms/date> ?datum . 
+  OPTIONAL { ?Veranderingsgebeurtenis_url <http://www.w3.org/ns/org#resultingOrganization> ?heeftResulterendeOrganisatie_url . }
+  OPTIONAL { ?Veranderingsgebeurtenis_url <http://www.w3.org/ns/org#originalOrganization> ?heeftOorspronkelijkeOrganisatie_url . }
+  OPTIONAL { ?Veranderingsgebeurtenis_url <http://data.europa.eu/m8g/hasFormalFramework> ?vindtPlaatsBinnen_url . }
+}

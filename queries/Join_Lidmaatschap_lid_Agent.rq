@@ -1,0 +1,6 @@
+# Join Lidmaatschap → lid → Agent
+SELECT DISTINCT ?Lidmaatschap_url ?Agent_url WHERE {
+  ?Lidmaatschap_url a <http://www.w3.org/ns/org#Membership> .
+  ?Agent_url a <http://purl.org/dc/terms/Agent> .
+  ?Lidmaatschap_url <http://www.w3.org/ns/org#member> ?Agent_url .
+}

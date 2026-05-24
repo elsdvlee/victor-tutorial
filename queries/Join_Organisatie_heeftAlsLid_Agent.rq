@@ -1,0 +1,6 @@
+# Join Organisatie → heeftAlsLid → Agent
+SELECT DISTINCT ?Organisatie_url ?Agent_url WHERE {
+  ?Organisatie_url a <http://www.w3.org/ns/org#Organization> .
+  ?Agent_url a <http://purl.org/dc/terms/Agent> .
+  ?Organisatie_url <http://www.w3.org/ns/org#hasMember> ?Agent_url .
+}

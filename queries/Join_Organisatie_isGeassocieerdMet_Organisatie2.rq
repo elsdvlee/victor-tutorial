@@ -1,0 +1,6 @@
+# Join Organisatie → isGeassocieerdMet → Organisatie2
+SELECT DISTINCT ?Organisatie_url ?Organisatie2_url WHERE {
+  ?Organisatie_url a <http://www.w3.org/ns/org#Organization> .
+  ?Organisatie2_url a <http://www.w3.org/ns/org#Organization> .
+  ?Organisatie_url <http://www.w3.org/ns/org#linkedTo> ?Organisatie2_url .
+}

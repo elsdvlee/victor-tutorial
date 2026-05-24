@@ -1,0 +1,6 @@
+# Join Veranderingsgebeurtenis → heeftOorspronkelijkeOrganisatie → Organisatie
+SELECT DISTINCT ?Veranderingsgebeurtenis_url ?Organisatie_url WHERE {
+  ?Veranderingsgebeurtenis_url a <http://www.w3.org/ns/org#ChangeEvent> .
+  ?Organisatie_url a <http://www.w3.org/ns/org#Organization> .
+  ?Veranderingsgebeurtenis_url <http://www.w3.org/ns/org#originalOrganization> ?Organisatie_url .
+}

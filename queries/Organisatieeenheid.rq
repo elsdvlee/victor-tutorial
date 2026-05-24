@@ -1,0 +1,5 @@
+# Organisatieeenheid 
+SELECT DISTINCT ?Organisatieeenheid_url ?isEenheidVan_url WHERE {
+  ?Organisatieeenheid_url a <http://www.w3.org/ns/org#OrganizationalUnit> .
+  ?Organisatieeenheid_url <http://www.w3.org/ns/org#unitOf> ?isEenheidVan_url . 
+}

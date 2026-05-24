@@ -1,0 +1,6 @@
+# Join Organisatie → isHetResultaatVan → Veranderingsgebeurtenis
+SELECT DISTINCT ?Organisatie_url ?Veranderingsgebeurtenis_url WHERE {
+  ?Organisatie_url a <http://www.w3.org/ns/org#Organization> .
+  ?Veranderingsgebeurtenis_url a <http://www.w3.org/ns/org#ChangeEvent> .
+  ?Organisatie_url <http://www.w3.org/ns/org#resultedFrom> ?Veranderingsgebeurtenis_url .
+}

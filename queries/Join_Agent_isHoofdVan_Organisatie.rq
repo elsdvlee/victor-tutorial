@@ -1,0 +1,6 @@
+# Join Agent → isHoofdVan → Organisatie
+SELECT DISTINCT ?Agent_url ?Organisatie_url WHERE {
+  ?Agent_url a <http://purl.org/dc/terms/Agent> .
+  ?Organisatie_url a <http://www.w3.org/ns/org#Organization> .
+  ?Agent_url <http://www.w3.org/ns/org#headOf> ?Organisatie_url .
+}

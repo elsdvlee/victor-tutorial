@@ -1,0 +1,6 @@
+# Join Agent → rapporteertAan → Agent2
+SELECT DISTINCT ?Agent_url ?Agent2_url WHERE {
+  ?Agent_url a <http://purl.org/dc/terms/Agent> .
+  ?Agent2_url a <http://purl.org/dc/terms/Agent> .
+  ?Agent_url <http://www.w3.org/ns/org#reportsTo> ?Agent2_url .
+}

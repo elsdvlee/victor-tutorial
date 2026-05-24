@@ -1,0 +1,6 @@
+# Join Persoon → heeftStandplaats → Vestiging
+SELECT DISTINCT ?Persoon_url ?Vestiging_url WHERE {
+  ?Persoon_url a <http://www.w3.org/ns/person#Person> .
+  ?Vestiging_url a <http://www.w3.org/ns/org#Site> .
+  ?Persoon_url <http://www.w3.org/ns/org#basedAt> ?Vestiging_url .
+}

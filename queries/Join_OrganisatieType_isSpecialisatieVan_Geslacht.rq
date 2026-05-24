@@ -1,0 +1,6 @@
+# Join OrganisatieType → isSpecialisatieVan → Geslacht
+SELECT DISTINCT ?OrganisatieType_url ?Geslacht_url WHERE {
+  ?OrganisatieType_url a <http://www.w3.org/2004/02/skos/core#Concept> .
+  ?Geslacht_url a <http://www.w3.org/2004/02/skos/core#Concept> .
+  ?OrganisatieType_url <http://www.w3.org/2004/02/skos/core#broader> ?Geslacht_url .
+}

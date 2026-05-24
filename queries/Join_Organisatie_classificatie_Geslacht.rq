@@ -1,0 +1,6 @@
+# Join Organisatie → classificatie → Geslacht
+SELECT DISTINCT ?Organisatie_url ?Geslacht_url WHERE {
+  ?Organisatie_url a <http://www.w3.org/ns/org#Organization> .
+  ?Geslacht_url a <http://www.w3.org/2004/02/skos/core#Concept> .
+  ?Organisatie_url <http://www.w3.org/ns/org#classification> ?Geslacht_url .
+}

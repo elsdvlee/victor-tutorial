@@ -1,0 +1,6 @@
+# Join Organisatie → heeft → Positie
+SELECT DISTINCT ?Organisatie_url ?Positie_url WHERE {
+  ?Organisatie_url a <http://www.w3.org/ns/org#Organization> .
+  ?Positie_url a <http://www.w3.org/ns/org#Post> .
+  ?Organisatie_url <http://www.w3.org/ns/org#hasPost> ?Positie_url .
+}

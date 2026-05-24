@@ -1,0 +1,6 @@
+# Join PubliekeOrganisatie → werkingsgebied → Plaats
+SELECT DISTINCT ?PubliekeOrganisatie_url ?Plaats_url WHERE {
+  ?PubliekeOrganisatie_url a <http://data.europa.eu/m8g/PublicOrganisation> .
+  ?Plaats_url a <http://purl.org/dc/terms/Location> .
+  ?PubliekeOrganisatie_url <http://purl.org/dc/terms/spatial> ?Plaats_url .
+}

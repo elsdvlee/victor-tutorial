@@ -1,0 +1,6 @@
+# Plaats 
+SELECT DISTINCT ?Plaats_url ?plaatsnaam ?geometrie_url WHERE {
+  ?Plaats_url a <http://purl.org/dc/terms/Location> .
+  ?Plaats_url <http://www.w3.org/2000/01/rdf-schema#label> ?plaatsnaam . 
+  OPTIONAL { ?Plaats_url <http://www.w3.org/ns/locn#geometry> ?geometrie_url . }
+}

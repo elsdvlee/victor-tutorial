@@ -1,0 +1,6 @@
+# Join Veranderingsgebeurtenis → vindtPlaatsBinnen → FormeelKader
+SELECT DISTINCT ?Veranderingsgebeurtenis_url ?FormeelKader_url WHERE {
+  ?Veranderingsgebeurtenis_url a <http://www.w3.org/ns/org#ChangeEvent> .
+  ?FormeelKader_url a <http://purl.org/vocab/cpsv#FormalFramework> .
+  ?Veranderingsgebeurtenis_url <http://data.europa.eu/m8g/hasFormalFramework> ?FormeelKader_url .
+}

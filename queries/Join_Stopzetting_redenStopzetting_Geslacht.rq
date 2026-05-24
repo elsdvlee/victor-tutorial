@@ -1,0 +1,6 @@
+# Join Stopzetting → redenStopzetting → Geslacht
+SELECT DISTINCT ?Stopzetting_url ?Geslacht_url WHERE {
+  ?Stopzetting_url a <https://data.vlaanderen.be/ns/organisatie#Stopzetting> .
+  ?Geslacht_url a <http://www.w3.org/2004/02/skos/core#Concept> .
+  ?Stopzetting_url <https://data.vlaanderen.be/ns/organisatie#redenStopzetting> ?Geslacht_url .
+}

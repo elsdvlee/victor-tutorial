@@ -1,0 +1,5 @@
+# Hoedanigheid 
+SELECT DISTINCT ?Hoedanigheid_url ?contactinfo_url WHERE {
+  ?Hoedanigheid_url a <https://data.vlaanderen.be/ns/organisatie#Hoedanigheid> .
+  OPTIONAL { ?Hoedanigheid_url <https://data.vlaanderen.be/ns/organisatie#contactinfo> ?contactinfo_url . }
+}

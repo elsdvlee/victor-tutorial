@@ -1,0 +1,6 @@
+# Join Persoon → geslacht → Geslacht
+SELECT DISTINCT ?Persoon_url ?Geslacht_url WHERE {
+  ?Persoon_url a <http://www.w3.org/ns/person#Person> .
+  ?Geslacht_url a <http://www.w3.org/2004/02/skos/core#Concept> .
+  ?Persoon_url <https://data.vlaanderen.be/ns/persoon#geslacht> ?Geslacht_url .
+}

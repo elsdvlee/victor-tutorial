@@ -1,0 +1,12 @@
+# Aantal personen per geslacht per organisatietype
+SELECT ?type ?geslacht (COUNT(DISTINCT ?Persoon_url) AS ?aantal) WHERE {
+  ?Persoon_url a <http://www.w3.org/ns/person#Person> .
+  ?Persoon_url <https://data.vlaanderen.be/ns/persoon#geslacht> ?geslachturl .
+  ?geslachturl <http://purl.org/dc/terms/title> ?geslacht .
+  ?Persoon_url <http://www.w3.org/ns/org#memberOf> ?Organisatie_url .
+  ?Organisatie_url a <http://www.w3.org/ns/org#Organization> .
+  ?Organisatie_url <http://www.w3.org/ns/regorg#orgType> ?typeurl .
+  ?typeurl <http://purl.org/dc/terms/title> ?type .
+}
+GROUP BY ?type ?geslacht
+ORDER BY ?type ?geslacht

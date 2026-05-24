@@ -1,0 +1,10 @@
+# Organisatie 
+SELECT DISTINCT ?Organisatie_url ?voorkeursnaam ?heeftSuborganisatie_url ?homepage_url ?beschrijving WHERE {
+   ?Organisatie_url a <http://www.w3.org/ns/org#Organization> .
+   ?Organisatie_url <http://xmlns.com/foaf/0.1/homepage> ?homepage_url . 
+   ?Organisatie_url <http://www.w3.org/2004/02/skos/core#prefLabel> ?voorkeursnaam . 
+   ?Organisatie_url <http://purl.org/dc/terms/description> ?beschrijving . 
+	 OPTIONAL { ?Organisatie_url <http://www.w3.org/ns/org#hasSubOrganization> ?heeftSuborganisatie_url .}
+   ?Organisatie_url <http://www.w3.org/ns/regorg#orgType> ?type_url .
+   ?type_url <http://purl.org/dc/terms/title> $organisatieType .
+}

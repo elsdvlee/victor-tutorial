@@ -1,0 +1,5 @@
+SELECT DISTINCT ?organisatieType WHERE {
+   ?Organisatie_url <http://www.w3.org/ns/regorg#orgType> ?type_url .
+   ?type_url <http://purl.org/dc/terms/title> ?organisatieType .
+}
+ORDER BY ?organisatieType

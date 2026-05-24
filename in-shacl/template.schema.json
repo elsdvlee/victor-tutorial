@@ -1,0 +1,572 @@
+{
+  "Veranderingsgebeurtenis": {
+    "sheetLabel": "Veranderingsgebeurtenis",
+    "sheetClass": "http://www.w3.org/ns/org#ChangeEvent",
+    "columns": {
+      "datum": {
+        "columnLabel": "datum",
+        "columnProperty": "http://purl.org/dc/terms/date",
+        "valueClass": null,
+        "valueDatatype": "http://www.w3.org/2000/01/rdf-schema#Literal",
+        "valueMinCount": "1",
+        "valueMaxCount": "1"
+      },
+      "heeftResulterendeOrganisatie": {
+        "columnLabel": "heeftResulterendeOrganisatie",
+        "columnProperty": "http://www.w3.org/ns/org#resultingOrganization",
+        "valueClass": "http://www.w3.org/ns/org#Organization",
+        "valueDatatype": null,
+        "valueMinCount": null,
+        "valueMaxCount": null,
+        "valueForeignKeySheet": "Organisatie"
+      },
+      "heeftOorspronkelijkeOrganisatie": {
+        "columnLabel": "heeftOorspronkelijkeOrganisatie",
+        "columnProperty": "http://www.w3.org/ns/org#originalOrganization",
+        "valueClass": "http://www.w3.org/ns/org#Organization",
+        "valueDatatype": null,
+        "valueMinCount": null,
+        "valueMaxCount": null,
+        "valueForeignKeySheet": "Organisatie"
+      },
+      "vindtPlaatsBinnen": {
+        "columnLabel": "vindtPlaatsBinnen",
+        "columnProperty": "http://data.europa.eu/m8g/hasFormalFramework",
+        "valueClass": "http://purl.org/vocab/cpsv#FormalFramework",
+        "valueDatatype": null,
+        "valueMinCount": null,
+        "valueMaxCount": null,
+        "valueForeignKeySheet": "FormeelKader"
+      }
+    }
+  },
+  "Organisatie": {
+    "sheetLabel": "Organisatie",
+    "sheetClass": "http://www.w3.org/ns/org#Organization",
+    "columns": {
+      "homepage": {
+        "columnLabel": "homepage",
+        "columnProperty": "http://xmlns.com/foaf/0.1/homepage",
+        "valueClass": null,
+        "valueDatatype": "http://www.w3.org/2001/XMLSchema#string",
+        "valueMinCount": null,
+        "valueMaxCount": "1"
+      },
+      "contactinfo": {
+        "columnLabel": "contactinfo",
+        "columnProperty": "http://schema.org/contactPoint",
+        "valueClass": "http://schema.org/ContactPoint",
+        "valueDatatype": null,
+        "valueMinCount": null,
+        "valueMaxCount": null
+      },
+      "doel": {
+        "columnLabel": "doel",
+        "columnProperty": "http://www.w3.org/ns/org#purpose",
+        "valueClass": null,
+        "valueDatatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+        "valueMinCount": null,
+        "valueMaxCount": null
+      },
+      "logo": {
+        "columnLabel": "logo",
+        "columnProperty": "http://schema.org/logo",
+        "valueClass": "https://schema.org/MediaObject",
+        "valueDatatype": null,
+        "valueMinCount": null,
+        "valueMaxCount": "1"
+      },
+      "status": {
+        "columnLabel": "status",
+        "columnProperty": "http://www.w3.org/ns/regorg#orgStatus",
+        "valueClass": "http://www.w3.org/2004/02/skos/core#Concept",
+        "valueDatatype": null,
+        "valueMinCount": null,
+        "valueMaxCount": null
+      },
+      "type": {
+        "columnLabel": "type",
+        "columnProperty": "http://www.w3.org/ns/regorg#orgType",
+        "valueClass": "http://www.w3.org/2004/02/skos/core#Concept",
+        "valueDatatype": null,
+        "valueMinCount": null,
+        "valueMaxCount": null
+      },
+      "voorkeursnaam": {
+        "columnLabel": "voorkeursnaam",
+        "columnProperty": "http://www.w3.org/2004/02/skos/core#prefLabel",
+        "valueClass": null,
+        "valueDatatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+        "valueMinCount": "1",
+        "valueMaxCount": "1"
+      },
+      "activiteit": {
+        "columnLabel": "activiteit",
+        "columnProperty": "http://www.w3.org/ns/regorg#orgActivity",
+        "valueClass": "http://www.w3.org/2004/02/skos/core#Concept",
+        "valueDatatype": null,
+        "valueMinCount": null,
+        "valueMaxCount": "1"
+      },
+      "alternatieveNaam": {
+        "columnLabel": "alternatieveNaam",
+        "columnProperty": "http://www.w3.org/2004/02/skos/core#altLabel",
+        "valueClass": null,
+        "valueDatatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+        "valueMinCount": null,
+        "valueMaxCount": null
+      },
+      "beschrijving": {
+        "columnLabel": "beschrijving",
+        "columnProperty": "http://purl.org/dc/terms/description",
+        "valueClass": null,
+        "valueDatatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+        "valueMinCount": null,
+        "valueMaxCount": "1"
+      },
+      "classificatie": {
+        "columnLabel": "classificatie",
+        "columnProperty": "http://www.w3.org/ns/org#classification",
+        "valueClass": "http://www.w3.org/2004/02/skos/core#Concept",
+        "valueDatatype": null,
+        "valueMinCount": null,
+        "valueMaxCount": null
+      },
+      "heeftGeregistreerdeVestiging": {
+        "columnLabel": "heeftGeregistreerdeVestiging",
+        "columnProperty": "http://www.w3.org/ns/org#hasRegisteredSite",
+        "valueClass": "http://www.w3.org/ns/org#Site",
+        "valueDatatype": null,
+        "valueMinCount": null,
+        "valueMaxCount": null,
+        "valueForeignKeySheet": "Vestiging"
+      },
+      "heeftPrimaireVestiging": {
+        "columnLabel": "heeftPrimaireVestiging",
+        "columnProperty": "http://www.w3.org/ns/org#hasPrimarySite",
+        "valueClass": "http://www.w3.org/ns/org#Site",
+        "valueDatatype": null,
+        "valueMinCount": null,
+        "valueMaxCount": null,
+        "valueForeignKeySheet": "Vestiging"
+      },
+      "heeftSuborganisatie": {
+        "columnLabel": "heeftSuborganisatie",
+        "columnProperty": "http://www.w3.org/ns/org#hasSubOrganization",
+        "valueClass": "http://www.w3.org/ns/org#Organization",
+        "valueDatatype": null,
+        "valueMinCount": null,
+        "valueMaxCount": null,
+        "valueForeignKeySheet": "Organisatie"
+      },
+      "heeft": {
+        "columnLabel": "heeft",
+        "columnProperty": "http://www.w3.org/ns/org#hasPost",
+        "valueClass": "http://www.w3.org/ns/org#Post",
+        "valueDatatype": null,
+        "valueMinCount": null,
+        "valueMaxCount": null,
+        "valueForeignKeySheet": "Positie"
+      },
+      "isGeassocieerdMet": {
+        "columnLabel": "isGeassocieerdMet",
+        "columnProperty": "http://www.w3.org/ns/org#linkedTo",
+        "valueClass": "http://www.w3.org/ns/org#Organization",
+        "valueDatatype": null,
+        "valueMinCount": null,
+        "valueMaxCount": null,
+        "valueForeignKeySheet": "Organisatie"
+      },
+      "heeftVestiging": {
+        "columnLabel": "heeftVestiging",
+        "columnProperty": "http://www.w3.org/ns/org#hasSite",
+        "valueClass": "http://www.w3.org/ns/org#Site",
+        "valueDatatype": null,
+        "valueMinCount": null,
+        "valueMaxCount": null,
+        "valueForeignKeySheet": "Vestiging"
+      },
+      "isSuborganisatieVan": {
+        "columnLabel": "isSuborganisatieVan",
+        "columnProperty": "http://www.w3.org/ns/org#subOrganizationOf",
+        "valueClass": "http://www.w3.org/ns/org#Organization",
+        "valueDatatype": null,
+        "valueMinCount": null,
+        "valueMaxCount": null,
+        "valueForeignKeySheet": "Organisatie"
+      },
+      "isHetResultaatVan": {
+        "columnLabel": "isHetResultaatVan",
+        "columnProperty": "http://www.w3.org/ns/org#resultedFrom",
+        "valueClass": "http://www.w3.org/ns/org#ChangeEvent",
+        "valueDatatype": null,
+        "valueMinCount": null,
+        "valueMaxCount": null,
+        "valueForeignKeySheet": "Veranderingsgebeurtenis"
+      },
+      "isVeranderdDoor": {
+        "columnLabel": "isVeranderdDoor",
+        "columnProperty": "http://www.w3.org/ns/org#changedBy",
+        "valueClass": "http://www.w3.org/ns/org#ChangeEvent",
+        "valueDatatype": null,
+        "valueMinCount": null,
+        "valueMaxCount": null,
+        "valueForeignKeySheet": "Veranderingsgebeurtenis"
+      },
+      "heeftEenheid": {
+        "columnLabel": "heeftEenheid",
+        "columnProperty": "http://www.w3.org/ns/org#hasUnit",
+        "valueClass": "http://www.w3.org/ns/org#OrganizationalUnit",
+        "valueDatatype": null,
+        "valueMinCount": null,
+        "valueMaxCount": null,
+        "valueForeignKeySheet": "Organisatieeenheid"
+      },
+      "heeftAlsLid": {
+        "columnLabel": "heeftAlsLid",
+        "columnProperty": "http://www.w3.org/ns/org#hasMember",
+        "valueClass": "http://purl.org/dc/terms/Agent",
+        "valueDatatype": null,
+        "valueMinCount": null,
+        "valueMaxCount": null,
+        "valueForeignKeySheet": "Agent"
+      }
+    }
+  },
+  "Agent": {
+    "sheetLabel": "Agent",
+    "sheetClass": "http://purl.org/dc/terms/Agent",
+    "columns": {
+      "heeftGeregistreerdeOrganisatie": {
+        "columnLabel": "heeftGeregistreerdeOrganisatie",
+        "columnProperty": "http://www.w3.org/ns/regorg#hasRegisteredOrganization",
+        "valueClass": "http://www.w3.org/ns/regorg#RegisteredOrganization",
+        "valueDatatype": null,
+        "valueMinCount": null,
+        "valueMaxCount": null,
+        "valueForeignKeySheet": "GeregistreerdeOrganisatie"
+      },
+      "rapporteertAan": {
+        "columnLabel": "rapporteertAan",
+        "columnProperty": "http://www.w3.org/ns/org#reportsTo",
+        "valueClass": "http://purl.org/dc/terms/Agent",
+        "valueDatatype": null,
+        "valueMinCount": null,
+        "valueMaxCount": null,
+        "valueForeignKeySheet": "Agent"
+      },
+      "houdt": {
+        "columnLabel": "houdt",
+        "columnProperty": "http://www.w3.org/ns/org#holds",
+        "valueClass": "http://www.w3.org/ns/org#Post",
+        "valueDatatype": null,
+        "valueMinCount": null,
+        "valueMaxCount": null,
+        "valueForeignKeySheet": "Positie"
+      },
+      "isHoofdVan": {
+        "columnLabel": "isHoofdVan",
+        "columnProperty": "http://www.w3.org/ns/org#headOf",
+        "valueClass": "http://www.w3.org/ns/org#Organization",
+        "valueDatatype": null,
+        "valueMinCount": null,
+        "valueMaxCount": null,
+        "valueForeignKeySheet": "Organisatie"
+      },
+      "isLidVan": {
+        "columnLabel": "isLidVan",
+        "columnProperty": "http://www.w3.org/ns/org#memberOf",
+        "valueClass": "http://www.w3.org/ns/org#Organization",
+        "valueDatatype": null,
+        "valueMinCount": null,
+        "valueMaxCount": null,
+        "valueForeignKeySheet": "Organisatie"
+      }
+    }
+  },
+  "Vestiging": {
+    "sheetLabel": "Vestiging",
+    "sheetClass": "http://www.w3.org/ns/org#Site",
+    "columns": {
+      "vestigingsadres": {
+        "columnLabel": "vestigingsadres",
+        "columnProperty": "http://www.w3.org/ns/org#siteAddress",
+        "valueClass": "http://schema.org/ContactPoint",
+        "valueDatatype": null,
+        "valueMinCount": null,
+        "valueMaxCount": "1"
+      },
+      "heeftGeregistreerdeVestiging": {
+        "columnLabel": "heeftGeregistreerdeVestiging",
+        "columnProperty": "http://www.w3.org/ns/org#hasRegisteredSite",
+        "valueClass": "http://www.w3.org/ns/org#Organization",
+        "valueDatatype": null,
+        "valueMinCount": "1",
+        "valueMaxCount": "1",
+        "valueForeignKeySheet": "Organisatie"
+      },
+      "heeftPrimaireVestiging": {
+        "columnLabel": "heeftPrimaireVestiging",
+        "columnProperty": "http://www.w3.org/ns/org#hasPrimarySite",
+        "valueClass": "http://www.w3.org/ns/org#Organization",
+        "valueDatatype": null,
+        "valueMinCount": "1",
+        "valueMaxCount": "1",
+        "valueForeignKeySheet": "Organisatie"
+      },
+      "heeftVestiging": {
+        "columnLabel": "heeftVestiging",
+        "columnProperty": "http://www.w3.org/ns/org#hasSite",
+        "valueClass": "http://www.w3.org/ns/org#Organization",
+        "valueDatatype": null,
+        "valueMinCount": "1",
+        "valueMaxCount": "1",
+        "valueForeignKeySheet": "Organisatie"
+      },
+      "bestaatUit": {
+        "columnLabel": "bestaatUit",
+        "columnProperty": "https://data.vlaanderen.be/ns/organisatie#bestaatUit",
+        "valueClass": "https://data.vlaanderen.be/ns/adres#AdresseerbaarObject",
+        "valueDatatype": null,
+        "valueMinCount": null,
+        "valueMaxCount": null
+      }
+    }
+  },
+  "Lidmaatschap": {
+    "sheetLabel": "Lidmaatschap",
+    "sheetClass": "http://www.w3.org/ns/org#Membership",
+    "columns": {
+      "lidVanTot": {
+        "columnLabel": "lidVanTot",
+        "columnProperty": "http://www.w3.org/ns/org#memberDuring",
+        "valueClass": "http://data.europa.eu/m8g/PeriodOfTime",
+        "valueDatatype": null,
+        "valueMinCount": null,
+        "valueMaxCount": "1"
+      },
+      "rol": {
+        "columnLabel": "rol",
+        "columnProperty": "http://www.w3.org/ns/org#role",
+        "valueClass": "http://www.w3.org/ns/org#Role",
+        "valueDatatype": null,
+        "valueMinCount": "1",
+        "valueMaxCount": "1"
+      },
+      "lid": {
+        "columnLabel": "lid",
+        "columnProperty": "http://www.w3.org/ns/org#member",
+        "valueClass": "http://purl.org/dc/terms/Agent",
+        "valueDatatype": null,
+        "valueMinCount": "1",
+        "valueMaxCount": "1",
+        "valueForeignKeySheet": "Agent"
+      },
+      "isLidmaatschapBij": {
+        "columnLabel": "isLidmaatschapBij",
+        "columnProperty": "http://www.w3.org/ns/org#organization",
+        "valueClass": "http://www.w3.org/ns/org#Organization",
+        "valueDatatype": null,
+        "valueMinCount": "1",
+        "valueMaxCount": "1",
+        "valueForeignKeySheet": "Organisatie"
+      }
+    }
+  },
+  "FormeelKader": {
+    "sheetLabel": "FormeelKader",
+    "sheetClass": "http://purl.org/vocab/cpsv#FormalFramework",
+    "columns": {
+      "naam": {
+        "columnLabel": "naam",
+        "columnProperty": "http://purl.org/dc/terms/title",
+        "valueClass": null,
+        "valueDatatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+        "valueMinCount": "1",
+        "valueMaxCount": "1"
+      }
+    }
+  },
+  "Plaats": {
+    "sheetLabel": "Plaats",
+    "sheetClass": "http://purl.org/dc/terms/Location",
+    "columns": {
+      "plaatsnaam": {
+        "columnLabel": "plaatsnaam",
+        "columnProperty": "http://www.w3.org/2000/01/rdf-schema#label",
+        "valueClass": null,
+        "valueDatatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+        "valueMinCount": "1",
+        "valueMaxCount": "1"
+      },
+      "geometrie": {
+        "columnLabel": "geometrie",
+        "columnProperty": "http://www.w3.org/ns/locn#geometry",
+        "valueClass": "http://www.w3.org/ns/locn#Geometry",
+        "valueDatatype": null,
+        "valueMinCount": null,
+        "valueMaxCount": "1"
+      }
+    }
+  },
+  "Organisatieeenheid": {
+    "sheetLabel": "Organisatieeenheid",
+    "sheetClass": "http://www.w3.org/ns/org#OrganizationalUnit",
+    "columns": {
+      "isEenheidVan": {
+        "columnLabel": "isEenheidVan",
+        "columnProperty": "http://www.w3.org/ns/org#unitOf",
+        "valueClass": "http://www.w3.org/ns/org#Organization",
+        "valueDatatype": null,
+        "valueMinCount": "1",
+        "valueMaxCount": "1",
+        "valueForeignKeySheet": "Organisatie"
+      }
+    }
+  },
+  "Hoedanigheid": {
+    "sheetLabel": "Hoedanigheid",
+    "sheetClass": "https://data.vlaanderen.be/ns/organisatie#Hoedanigheid",
+    "columns": {
+      "contactinfo": {
+        "columnLabel": "contactinfo",
+        "columnProperty": "https://data.vlaanderen.be/ns/organisatie#contactinfo",
+        "valueClass": "http://schema.org/ContactPoint",
+        "valueDatatype": null,
+        "valueMinCount": null,
+        "valueMaxCount": null
+      }
+    }
+  },
+  "Positie": {
+    "sheetLabel": "Positie",
+    "sheetClass": "http://www.w3.org/ns/org#Post",
+    "columns": {
+      "rol": {
+        "columnLabel": "rol",
+        "columnProperty": "http://www.w3.org/ns/org#role",
+        "valueClass": "http://www.w3.org/ns/org#Role",
+        "valueDatatype": null,
+        "valueMinCount": "1",
+        "valueMaxCount": "1"
+      },
+      "rapporteertAan": {
+        "columnLabel": "rapporteertAan",
+        "columnProperty": "http://www.w3.org/ns/org#reportsTo",
+        "valueClass": "http://www.w3.org/ns/org#Post",
+        "valueDatatype": null,
+        "valueMinCount": null,
+        "valueMaxCount": null,
+        "valueForeignKeySheet": "Positie"
+      },
+      "isPositieIn": {
+        "columnLabel": "isPositieIn",
+        "columnProperty": "http://www.w3.org/ns/org#postIn",
+        "valueClass": "http://www.w3.org/ns/org#Organization",
+        "valueDatatype": null,
+        "valueMinCount": null,
+        "valueMaxCount": null,
+        "valueForeignKeySheet": "Organisatie"
+      },
+      "wordtIngevuldDoor": {
+        "columnLabel": "wordtIngevuldDoor",
+        "columnProperty": "http://www.w3.org/ns/org#heldBy",
+        "valueClass": "http://purl.org/dc/terms/Agent",
+        "valueDatatype": null,
+        "valueMinCount": null,
+        "valueMaxCount": null,
+        "valueForeignKeySheet": "Agent"
+      }
+    }
+  },
+  "Stopzetting": {
+    "sheetLabel": "Stopzetting",
+    "sheetClass": "https://data.vlaanderen.be/ns/organisatie#Stopzetting",
+    "columns": {
+      "redenStopzetting": {
+        "columnLabel": "redenStopzetting",
+        "columnProperty": "https://data.vlaanderen.be/ns/organisatie#redenStopzetting",
+        "valueClass": "http://www.w3.org/2004/02/skos/core#Concept",
+        "valueDatatype": null,
+        "valueMinCount": null,
+        "valueMaxCount": "1"
+      }
+    }
+  },
+  "PubliekeOrganisatie": {
+    "sheetLabel": "PubliekeOrganisatie",
+    "sheetClass": "http://data.europa.eu/m8g/PublicOrganisation",
+    "columns": {
+      "werkingsgebied": {
+        "columnLabel": "werkingsgebied",
+        "columnProperty": "http://purl.org/dc/terms/spatial",
+        "valueClass": "http://purl.org/dc/terms/Location",
+        "valueDatatype": null,
+        "valueMinCount": null,
+        "valueMaxCount": null,
+        "valueForeignKeySheet": "Plaats"
+      }
+    }
+  },
+  "GeregistreerdeOrganisatie": {
+    "sheetLabel": "GeregistreerdeOrganisatie",
+    "sheetClass": "http://www.w3.org/ns/regorg#RegisteredOrganization",
+    "columns": {
+      "rechtspersoonlijkheid": {
+        "columnLabel": "rechtspersoonlijkheid",
+        "columnProperty": "https://data.vlaanderen.be/ns/organisatie#rechtspersoonlijkheid",
+        "valueClass": "http://www.w3.org/2004/02/skos/core#Concept",
+        "valueDatatype": null,
+        "valueMinCount": null,
+        "valueMaxCount": "1"
+      },
+      "rechtstoestand": {
+        "columnLabel": "rechtstoestand",
+        "columnProperty": "https://data.vlaanderen.be/ns/organisatie#rechtstoestand",
+        "valueClass": "http://www.w3.org/2004/02/skos/core#Concept",
+        "valueDatatype": null,
+        "valueMinCount": null,
+        "valueMaxCount": "1"
+      },
+      "rechtsvorm": {
+        "columnLabel": "rechtsvorm",
+        "columnProperty": "https://data.vlaanderen.be/ns/organisatie#rechtsvorm",
+        "valueClass": "http://www.w3.org/2004/02/skos/core#Concept",
+        "valueDatatype": null,
+        "valueMinCount": null,
+        "valueMaxCount": "1"
+      },
+      "registratie": {
+        "columnLabel": "registratie",
+        "columnProperty": "http://www.w3.org/ns/regorg#registration",
+        "valueClass": "http://www.w3.org/ns/adms#Identifier",
+        "valueDatatype": null,
+        "valueMinCount": "1",
+        "valueMaxCount": "1"
+      },
+      "wettelijkeNaam": {
+        "columnLabel": "wettelijkeNaam",
+        "columnProperty": "http://www.w3.org/ns/regorg#legalName",
+        "valueClass": null,
+        "valueDatatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+        "valueMinCount": "1",
+        "valueMaxCount": "1"
+      }
+    }
+  },
+  "Persoon": {
+    "sheetLabel": "Persoon",
+    "sheetClass": "http://www.w3.org/ns/person#Person",
+    "columns": {
+      "heeftStandplaats": {
+        "columnLabel": "heeftStandplaats",
+        "columnProperty": "http://www.w3.org/ns/org#basedAt",
+        "valueClass": "http://www.w3.org/ns/org#Site",
+        "valueDatatype": null,
+        "valueMinCount": null,
+        "valueMaxCount": null,
+        "valueForeignKeySheet": "Vestiging"
+      }
+    }
+  }
+}

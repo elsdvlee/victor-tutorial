@@ -1,0 +1,2293 @@
+@base <http://example.com/> .
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix fnml: <http://semweb.mmlab.be/ns/fnml#> .
+@prefix fno: <https://w3id.org/function/ontology#> .
+@prefix d2rq: <http://www.wiwiss.fu-berlin.de/suhl/bizer/D2RQ/0.1#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rml: <http://semweb.mmlab.be/ns/rml#> .
+@prefix ql: <http://semweb.mmlab.be/ns/ql#> .
+@prefix : <http://base.example.com/> .
+@prefix ex: <http://example.org/> .
+@prefix exr: <http://example.org/relation/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://mapping.example.com/rules_000> rdf:type void:Dataset ;
+	void:exampleResource :map_m_1_000, :map_m_5_000, :map_m_6_000, :map_m_7_000, :map_m_8_000, :map_m_30_000, :map_m_31_000, :map_m_32_000, :map_m_33_000, :map_m_34_000, :map_m_35_000, :map_m_36_000, :map_m_37_000, :map_m_38_000, :map_m_39_000, :map_m_40_000, :map_m_41_000, :map_m_42_000, :map_m_43_000, :map_m_44_000, :map_m_45_000, :map_m_46_000, :map_m_47_000, :map_m_52_000, :map_m_53_000, :map_m_54_000, :map_m_55_000, :map_m_56_000, :map_m_57_000, :map_m_62_000, :map_m_63_000, :map_m_64_000, :map_m_65_000, :map_m_66_000, :map_m_67_000, :map_m_71_000, :map_m_72_000, :map_m_73_000, :map_m_74_000, :map_m_75_000, :map_m_76_000, :map_m_78_000, :map_m_79_000, :map_m_80_000, :map_m_81_000, :map_m_82_000, :map_m_83_000, :map_m_87_000, :map_m_88_000, :map_m_89_000, :map_m_90_000, :map_m_91_000, :map_m_92_000, :map_m_93_000, :map_m_94_000, :map_m_95_000, :map_m_100_000, :map_m_101_000, :map_m_102_000, :map_m_103_000, :map_m_104_000, :map_m_109_000, :map_m_110_000 .
+
+:map_m_1_000 rml:logicalSource :source_000 ;
+	rdf:type rr:TriplesMap ;
+	rdfs:label "m_1" ;
+	rr:subjectMap :s_000 ;
+	rr:predicateObjectMap :pom_000, :pom_001, :pom_002, :pom_003, :pom_004 .
+
+:source_000 rdf:type rml:LogicalSource ;
+	rml:source "out/dummydata-a10.json" ;
+	rml:iterator "$.Veranderingsgebeurtenis[*]" ;
+	rml:referenceFormulation ql:JSONPath .
+
+:s_000 rdf:type rr:SubjectMap ;
+	rml:reference "CODE[*]" .
+
+:pom_000 rdf:type rr:PredicateObjectMap ;
+	rr:predicateMap :pm_000 ;
+	rr:objectMap :om_000 .
+
+:pm_000 rdf:type rr:PredicateMap ;
+	rr:constant rdf:type .
+
+:om_000 rdf:type rr:ObjectMap ;
+	rr:constant <http://www.w3.org/ns/org#ChangeEvent> ;
+	rr:termType rr:IRI .
+
+:pom_001 rdf:type rr:PredicateObjectMap ;
+	rr:predicateMap :pm_001 ;
+	rr:objectMap :om_001 .
+
+:pm_001 rdf:type rr:PredicateMap ;
+	rr:constant dcterms:date .
+
+:om_001 rdf:type rr:ObjectMap ;
+	rml:reference "datum[*]" ;
+	rr:termType rr:Literal ;
+	rr:datatype rdfs:Literal .
+
+:pom_002 rdf:type rr:PredicateObjectMap ;
+	rr:predicateMap :pm_002 ;
+	rr:objectMap :om_002 .
+
+:pm_002 rdf:type rr:PredicateMap ;
+	rr:constant <http://www.w3.org/ns/org#resultingOrganization> .
+
+:om_002 rdf:type rr:ObjectMap ;
+	rml:reference "heeftResulterendeOrganisatie[*]" ;
+	rr:termType rr:IRI .
+
+:pom_003 rdf:type rr:PredicateObjectMap ;
+	rr:predicateMap :pm_003 ;
+	rr:objectMap :om_003 .
+
+:pm_003 rdf:type rr:PredicateMap ;
+	rr:constant <http://www.w3.org/ns/org#originalOrganization> .
+
+:om_003 rdf:type rr:ObjectMap ;
+	rml:reference "heeftOorspronkelijkeOrganisatie[*]" ;
+	rr:termType rr:IRI .
+
+:pom_004 rdf:type rr:PredicateObjectMap ;
+	rr:predicateMap :pm_004 ;
+	rr:objectMap :om_004 .
+
+:pm_004 rdf:type rr:PredicateMap ;
+	rr:constant <http://data.europa.eu/m8g/hasFormalFramework> .
+
+:om_004 rdf:type rr:ObjectMap ;
+	rml:reference "vindtPlaatsBinnen[*]" ;
+	rr:termType rr:IRI .
+
+:map_m_5_000 rml:logicalSource :source_001 ;
+	rdf:type rr:TriplesMap ;
+	rdfs:label "m_5" ;
+	rr:subjectMap :s_001 ;
+	rr:predicateObjectMap :pom_005 .
+
+:source_001 rdf:type rml:LogicalSource ;
+	rml:source "out/dummydata-a10.json" ;
+	rml:iterator "$.Veranderingsgebeurtenis[*]" ;
+	rml:referenceFormulation ql:JSONPath .
+
+:s_001 rdf:type rr:SubjectMap ;
+	rml:reference "heeftResulterendeOrganisatie[*]" .
+
+:pom_005 rdf:type rr:PredicateObjectMap ;
+	rr:predicateMap :pm_005 ;
+	rr:objectMap :om_005 .
+
+:pm_005 rdf:type rr:PredicateMap ;
+	rr:constant rdf:type .
+
+:om_005 rdf:type rr:ObjectMap ;
+	rr:constant <http://www.w3.org/ns/org#Organization> ;
+	rr:termType rr:IRI .
+
+:map_m_6_000 rml:logicalSource :source_002 ;
+	rdf:type rr:TriplesMap ;
+	rdfs:label "m_6" ;
+	rr:subjectMap :s_002 ;
+	rr:predicateObjectMap :pom_006 .
+
+:source_002 rdf:type rml:LogicalSource ;
+	rml:source "out/dummydata-a10.json" ;
+	rml:iterator "$.Veranderingsgebeurtenis[*]" ;
+	rml:referenceFormulation ql:JSONPath .
+
+:s_002 rdf:type rr:SubjectMap ;
+	rml:reference "heeftOorspronkelijkeOrganisatie[*]" .
+
+:pom_006 rdf:type rr:PredicateObjectMap ;
+	rr:predicateMap :pm_006 ;
+	rr:objectMap :om_006 .
+
+:pm_006 rdf:type rr:PredicateMap ;
+	rr:constant rdf:type .
+
+:om_006 rdf:type rr:ObjectMap ;
+	rr:constant <http://www.w3.org/ns/org#Organization> ;
+	rr:termType rr:IRI .
+
+:map_m_7_000 rml:logicalSource :source_003 ;
+	rdf:type rr:TriplesMap ;
+	rdfs:label "m_7" ;
+	rr:subjectMap :s_003 ;
+	rr:predicateObjectMap :pom_007 .
+
+:source_003 rdf:type rml:LogicalSource ;
+	rml:source "out/dummydata-a10.json" ;
+	rml:iterator "$.Veranderingsgebeurtenis[*]" ;
+	rml:referenceFormulation ql:JSONPath .
+
+:s_003 rdf:type rr:SubjectMap ;
+	rml:reference "vindtPlaatsBinnen[*]" .
+
+:pom_007 rdf:type rr:PredicateObjectMap ;
+	rr:predicateMap :pm_007 ;
+	rr:objectMap :om_007 .
+
+:pm_007 rdf:type rr:PredicateMap ;
+	rr:constant rdf:type .
+
+:om_007 rdf:type rr:ObjectMap ;
+	rr:constant <http://purl.org/vocab/cpsv#FormalFramework> ;
+	rr:termType rr:IRI .
+
+:map_m_8_000 rml:logicalSource :source_004 ;
+	rdf:type rr:TriplesMap ;
+	rdfs:label "m_8" ;
+	rr:subjectMap :s_004 ;
+	rr:predicateObjectMap :pom_008, :pom_009, :pom_010, :pom_011, :pom_012, :pom_013, :pom_014, :pom_015, :pom_016, :pom_017, :pom_018, :pom_019, :pom_020, :pom_021, :pom_022, :pom_023, :pom_024, :pom_025, :pom_026, :pom_027, :pom_028, :pom_029, :pom_030 .
+
+:source_004 rdf:type rml:LogicalSource ;
+	rml:source "out/dummydata-a10.json" ;
+	rml:iterator "$.Organisatie[*]" ;
+	rml:referenceFormulation ql:JSONPath .
+
+:s_004 rdf:type rr:SubjectMap ;
+	rml:reference "CODE[*]" .
+
+:pom_008 rdf:type rr:PredicateObjectMap ;
+	rr:predicateMap :pm_008 ;
+	rr:objectMap :om_008 .
+
+:pm_008 rdf:type rr:PredicateMap ;
+	rr:constant rdf:type .
+
+:om_008 rdf:type rr:ObjectMap ;
+	rr:constant <http://www.w3.org/ns/org#Organization> ;
+	rr:termType rr:IRI .
+
+:pom_009 rdf:type rr:PredicateObjectMap ;
+	rr:predicateMap :pm_009 ;
+	rr:objectMap :om_009 .
+
+:pm_009 rdf:type rr:PredicateMap ;
+	rr:constant foaf:homepage .
+
+:om_009 rdf:type rr:ObjectMap ;
+	rml:reference "homepage[*]" ;
+	rr:termType rr:Literal ;
+	rr:datatype <http://www.w3.org/2001/XMLSchema#string> .
+
+:pom_010 rdf:type rr:PredicateObjectMap ;
+	rr:predicateMap :pm_010 ;
+	rr:objectMap :om_010 .
+
+:pm_010 rdf:type rr:PredicateMap ;
+	rr:constant <http://schema.org/contactPoint> .
+
+:om_010 rdf:type rr:ObjectMap ;
+	rml:reference "contactinfo[*]" ;
+	rr:termType rr:IRI .
+
+:pom_011 rdf:type rr:PredicateObjectMap ;
+	rr:predicateMap :pm_011 ;
+	rr:objectMap :om_011 .
+
+:pm_011 rdf:type rr:PredicateMap ;
+	rr:constant <http://www.w3.org/ns/org#purpose> .
+
+:om_011 rdf:type rr:ObjectMap ;
+	rml:reference "doel[*]" ;
+	rr:termType rr:Literal ;
+	rml:languageMap :language_000 .
+
+:language_000 rr:constant "nl" .
+
+:pom_012 rdf:type rr:PredicateObjectMap ;
+	rr:predicateMap :pm_012 ;
+	rr:objectMap :om_012 .
+
+:pm_012 rdf:type rr:PredicateMap ;
+	rr:constant <http://schema.org/logo> .
+
+:om_012 rdf:type rr:ObjectMap ;
+	rml:reference "logo[*]" ;
+	rr:termType rr:IRI .
+
+:pom_013 rdf:type rr:PredicateObjectMap ;
+	rr:predicateMap :pm_013 ;
+	rr:objectMap :om_013 .
+
+:pm_013 rdf:type rr:PredicateMap ;
+	rr:constant <http://www.w3.org/ns/regorg#orgStatus> .
+
+:om_013 rdf:type rr:ObjectMap ;
+	rml:reference "status[*]" ;
+	rr:termType rr:IRI .
+
+:pom_014 rdf:type rr:PredicateObjectMap ;
+	rr:predicateMap :pm_014 ;
+	rr:objectMap :om_014 .
+
+:pm_014 rdf:type rr:PredicateMap ;
+	rr:constant <http://www.w3.org/ns/regorg#orgType> .
+
+:om_014 rdf:type rr:ObjectMap ;
+	rml:reference "type[*]" ;
+	rr:termType rr:IRI .
+
+:pom_015 rdf:type rr:PredicateObjectMap ;
+	rr:predicateMap :pm_015 ;
+	rr:objectMap :om_015 .
+
+:pm_015 rdf:type rr:PredicateMap ;
+	rr:constant skos:prefLabel .
+
+:om_015 rdf:type rr:ObjectMap ;
+	rml:reference "voorkeursnaam[*]" ;
+	rr:termType rr:Literal ;
+	rml:languageMap :language_001 .
+
+:language_001 rr:constant "nl" .
+
+:pom_016 rdf:type rr:PredicateObjectMap ;
+	rr:predicateMap :pm_016 ;
+	rr:objectMap :om_016 .
+
+:pm_016 rdf:type rr:PredicateMap ;
+	rr:constant <http://www.w3.org/ns/regorg#orgActivity> .
+
+:om_016 rdf:type rr:ObjectMap ;
+	rml:reference "activiteit[*]" ;
+	rr:termType rr:IRI .
+
+:pom_017 rdf:type rr:PredicateObjectMap ;
+	rr:predicateMap :pm_017 ;
+	rr:objectMap :om_017 .
+
+:pm_017 rdf:type rr:PredicateMap ;
+	rr:constant skos:altLabel .
+
+:om_017 rdf:type rr:ObjectMap ;
+	rml:reference "alternatieveNaam[*]" ;
+	rr:termType rr:Literal ;
+	rml:languageMap :language_002 .
+
+:language_002 rr:constant "nl" .
+
+:pom_018 rdf:type rr:PredicateObjectMap ;
+	rr:predicateMap :pm_018 ;
+	rr:objectMap :om_018 .
+
+:pm_018 rdf:type rr:PredicateMap ;
+	rr:constant dcterms:description .
+
+:om_018 rdf:type rr:ObjectMap ;
+	rml:reference "beschrijving[*]" ;
+	rr:termType rr:Literal ;
+	rml:languageMap :language_003 .
+
+:language_003 rr:constant "nl" .
+
+:pom_019 rdf:type rr:PredicateObjectMap ;
+	rr:predicateMap :pm_019 ;
+	rr:objectMap :om_019 .
+
+:pm_019 rdf:type rr:PredicateMap ;
+	rr:constant <http://www.w3.org/ns/org#classification> .
+
+:om_019 rdf:type rr:ObjectMap ;
+	rml:reference "classificatie[*]" ;
+	rr:termType rr:IRI .
+
+:pom_020 rdf:type rr:PredicateObjectMap ;
+	rr:predicateMap :pm_020 ;
+	rr:objectMap :om_020 .
+
+:pm_020 rdf:type rr:PredicateMap ;
+	rr:constant <http://www.w3.org/ns/org#hasRegisteredSite> .
+
+:om_020 rdf:type rr:ObjectMap ;
+	rml:reference "heeftGeregistreerdeVestiging[*]" ;
+	rr:termType rr:IRI .
+
+:pom_021 rdf:type rr:PredicateObjectMap ;
+	rr:predicateMap :pm_021 ;
+	rr:objectMap :om_021 .
+
+:pm_021 rdf:type rr:PredicateMap ;
+	rr:constant <http://www.w3.org/ns/org#hasPrimarySite> .
+
+:om_021 rdf:type rr:ObjectMap ;
+	rml:reference "heeftPrimaireVestiging[*]" ;
+	rr:termType rr:IRI .
+
+:pom_022 rdf:type rr:PredicateObjectMap ;
+	rr:predicateMap :pm_022 ;
+	rr:objectMap :om_022 .
+
+:pm_022 rdf:type rr:PredicateMap ;
+	rr:constant <http://www.w3.org/ns/org#hasSubOrganization> .
+
+:om_022 rdf:type rr:ObjectMap ;
+	rml:reference "heeftSuborganisatie[*]" ;
+	rr:termType rr:IRI .
+
+:pom_023 rdf:type rr:PredicateObjectMap ;
+	rr:predicateMap :pm_023 ;
+	rr:objectMap :om_023 .
+
+:pm_023 rdf:type rr:PredicateMap ;
+	rr:constant <http://www.w3.org/ns/org#hasPost> .
+
+:om_023 rdf:type rr:ObjectMap ;
+	rml:reference "heeft[*]" ;
+	rr:termType rr:IRI .
+
+:pom_024 rdf:type rr:PredicateObjectMap ;
+	rr:predicateMap :pm_024 ;
+	rr:objectMap :om_024 .
+
+:pm_024 rdf:type rr:PredicateMap ;
+	rr:constant <http://www.w3.org/ns/org#linkedTo> .
+
+:om_024 rdf:type rr:ObjectMap ;
+	rml:reference "isGeassocieerdMet[*]" ;
+	rr:termType rr:IRI .
+
+:pom_025 rdf:type rr:PredicateObjectMap ;
+	rr:predicateMap :pm_025 ;
+	rr:objectMap :om_025 .
+
+:pm_025 rdf:type rr:PredicateMap ;
+	rr:constant <http://www.w3.org/ns/org#hasSite> .
+
+:om_025 rdf:type rr:ObjectMap ;
+	rml:reference "heeftVestiging[*]" ;
+	rr:termType rr:IRI .
+
+:pom_026 rdf:type rr:PredicateObjectMap ;
+	rr:predicateMap :pm_026 ;
+	rr:objectMap :om_026 .
+
+:pm_026 rdf:type rr:PredicateMap ;
+	rr:constant <http://www.w3.org/ns/org#subOrganizationOf> .
+
+:om_026 rdf:type rr:ObjectMap ;
+	rml:reference "isSuborganisatieVan[*]" ;
+	rr:termType rr:IRI .
+
+:pom_027 rdf:type rr:PredicateObjectMap ;
+	rr:predicateMap :pm_027 ;
+	rr:objectMap :om_027 .
+
+:pm_027 rdf:type rr:PredicateMap ;
+	rr:constant <http://www.w3.org/ns/org#resultedFrom> .
+
+:om_027 rdf:type rr:ObjectMap ;
+	rml:reference "isHetResultaatVan[*]" ;
+	rr:termType rr:IRI .
+
+:pom_028 rdf:type rr:PredicateObjectMap ;
+	rr:predicateMap :pm_028 ;
+	rr:objectMap :om_028 .
+
+:pm_028 rdf:type rr:PredicateMap ;
+	rr:constant <http://www.w3.org/ns/org#changedBy> .
+
+:om_028 rdf:type rr:ObjectMap ;
+	rml:reference "isVeranderdDoor[*]" ;
+	rr:termType rr:IRI .
+
+:pom_029 rdf:type rr:PredicateObjectMap ;
+	rr:predicateMap :pm_029 ;
+	rr:objectMap :om_029 .
+
+:pm_029 rdf:type rr:PredicateMap ;
+	rr:constant <http://www.w3.org/ns/org#hasUnit> .
+
+:om_029 rdf:type rr:ObjectMap ;
+	rml:reference "heeftEenheid[*]" ;
+	rr:termType rr:IRI .
+
+:pom_030 rdf:type rr:PredicateObjectMap ;
+	rr:predicateMap :pm_030 ;
+	rr:objectMap :om_030 .
+
+:pm_030 rdf:type rr:PredicateMap ;
+	rr:constant <http://www.w3.org/ns/org#hasMember> .
+
+:om_030 rdf:type rr:ObjectMap ;
+	rml:reference "heeftAlsLid[*]" ;
+	rr:termType rr:IRI .
+
+:map_m_30_000 rml:logicalSource :source_005 ;
+	rdf:type rr:TriplesMap ;
+	rdfs:label "m_30" ;
+	rr:subjectMap :s_005 ;
+	rr:predicateObjectMap :pom_031 .
+
+:source_005 rdf:type rml:LogicalSource ;
+	rml:source "out/dummydata-a10.json" ;
+	rml:iterator "$.Organisatie[*]" ;
+	rml:referenceFormulation ql:JSONPath .
+
+:s_005 rdf:type rr:SubjectMap ;
+	rml:reference "contactinfo[*]" .
+
+:pom_031 rdf:type rr:PredicateObjectMap ;
+	rr:predicateMap :pm_031 ;
+	rr:objectMap :om_031 .
+
+:pm_031 rdf:type rr:PredicateMap ;
+	rr:constant rdf:type .
+
+:om_031 rdf:type rr:ObjectMap ;
+	rr:constant <http://schema.org/ContactPoint> ;
+	rr:termType rr:IRI .
+
+:map_m_31_000 rml:logicalSource :source_006 ;
+	rdf:type rr:TriplesMap ;
+	rdfs:label "m_31" ;
+	rr:subjectMap :s_006 ;
+	rr:predicateObjectMap :pom_032 .
+
+:source_006 rdf:type rml:LogicalSource ;
+	rml:source "out/dummydata-a10.json" ;
+	rml:iterator "$.Organisatie[*]" ;
+	rml:referenceFormulation ql:JSONPath .
+
+:s_006 rdf:type rr:SubjectMap ;
+	rml:reference "logo[*]" .
+
+:pom_032 rdf:type rr:PredicateObjectMap ;
+	rr:predicateMap :pm_032 ;
+	rr:objectMap :om_032 .
+
+:pm_032 rdf:type rr:PredicateMap ;
+	rr:constant rdf:type .
+
+:om_032 rdf:type rr:ObjectMap ;
+	rr:constant <https://schema.org/MediaObject> ;
+	rr:termType rr:IRI .
+
+:map_m_32_000 rml:logicalSource :source_007 ;
+	rdf:type rr:TriplesMap ;
+	rdfs:label "m_32" ;
+	rr:subjectMap :s_007 ;
+	rr:predicateObjectMap :pom_033 .
+
+:source_007 rdf:type rml:LogicalSource ;
+	rml:source "out/dummydata-a10.json" ;
+	rml:iterator "$.Organisatie[*]" ;
+	rml:referenceFormulation ql:JSONPath .
+
+:s_007 rdf:type rr:SubjectMap ;
+	rml:reference "status[*]" .
+
+:pom_033 rdf:type rr:PredicateObjectMap ;
+	rr:predicateMap :pm_033 ;
+	rr:objectMap :om_033 .
+
+:pm_033 rdf:type rr:PredicateMap ;
+	rr:constant rdf:type .
+
+:om_033 rdf:type rr:ObjectMap ;
+	rr:constant skos:Concept ;
+	rr:termType rr:IRI .
+
+:map_m_33_000 rml:logicalSource :source_008 ;
+	rdf:type rr:TriplesMap ;
+	rdfs:label "m_33" ;
+	rr:subjectMap :s_008 ;
+	rr:predicateObjectMap :pom_034 .
+
+:source_008 rdf:type rml:LogicalSource ;
+	rml:source "out/dummydata-a10.json" ;
+	rml:iterator "$.Organisatie[*]" ;
+	rml:referenceFormulation ql:JSONPath .
+
+:s_008 rdf:type rr:SubjectMap ;
+	rml:reference "type[*]" .
+
+:pom_034 rdf:type rr:PredicateObjectMap ;
+	rr:predicateMap :pm_034 ;
+	rr:objectMap :om_034 .
+
+:pm_034 rdf:type rr:PredicateMap ;
+	rr:constant rdf:type .
+
+:om_034 rdf:type rr:ObjectMap ;
+	rr:constant skos:Concept ;
+	rr:termType rr:IRI .
+
+:map_m_34_000 rml:logicalSource :source_009 ;
+	rdf:type rr:TriplesMap ;
+	rdfs:label "m_34" ;
+	rr:subjectMap :s_009 ;
+	rr:predicateObjectMap :pom_035 .
+
+:source_009 rdf:type rml:LogicalSource ;
+	rml:source "out/dummydata-a10.json" ;
+	rml:iterator "$.Organisatie[*]" ;
+	rml:referenceFormulation ql:JSONPath .
+
+:s_009 rdf:type rr:SubjectMap ;
+	rml:reference "activiteit[*]" .
+
+:pom_035 rdf:type rr:PredicateObjectMap ;
+	rr:predicateMap :pm_035 ;
+	rr:objectMap :om_035 .
+
+:pm_035 rdf:type rr:PredicateMap ;
+	rr:constant rdf:type .
+
+:om_035 rdf:type rr:ObjectMap ;
+	rr:constant skos:Concept ;
+	rr:termType rr:IRI .
+
+:map_m_35_000 rml:logicalSource :source_010 ;
+	rdf:type rr:TriplesMap ;
+	rdfs:label "m_35" ;
+	rr:subjectMap :s_010 ;
+	rr:predicateObjectMap :pom_036 .
+
+:source_010 rdf:type rml:LogicalSource ;
+	rml:source "out/dummydata-a10.json" ;
+	rml:iterator "$.Organisatie[*]" ;
+	rml:referenceFormulation ql:JSONPath .
+
+:s_010 rdf:type rr:SubjectMap ;
+	rml:reference "classificatie[*]" .
+
+:pom_036 rdf:type rr:PredicateObjectMap ;
+	rr:predicateMap :pm_036 ;
+	rr:objectMap :om_036 .
+
+:pm_036 rdf:type rr:PredicateMap ;
+	rr:constant rdf:type .
+
+:om_036 rdf:type rr:ObjectMap ;
+	rr:constant skos:Concept ;
+	rr:termType rr:IRI .
+
+:map_m_36_000 rml:logicalSource :source_011 ;
+	rdf:type rr:TriplesMap ;
+	rdfs:label "m_36" ;
+	rr:subjectMap :s_011 ;
+	rr:predicateObjectMap :pom_037 .
+
+:source_011 rdf:type rml:LogicalSource ;
+	rml:source "out/dummydata-a10.json" ;
+	rml:iterator "$.Organisatie[*]" ;
+	rml:referenceFormulation ql:JSONPath .
+
+:s_011 rdf:type rr:SubjectMap ;
+	rml:reference "heeftGeregistreerdeVestiging[*]" .
+
+:pom_037 rdf:type rr:PredicateObjectMap ;
+	rr:predicateMap :pm_037 ;
+	rr:objectMap :om_037 .
+
+:pm_037 rdf:type rr:PredicateMap ;
+	rr:constant rdf:type .
+
+:om_037 rdf:type rr:ObjectMap ;
+	rr:constant <http://www.w3.org/ns/org#Site> ;
+	rr:termType rr:IRI .
+
+:map_m_37_000 rml:logicalSource :source_012 ;
+	rdf:type rr:TriplesMap ;
+	rdfs:label "m_37" ;
+	rr:subjectMap :s_012 ;
+	rr:predicateObjectMap :pom_038 .
+
+:source_012 rdf:type rml:LogicalSource ;
+	rml:source "out/dummydata-a10.json" ;
+	rml:iterator "$.Organisatie[*]" ;
+	rml:referenceFormulation ql:JSONPath .
+
+:s_012 rdf:type rr:SubjectMap ;
+	rml:reference "heeftPrimaireVestiging[*]" .
+
+:pom_038 rdf:type rr:PredicateObjectMap ;
+	rr:predicateMap :pm_038 ;
+	rr:objectMap :om_038 .
+
+:pm_038 rdf:type rr:PredicateMap ;
+	rr:constant rdf:type .
+
+:om_038 rdf:type rr:ObjectMap ;
+	rr:constant <http://www.w3.org/ns/org#Site> ;
+	rr:termType rr:IRI .
+
+:map_m_38_000 rml:logicalSource :source_013 ;
+	rdf:type rr:TriplesMap ;
+	rdfs:label "m_38" ;
+	rr:subjectMap :s_013 ;
+	rr:predicateObjectMap :pom_039 .
+
+:source_013 rdf:type rml:LogicalSource ;
+	rml:source "out/dummydata-a10.json" ;
+	rml:iterator "$.Organisatie[*]" ;
+	rml:referenceFormulation ql:JSONPath .
+
+:s_013 rdf:type rr:SubjectMap ;
+	rml:reference "heeftSuborganisatie[*]" .
+
+:pom_039 rdf:type rr:PredicateObjectMap ;
+	rr:predicateMap :pm_039 ;
+	rr:objectMap :om_039 .
+
+:pm_039 rdf:type rr:PredicateMap ;
+	rr:constant rdf:type .
+
+:om_039 rdf:type rr:ObjectMap ;
+	rr:constant <http://www.w3.org/ns/org#Organization> ;
+	rr:termType rr:IRI .
+
+:map_m_39_000 rml:logicalSource :source_014 ;
+	rdf:type rr:TriplesMap ;
+	rdfs:label "m_39" ;
+	rr:subjectMap :s_014 ;
+	rr:predicateObjectMap :pom_040 .
+
+:source_014 rdf:type rml:LogicalSource ;
+	rml:source "out/dummydata-a10.json" ;
+	rml:iterator "$.Organisatie[*]" ;
+	rml:referenceFormulation ql:JSONPath .
+
+:s_014 rdf:type rr:SubjectMap ;
+	rml:reference "heeft[*]" .
+
+:pom_040 rdf:type rr:PredicateObjectMap ;
+	rr:predicateMap :pm_040 ;
+	rr:objectMap :om_040 .
+
+:pm_040 rdf:type rr:PredicateMap ;
+	rr:constant rdf:type .
+
+:om_040 rdf:type rr:ObjectMap ;
+	rr:constant <http://www.w3.org/ns/org#Post> ;
+	rr:termType rr:IRI .
+
+:map_m_40_000 rml:logicalSource :source_015 ;
+	rdf:type rr:TriplesMap ;
+	rdfs:label "m_40" ;
+	rr:subjectMap :s_015 ;
+	rr:predicateObjectMap :pom_041 .
+
+:source_015 rdf:type rml:LogicalSource ;
+	rml:source "out/dummydata-a10.json" ;
+	rml:iterator "$.Organisatie[*]" ;
+	rml:referenceFormulation ql:JSONPath .
+
+:s_015 rdf:type rr:SubjectMap ;
+	rml:reference "isGeassocieerdMet[*]" .
+
+:pom_041 rdf:type rr:PredicateObjectMap ;
+	rr:predicateMap :pm_041 ;
+	rr:objectMap :om_041 .
+
+:pm_041 rdf:type rr:PredicateMap ;
+	rr:constant rdf:type .
+
+:om_041 rdf:type rr:ObjectMap ;
+	rr:constant <http://www.w3.org/ns/org#Organization> ;
+	rr:termType rr:IRI .
+
+:map_m_41_000 rml:logicalSource :source_016 ;
+	rdf:type rr:TriplesMap ;
+	rdfs:label "m_41" ;
+	rr:subjectMap :s_016 ;
+	rr:predicateObjectMap :pom_042 .
+
+:source_016 rdf:type rml:LogicalSource ;
+	rml:source "out/dummydata-a10.json" ;
+	rml:iterator "$.Organisatie[*]" ;
+	rml:referenceFormulation ql:JSONPath .
+
+:s_016 rdf:type rr:SubjectMap ;
+	rml:reference "heeftVestiging[*]" .
+
+:pom_042 rdf:type rr:PredicateObjectMap ;
+	rr:predicateMap :pm_042 ;
+	rr:objectMap :om_042 .
+
+:pm_042 rdf:type rr:PredicateMap ;
+	rr:constant rdf:type .
+
+:om_042 rdf:type rr:ObjectMap ;
+	rr:constant <http://www.w3.org/ns/org#Site> ;
+	rr:termType rr:IRI .
+
+:map_m_42_000 rml:logicalSource :source_017 ;
+	rdf:type rr:TriplesMap ;
+	rdfs:label "m_42" ;
+	rr:subjectMap :s_017 ;
+	rr:predicateObjectMap :pom_043 .
+
+:source_017 rdf:type rml:LogicalSource ;
+	rml:source "out/dummydata-a10.json" ;
+	rml:iterator "$.Organisatie[*]" ;
+	rml:referenceFormulation ql:JSONPath .
+
+:s_017 rdf:type rr:SubjectMap ;
+	rml:reference "isSuborganisatieVan[*]" .
+
+:pom_043 rdf:type rr:PredicateObjectMap ;
+	rr:predicateMap :pm_043 ;
+	rr:objectMap :om_043 .
+
+:pm_043 rdf:type rr:PredicateMap ;
+	rr:constant rdf:type .
+
+:om_043 rdf:type rr:ObjectMap ;
+	rr:constant <http://www.w3.org/ns/org#Organization> ;
+	rr:termType rr:IRI .
+
+:map_m_43_000 rml:logicalSource :source_018 ;
+	rdf:type rr:TriplesMap ;
+	rdfs:label "m_43" ;
+	rr:subjectMap :s_018 ;
+	rr:predicateObjectMap :pom_044 .
+
+:source_018 rdf:type rml:LogicalSource ;
+	rml:source "out/dummydata-a10.json" ;
+	rml:iterator "$.Organisatie[*]" ;
+	rml:referenceFormulation ql:JSONPath .
+
+:s_018 rdf:type rr:SubjectMap ;
+	rml:reference "isHetResultaatVan[*]" .
+
+:pom_044 rdf:type rr:PredicateObjectMap ;
+	rr:predicateMap :pm_044 ;
+	rr:objectMap :om_044 .
+
+:pm_044 rdf:type rr:PredicateMap ;
+	rr:constant rdf:type .
+
+:om_044 rdf:type rr:ObjectMap ;
+	rr:constant <http://www.w3.org/ns/org#ChangeEvent> ;
+	rr:termType rr:IRI .
+
+:map_m_44_000 rml:logicalSource :source_019 ;
+	rdf:type rr:TriplesMap ;
+	rdfs:label "m_44" ;
+	rr:subjectMap :s_019 ;
+	rr:predicateObjectMap :pom_045 .
+
+:source_019 rdf:type rml:LogicalSource ;
+	rml:source "out/dummydata-a10.json" ;
+	rml:iterator "$.Organisatie[*]" ;
+	rml:referenceFormulation ql:JSONPath .
+
+:s_019 rdf:type rr:SubjectMap ;
+	rml:reference "isVeranderdDoor[*]" .
+
+:pom_045 rdf:type rr:PredicateObjectMap ;
+	rr:predicateMap :pm_045 ;
+	rr:objectMap :om_045 .
+
+:pm_045 rdf:type rr:PredicateMap ;
+	rr:constant rdf:type .
+
+:om_045 rdf:type rr:ObjectMap ;
+	rr:constant <http://www.w3.org/ns/org#ChangeEvent> ;
+	rr:termType rr:IRI .
+
+:map_m_45_000 rml:logicalSource :source_020 ;
+	rdf:type rr:TriplesMap ;
+	rdfs:label "m_45" ;
+	rr:subjectMap :s_020 ;
+	rr:predicateObjectMap :pom_046 .
+
+:source_020 rdf:type rml:LogicalSource ;
+	rml:source "out/dummydata-a10.json" ;
+	rml:iterator "$.Organisatie[*]" ;
+	rml:referenceFormulation ql:JSONPath .
+
+:s_020 rdf:type rr:SubjectMap ;
+	rml:reference "heeftEenheid[*]" .
+
+:pom_046 rdf:type rr:PredicateObjectMap ;
+	rr:predicateMap :pm_046 ;
+	rr:objectMap :om_046 .
+
+:pm_046 rdf:type rr:PredicateMap ;
+	rr:constant rdf:type .
+
+:om_046 rdf:type rr:ObjectMap ;
+	rr:constant <http://www.w3.org/ns/org#OrganizationalUnit> ;
+	rr:termType rr:IRI .
+
+:map_m_46_000 rml:logicalSource :source_021 ;
+	rdf:type rr:TriplesMap ;
+	rdfs:label "m_46" ;
+	rr:subjectMap :s_021 ;
+	rr:predicateObjectMap :pom_047 .
+
+:source_021 rdf:type rml:LogicalSource ;
+	rml:source "out/dummydata-a10.json" ;
+	rml:iterator "$.Organisatie[*]" ;
+	rml:referenceFormulation ql:JSONPath .
+
+:s_021 rdf:type rr:SubjectMap ;
+	rml:reference "heeftAlsLid[*]" .
+
+:pom_047 rdf:type rr:PredicateObjectMap ;
+	rr:predicateMap :pm_047 ;
+	rr:objectMap :om_047 .
+
+:pm_047 rdf:type rr:PredicateMap ;
+	rr:constant rdf:type .
+
+:om_047 rdf:type rr:ObjectMap ;
+	rr:constant dcterms:Agent ;
+	rr:termType rr:IRI .
+
+:map_m_47_000 rml:logicalSource :source_022 ;
+	rdf:type rr:TriplesMap ;
+	rdfs:label "m_47" ;
+	rr:subjectMap :s_022 ;
+	rr:predicateObjectMap :pom_048, :pom_049, :pom_050, :pom_051, :pom_052, :pom_053 .
+
+:source_022 rdf:type rml:LogicalSource ;
+	rml:source "out/dummydata-a10.json" ;
+	rml:iterator "$.Agent[*]" ;
+	rml:referenceFormulation ql:JSONPath .
+
+:s_022 rdf:type rr:SubjectMap ;
+	rml:reference "CODE[*]" .
+
+:pom_048 rdf:type rr:PredicateObjectMap ;
+	rr:predicateMap :pm_048 ;
+	rr:objectMap :om_048 .
+
+:pm_048 rdf:type rr:PredicateMap ;
+	rr:constant rdf:type .
+
+:om_048 rdf:type rr:ObjectMap ;
+	rr:constant dcterms:Agent ;
+	rr:termType rr:IRI .
+
+:pom_049 rdf:type rr:PredicateObjectMap ;
+	rr:predicateMap :pm_049 ;
+	rr:objectMap :om_049 .
+
+:pm_049 rdf:type rr:PredicateMap ;
+	rr:constant <http://www.w3.org/ns/regorg#hasRegisteredOrganization> .
+
+:om_049 rdf:type rr:ObjectMap ;
+	rml:reference "heeftGeregistreerdeOrganisatie[*]" ;
+	rr:termType rr:IRI .
+
+:pom_050 rdf:type rr:PredicateObjectMap ;
+	rr:predicateMap :pm_050 ;
+	rr:objectMap :om_050 .
+
+:pm_050 rdf:type rr:PredicateMap ;
+	rr:constant <http://www.w3.org/ns/org#reportsTo> .
+
+:om_050 rdf:type rr:ObjectMap ;
+	rml:reference "rapporteertAan[*]" ;
+	rr:termType rr:IRI .
+
+:pom_051 rdf:type rr:PredicateObjectMap ;
+	rr:predicateMap :pm_051 ;
+	rr:objectMap :om_051 .
+
+:pm_051 rdf:type rr:PredicateMap ;
+	rr:constant <http://www.w3.org/ns/org#holds> .
+
+:om_051 rdf:type rr:ObjectMap ;
+	rml:reference "houdt[*]" ;
+	rr:termType rr:IRI .
+
+:pom_052 rdf:type rr:PredicateObjectMap ;
+	rr:predicateMap :pm_052 ;
+	rr:objectMap :om_052 .
+
+:pm_052 rdf:type rr:PredicateMap ;
+	rr:constant <http://www.w3.org/ns/org#headOf> .
+
+:om_052 rdf:type rr:ObjectMap ;
+	rml:reference "isHoofdVan[*]" ;
+	rr:termType rr:IRI .
+
+:pom_053 rdf:type rr:PredicateObjectMap ;
+	rr:predicateMap :pm_053 ;
+	rr:objectMap :om_053 .
+
+:pm_053 rdf:type rr:PredicateMap ;
+	rr:constant <http://www.w3.org/ns/org#memberOf> .
+
+:om_053 rdf:type rr:ObjectMap ;
+	rml:reference "isLidVan[*]" ;
+	rr:termType rr:IRI .
+
+:map_m_52_000 rml:logicalSource :source_023 ;
+	rdf:type rr:TriplesMap ;
+	rdfs:label "m_52" ;
+	rr:subjectMap :s_023 ;
+	rr:predicateObjectMap :pom_054 .
+
+:source_023 rdf:type rml:LogicalSource ;
+	rml:source "out/dummydata-a10.json" ;
+	rml:iterator "$.Agent[*]" ;
+	rml:referenceFormulation ql:JSONPath .
+
+:s_023 rdf:type rr:SubjectMap ;
+	rml:reference "heeftGeregistreerdeOrganisatie[*]" .
+
+:pom_054 rdf:type rr:PredicateObjectMap ;
+	rr:predicateMap :pm_054 ;
+	rr:objectMap :om_054 .
+
+:pm_054 rdf:type rr:PredicateMap ;
+	rr:constant rdf:type .
+
+:om_054 rdf:type rr:ObjectMap ;
+	rr:constant <http://www.w3.org/ns/regorg#RegisteredOrganization> ;
+	rr:termType rr:IRI .
+
+:map_m_53_000 rml:logicalSource :source_024 ;
+	rdf:type rr:TriplesMap ;
+	rdfs:label "m_53" ;
+	rr:subjectMap :s_024 ;
+	rr:predicateObjectMap :pom_055 .
+
+:source_024 rdf:type rml:LogicalSource ;
+	rml:source "out/dummydata-a10.json" ;
+	rml:iterator "$.Agent[*]" ;
+	rml:referenceFormulation ql:JSONPath .
+
+:s_024 rdf:type rr:SubjectMap ;
+	rml:reference "rapporteertAan[*]" .
+
+:pom_055 rdf:type rr:PredicateObjectMap ;
+	rr:predicateMap :pm_055 ;
+	rr:objectMap :om_055 .
+
+:pm_055 rdf:type rr:PredicateMap ;
+	rr:constant rdf:type .
+
+:om_055 rdf:type rr:ObjectMap ;
+	rr:constant dcterms:Agent ;
+	rr:termType rr:IRI .
+
+:map_m_54_000 rml:logicalSource :source_025 ;
+	rdf:type rr:TriplesMap ;
+	rdfs:label "m_54" ;
+	rr:subjectMap :s_025 ;
+	rr:predicateObjectMap :pom_056 .
+
+:source_025 rdf:type rml:LogicalSource ;
+	rml:source "out/dummydata-a10.json" ;
+	rml:iterator "$.Agent[*]" ;
+	rml:referenceFormulation ql:JSONPath .
+
+:s_025 rdf:type rr:SubjectMap ;
+	rml:reference "houdt[*]" .
+
+:pom_056 rdf:type rr:PredicateObjectMap ;
+	rr:predicateMap :pm_056 ;
+	rr:objectMap :om_056 .
+
+:pm_056 rdf:type rr:PredicateMap ;
+	rr:constant rdf:type .
+
+:om_056 rdf:type rr:ObjectMap ;
+	rr:constant <http://www.w3.org/ns/org#Post> ;
+	rr:termType rr:IRI .
+
+:map_m_55_000 rml:logicalSource :source_026 ;
+	rdf:type rr:TriplesMap ;
+	rdfs:label "m_55" ;
+	rr:subjectMap :s_026 ;
+	rr:predicateObjectMap :pom_057 .
+
+:source_026 rdf:type rml:LogicalSource ;
+	rml:source "out/dummydata-a10.json" ;
+	rml:iterator "$.Agent[*]" ;
+	rml:referenceFormulation ql:JSONPath .
+
+:s_026 rdf:type rr:SubjectMap ;
+	rml:reference "isHoofdVan[*]" .
+
+:pom_057 rdf:type rr:PredicateObjectMap ;
+	rr:predicateMap :pm_057 ;
+	rr:objectMap :om_057 .
+
+:pm_057 rdf:type rr:PredicateMap ;
+	rr:constant rdf:type .
+
+:om_057 rdf:type rr:ObjectMap ;
+	rr:constant <http://www.w3.org/ns/org#Organization> ;
+	rr:termType rr:IRI .
+
+:map_m_56_000 rml:logicalSource :source_027 ;
+	rdf:type rr:TriplesMap ;
+	rdfs:label "m_56" ;
+	rr:subjectMap :s_027 ;
+	rr:predicateObjectMap :pom_058 .
+
+:source_027 rdf:type rml:LogicalSource ;
+	rml:source "out/dummydata-a10.json" ;
+	rml:iterator "$.Agent[*]" ;
+	rml:referenceFormulation ql:JSONPath .
+
+:s_027 rdf:type rr:SubjectMap ;
+	rml:reference "isLidVan[*]" .
+
+:pom_058 rdf:type rr:PredicateObjectMap ;
+	rr:predicateMap :pm_058 ;
+	rr:objectMap :om_058 .
+
+:pm_058 rdf:type rr:PredicateMap ;
+	rr:constant rdf:type .
+
+:om_058 rdf:type rr:ObjectMap ;
+	rr:constant <http://www.w3.org/ns/org#Organization> ;
+	rr:termType rr:IRI .
+
+:map_m_57_000 rml:logicalSource :source_028 ;
+	rdf:type rr:TriplesMap ;
+	rdfs:label "m_57" ;
+	rr:subjectMap :s_028 ;
+	rr:predicateObjectMap :pom_059, :pom_060, :pom_061, :pom_062, :pom_063, :pom_064 .
+
+:source_028 rdf:type rml:LogicalSource ;
+	rml:source "out/dummydata-a10.json" ;
+	rml:iterator "$.Vestiging[*]" ;
+	rml:referenceFormulation ql:JSONPath .
+
+:s_028 rdf:type rr:SubjectMap ;
+	rml:reference "CODE[*]" .
+
+:pom_059 rdf:type rr:PredicateObjectMap ;
+	rr:predicateMap :pm_059 ;
+	rr:objectMap :om_059 .
+
+:pm_059 rdf:type rr:PredicateMap ;
+	rr:constant rdf:type .
+
+:om_059 rdf:type rr:ObjectMap ;
+	rr:constant <http://www.w3.org/ns/org#Site> ;
+	rr:termType rr:IRI .
+
+:pom_060 rdf:type rr:PredicateObjectMap ;
+	rr:predicateMap :pm_060 ;
+	rr:objectMap :om_060 .
+
+:pm_060 rdf:type rr:PredicateMap ;
+	rr:constant <http://www.w3.org/ns/org#siteAddress> .
+
+:om_060 rdf:type rr:ObjectMap ;
+	rml:reference "vestigingsadres[*]" ;
+	rr:termType rr:IRI .
+
+:pom_061 rdf:type rr:PredicateObjectMap ;
+	rr:predicateMap :pm_061 ;
+	rr:objectMap :om_061 .
+
+:pm_061 rdf:type rr:PredicateMap ;
+	rr:constant <http://www.w3.org/ns/org#hasRegisteredSite> .
+
+:om_061 rdf:type rr:ObjectMap ;
+	rml:reference "heeftGeregistreerdeVestiging[*]" ;
+	rr:termType rr:IRI .
+
+:pom_062 rdf:type rr:PredicateObjectMap ;
+	rr:predicateMap :pm_062 ;
+	rr:objectMap :om_062 .
+
+:pm_062 rdf:type rr:PredicateMap ;
+	rr:constant <http://www.w3.org/ns/org#hasPrimarySite> .
+
+:om_062 rdf:type rr:ObjectMap ;
+	rml:reference "heeftPrimaireVestiging[*]" ;
+	rr:termType rr:IRI .
+
+:pom_063 rdf:type rr:PredicateObjectMap ;
+	rr:predicateMap :pm_063 ;
+	rr:objectMap :om_063 .
+
+:pm_063 rdf:type rr:PredicateMap ;
+	rr:constant <http://www.w3.org/ns/org#hasSite> .
+
+:om_063 rdf:type rr:ObjectMap ;
+	rml:reference "heeftVestiging[*]" ;
+	rr:termType rr:IRI .
+
+:pom_064 rdf:type rr:PredicateObjectMap ;
+	rr:predicateMap :pm_064 ;
+	rr:objectMap :om_064 .
+
+:pm_064 rdf:type rr:PredicateMap ;
+	rr:constant <https://data.vlaanderen.be/ns/organisatie#bestaatUit> .
+
+:om_064 rdf:type rr:ObjectMap ;
+	rml:reference "bestaatUit[*]" ;
+	rr:termType rr:IRI .
+
+:map_m_62_000 rml:logicalSource :source_029 ;
+	rdf:type rr:TriplesMap ;
+	rdfs:label "m_62" ;
+	rr:subjectMap :s_029 ;
+	rr:predicateObjectMap :pom_065 .
+
+:source_029 rdf:type rml:LogicalSource ;
+	rml:source "out/dummydata-a10.json" ;
+	rml:iterator "$.Vestiging[*]" ;
+	rml:referenceFormulation ql:JSONPath .
+
+:s_029 rdf:type rr:SubjectMap ;
+	rml:reference "vestigingsadres[*]" .
+
+:pom_065 rdf:type rr:PredicateObjectMap ;
+	rr:predicateMap :pm_065 ;
+	rr:objectMap :om_065 .
+
+:pm_065 rdf:type rr:PredicateMap ;
+	rr:constant rdf:type .
+
+:om_065 rdf:type rr:ObjectMap ;
+	rr:constant <http://schema.org/ContactPoint> ;
+	rr:termType rr:IRI .
+
+:map_m_63_000 rml:logicalSource :source_030 ;
+	rdf:type rr:TriplesMap ;
+	rdfs:label "m_63" ;
+	rr:subjectMap :s_030 ;
+	rr:predicateObjectMap :pom_066 .
+
+:source_030 rdf:type rml:LogicalSource ;
+	rml:source "out/dummydata-a10.json" ;
+	rml:iterator "$.Vestiging[*]" ;
+	rml:referenceFormulation ql:JSONPath .
+
+:s_030 rdf:type rr:SubjectMap ;
+	rml:reference "heeftGeregistreerdeVestiging[*]" .
+
+:pom_066 rdf:type rr:PredicateObjectMap ;
+	rr:predicateMap :pm_066 ;
+	rr:objectMap :om_066 .
+
+:pm_066 rdf:type rr:PredicateMap ;
+	rr:constant rdf:type .
+
+:om_066 rdf:type rr:ObjectMap ;
+	rr:constant <http://www.w3.org/ns/org#Organization> ;
+	rr:termType rr:IRI .
+
+:map_m_64_000 rml:logicalSource :source_031 ;
+	rdf:type rr:TriplesMap ;
+	rdfs:label "m_64" ;
+	rr:subjectMap :s_031 ;
+	rr:predicateObjectMap :pom_067 .
+
+:source_031 rdf:type rml:LogicalSource ;
+	rml:source "out/dummydata-a10.json" ;
+	rml:iterator "$.Vestiging[*]" ;
+	rml:referenceFormulation ql:JSONPath .
+
+:s_031 rdf:type rr:SubjectMap ;
+	rml:reference "heeftPrimaireVestiging[*]" .
+
+:pom_067 rdf:type rr:PredicateObjectMap ;
+	rr:predicateMap :pm_067 ;
+	rr:objectMap :om_067 .
+
+:pm_067 rdf:type rr:PredicateMap ;
+	rr:constant rdf:type .
+
+:om_067 rdf:type rr:ObjectMap ;
+	rr:constant <http://www.w3.org/ns/org#Organization> ;
+	rr:termType rr:IRI .
+
+:map_m_65_000 rml:logicalSource :source_032 ;
+	rdf:type rr:TriplesMap ;
+	rdfs:label "m_65" ;
+	rr:subjectMap :s_032 ;
+	rr:predicateObjectMap :pom_068 .
+
+:source_032 rdf:type rml:LogicalSource ;
+	rml:source "out/dummydata-a10.json" ;
+	rml:iterator "$.Vestiging[*]" ;
+	rml:referenceFormulation ql:JSONPath .
+
+:s_032 rdf:type rr:SubjectMap ;
+	rml:reference "heeftVestiging[*]" .
+
+:pom_068 rdf:type rr:PredicateObjectMap ;
+	rr:predicateMap :pm_068 ;
+	rr:objectMap :om_068 .
+
+:pm_068 rdf:type rr:PredicateMap ;
+	rr:constant rdf:type .
+
+:om_068 rdf:type rr:ObjectMap ;
+	rr:constant <http://www.w3.org/ns/org#Organization> ;
+	rr:termType rr:IRI .
+
+:map_m_66_000 rml:logicalSource :source_033 ;
+	rdf:type rr:TriplesMap ;
+	rdfs:label "m_66" ;
+	rr:subjectMap :s_033 ;
+	rr:predicateObjectMap :pom_069 .
+
+:source_033 rdf:type rml:LogicalSource ;
+	rml:source "out/dummydata-a10.json" ;
+	rml:iterator "$.Vestiging[*]" ;
+	rml:referenceFormulation ql:JSONPath .
+
+:s_033 rdf:type rr:SubjectMap ;
+	rml:reference "bestaatUit[*]" .
+
+:pom_069 rdf:type rr:PredicateObjectMap ;
+	rr:predicateMap :pm_069 ;
+	rr:objectMap :om_069 .
+
+:pm_069 rdf:type rr:PredicateMap ;
+	rr:constant rdf:type .
+
+:om_069 rdf:type rr:ObjectMap ;
+	rr:constant <https://data.vlaanderen.be/ns/adres#AdresseerbaarObject> ;
+	rr:termType rr:IRI .
+
+:map_m_67_000 rml:logicalSource :source_034 ;
+	rdf:type rr:TriplesMap ;
+	rdfs:label "m_67" ;
+	rr:subjectMap :s_034 ;
+	rr:predicateObjectMap :pom_070, :pom_071, :pom_072, :pom_073, :pom_074 .
+
+:source_034 rdf:type rml:LogicalSource ;
+	rml:source "out/dummydata-a10.json" ;
+	rml:iterator "$.Lidmaatschap[*]" ;
+	rml:referenceFormulation ql:JSONPath .
+
+:s_034 rdf:type rr:SubjectMap ;
+	rml:reference "CODE[*]" .
+
+:pom_070 rdf:type rr:PredicateObjectMap ;
+	rr:predicateMap :pm_070 ;
+	rr:objectMap :om_070 .
+
+:pm_070 rdf:type rr:PredicateMap ;
+	rr:constant rdf:type .
+
+:om_070 rdf:type rr:ObjectMap ;
+	rr:constant <http://www.w3.org/ns/org#Membership> ;
+	rr:termType rr:IRI .
+
+:pom_071 rdf:type rr:PredicateObjectMap ;
+	rr:predicateMap :pm_071 ;
+	rr:objectMap :om_071 .
+
+:pm_071 rdf:type rr:PredicateMap ;
+	rr:constant <http://www.w3.org/ns/org#memberDuring> .
+
+:om_071 rdf:type rr:ObjectMap ;
+	rml:reference "lidVanTot[*]" ;
+	rr:termType rr:IRI .
+
+:pom_072 rdf:type rr:PredicateObjectMap ;
+	rr:predicateMap :pm_072 ;
+	rr:objectMap :om_072 .
+
+:pm_072 rdf:type rr:PredicateMap ;
+	rr:constant <http://www.w3.org/ns/org#role> .
+
+:om_072 rdf:type rr:ObjectMap ;
+	rml:reference "rol[*]" ;
+	rr:termType rr:IRI .
+
+:pom_073 rdf:type rr:PredicateObjectMap ;
+	rr:predicateMap :pm_073 ;
+	rr:objectMap :om_073 .
+
+:pm_073 rdf:type rr:PredicateMap ;
+	rr:constant <http://www.w3.org/ns/org#member> .
+
+:om_073 rdf:type rr:ObjectMap ;
+	rml:reference "lid[*]" ;
+	rr:termType rr:IRI .
+
+:pom_074 rdf:type rr:PredicateObjectMap ;
+	rr:predicateMap :pm_074 ;
+	rr:objectMap :om_074 .
+
+:pm_074 rdf:type rr:PredicateMap ;
+	rr:constant <http://www.w3.org/ns/org#organization> .
+
+:om_074 rdf:type rr:ObjectMap ;
+	rml:reference "isLidmaatschapBij[*]" ;
+	rr:termType rr:IRI .
+
+:map_m_71_000 rml:logicalSource :source_035 ;
+	rdf:type rr:TriplesMap ;
+	rdfs:label "m_71" ;
+	rr:subjectMap :s_035 ;
+	rr:predicateObjectMap :pom_075 .
+
+:source_035 rdf:type rml:LogicalSource ;
+	rml:source "out/dummydata-a10.json" ;
+	rml:iterator "$.Lidmaatschap[*]" ;
+	rml:referenceFormulation ql:JSONPath .
+
+:s_035 rdf:type rr:SubjectMap ;
+	rml:reference "lidVanTot[*]" .
+
+:pom_075 rdf:type rr:PredicateObjectMap ;
+	rr:predicateMap :pm_075 ;
+	rr:objectMap :om_075 .
+
+:pm_075 rdf:type rr:PredicateMap ;
+	rr:constant rdf:type .
+
+:om_075 rdf:type rr:ObjectMap ;
+	rr:constant <http://data.europa.eu/m8g/PeriodOfTime> ;
+	rr:termType rr:IRI .
+
+:map_m_72_000 rml:logicalSource :source_036 ;
+	rdf:type rr:TriplesMap ;
+	rdfs:label "m_72" ;
+	rr:subjectMap :s_036 ;
+	rr:predicateObjectMap :pom_076 .
+
+:source_036 rdf:type rml:LogicalSource ;
+	rml:source "out/dummydata-a10.json" ;
+	rml:iterator "$.Lidmaatschap[*]" ;
+	rml:referenceFormulation ql:JSONPath .
+
+:s_036 rdf:type rr:SubjectMap ;
+	rml:reference "rol[*]" .
+
+:pom_076 rdf:type rr:PredicateObjectMap ;
+	rr:predicateMap :pm_076 ;
+	rr:objectMap :om_076 .
+
+:pm_076 rdf:type rr:PredicateMap ;
+	rr:constant rdf:type .
+
+:om_076 rdf:type rr:ObjectMap ;
+	rr:constant <http://www.w3.org/ns/org#Role> ;
+	rr:termType rr:IRI .
+
+:map_m_73_000 rml:logicalSource :source_037 ;
+	rdf:type rr:TriplesMap ;
+	rdfs:label "m_73" ;
+	rr:subjectMap :s_037 ;
+	rr:predicateObjectMap :pom_077 .
+
+:source_037 rdf:type rml:LogicalSource ;
+	rml:source "out/dummydata-a10.json" ;
+	rml:iterator "$.Lidmaatschap[*]" ;
+	rml:referenceFormulation ql:JSONPath .
+
+:s_037 rdf:type rr:SubjectMap ;
+	rml:reference "lid[*]" .
+
+:pom_077 rdf:type rr:PredicateObjectMap ;
+	rr:predicateMap :pm_077 ;
+	rr:objectMap :om_077 .
+
+:pm_077 rdf:type rr:PredicateMap ;
+	rr:constant rdf:type .
+
+:om_077 rdf:type rr:ObjectMap ;
+	rr:constant dcterms:Agent ;
+	rr:termType rr:IRI .
+
+:map_m_74_000 rml:logicalSource :source_038 ;
+	rdf:type rr:TriplesMap ;
+	rdfs:label "m_74" ;
+	rr:subjectMap :s_038 ;
+	rr:predicateObjectMap :pom_078 .
+
+:source_038 rdf:type rml:LogicalSource ;
+	rml:source "out/dummydata-a10.json" ;
+	rml:iterator "$.Lidmaatschap[*]" ;
+	rml:referenceFormulation ql:JSONPath .
+
+:s_038 rdf:type rr:SubjectMap ;
+	rml:reference "isLidmaatschapBij[*]" .
+
+:pom_078 rdf:type rr:PredicateObjectMap ;
+	rr:predicateMap :pm_078 ;
+	rr:objectMap :om_078 .
+
+:pm_078 rdf:type rr:PredicateMap ;
+	rr:constant rdf:type .
+
+:om_078 rdf:type rr:ObjectMap ;
+	rr:constant <http://www.w3.org/ns/org#Organization> ;
+	rr:termType rr:IRI .
+
+:map_m_75_000 rml:logicalSource :source_039 ;
+	rdf:type rr:TriplesMap ;
+	rdfs:label "m_75" ;
+	rr:subjectMap :s_039 ;
+	rr:predicateObjectMap :pom_079, :pom_080 .
+
+:source_039 rdf:type rml:LogicalSource ;
+	rml:source "out/dummydata-a10.json" ;
+	rml:iterator "$.FormeelKader[*]" ;
+	rml:referenceFormulation ql:JSONPath .
+
+:s_039 rdf:type rr:SubjectMap ;
+	rml:reference "CODE[*]" .
+
+:pom_079 rdf:type rr:PredicateObjectMap ;
+	rr:predicateMap :pm_079 ;
+	rr:objectMap :om_079 .
+
+:pm_079 rdf:type rr:PredicateMap ;
+	rr:constant rdf:type .
+
+:om_079 rdf:type rr:ObjectMap ;
+	rr:constant <http://purl.org/vocab/cpsv#FormalFramework> ;
+	rr:termType rr:IRI .
+
+:pom_080 rdf:type rr:PredicateObjectMap ;
+	rr:predicateMap :pm_080 ;
+	rr:objectMap :om_080 .
+
+:pm_080 rdf:type rr:PredicateMap ;
+	rr:constant dcterms:title .
+
+:om_080 rdf:type rr:ObjectMap ;
+	rml:reference "naam[*]" ;
+	rr:termType rr:Literal ;
+	rml:languageMap :language_004 .
+
+:language_004 rr:constant "nl" .
+
+:map_m_76_000 rml:logicalSource :source_040 ;
+	rdf:type rr:TriplesMap ;
+	rdfs:label "m_76" ;
+	rr:subjectMap :s_040 ;
+	rr:predicateObjectMap :pom_081, :pom_082, :pom_083 .
+
+:source_040 rdf:type rml:LogicalSource ;
+	rml:source "out/dummydata-a10.json" ;
+	rml:iterator "$.Plaats[*]" ;
+	rml:referenceFormulation ql:JSONPath .
+
+:s_040 rdf:type rr:SubjectMap ;
+	rml:reference "CODE[*]" .
+
+:pom_081 rdf:type rr:PredicateObjectMap ;
+	rr:predicateMap :pm_081 ;
+	rr:objectMap :om_081 .
+
+:pm_081 rdf:type rr:PredicateMap ;
+	rr:constant rdf:type .
+
+:om_081 rdf:type rr:ObjectMap ;
+	rr:constant dcterms:Location ;
+	rr:termType rr:IRI .
+
+:pom_082 rdf:type rr:PredicateObjectMap ;
+	rr:predicateMap :pm_082 ;
+	rr:objectMap :om_082 .
+
+:pm_082 rdf:type rr:PredicateMap ;
+	rr:constant rdfs:label .
+
+:om_082 rdf:type rr:ObjectMap ;
+	rml:reference "plaatsnaam[*]" ;
+	rr:termType rr:Literal ;
+	rml:languageMap :language_005 .
+
+:language_005 rr:constant "nl" .
+
+:pom_083 rdf:type rr:PredicateObjectMap ;
+	rr:predicateMap :pm_083 ;
+	rr:objectMap :om_083 .
+
+:pm_083 rdf:type rr:PredicateMap ;
+	rr:constant <http://www.w3.org/ns/locn#geometry> .
+
+:om_083 rdf:type rr:ObjectMap ;
+	rml:reference "geometrie[*]" ;
+	rr:termType rr:IRI .
+
+:map_m_78_000 rml:logicalSource :source_041 ;
+	rdf:type rr:TriplesMap ;
+	rdfs:label "m_78" ;
+	rr:subjectMap :s_041 ;
+	rr:predicateObjectMap :pom_084 .
+
+:source_041 rdf:type rml:LogicalSource ;
+	rml:source "out/dummydata-a10.json" ;
+	rml:iterator "$.Plaats[*]" ;
+	rml:referenceFormulation ql:JSONPath .
+
+:s_041 rdf:type rr:SubjectMap ;
+	rml:reference "geometrie[*]" .
+
+:pom_084 rdf:type rr:PredicateObjectMap ;
+	rr:predicateMap :pm_084 ;
+	rr:objectMap :om_084 .
+
+:pm_084 rdf:type rr:PredicateMap ;
+	rr:constant rdf:type .
+
+:om_084 rdf:type rr:ObjectMap ;
+	rr:constant <http://www.w3.org/ns/locn#Geometry> ;
+	rr:termType rr:IRI .
+
+:map_m_79_000 rml:logicalSource :source_042 ;
+	rdf:type rr:TriplesMap ;
+	rdfs:label "m_79" ;
+	rr:subjectMap :s_042 ;
+	rr:predicateObjectMap :pom_085, :pom_086 .
+
+:source_042 rdf:type rml:LogicalSource ;
+	rml:source "out/dummydata-a10.json" ;
+	rml:iterator "$.Organisatieeenheid[*]" ;
+	rml:referenceFormulation ql:JSONPath .
+
+:s_042 rdf:type rr:SubjectMap ;
+	rml:reference "CODE[*]" .
+
+:pom_085 rdf:type rr:PredicateObjectMap ;
+	rr:predicateMap :pm_085 ;
+	rr:objectMap :om_085 .
+
+:pm_085 rdf:type rr:PredicateMap ;
+	rr:constant rdf:type .
+
+:om_085 rdf:type rr:ObjectMap ;
+	rr:constant <http://www.w3.org/ns/org#OrganizationalUnit> ;
+	rr:termType rr:IRI .
+
+:pom_086 rdf:type rr:PredicateObjectMap ;
+	rr:predicateMap :pm_086 ;
+	rr:objectMap :om_086 .
+
+:pm_086 rdf:type rr:PredicateMap ;
+	rr:constant <http://www.w3.org/ns/org#unitOf> .
+
+:om_086 rdf:type rr:ObjectMap ;
+	rml:reference "isEenheidVan[*]" ;
+	rr:termType rr:IRI .
+
+:map_m_80_000 rml:logicalSource :source_043 ;
+	rdf:type rr:TriplesMap ;
+	rdfs:label "m_80" ;
+	rr:subjectMap :s_043 ;
+	rr:predicateObjectMap :pom_087 .
+
+:source_043 rdf:type rml:LogicalSource ;
+	rml:source "out/dummydata-a10.json" ;
+	rml:iterator "$.Organisatieeenheid[*]" ;
+	rml:referenceFormulation ql:JSONPath .
+
+:s_043 rdf:type rr:SubjectMap ;
+	rml:reference "isEenheidVan[*]" .
+
+:pom_087 rdf:type rr:PredicateObjectMap ;
+	rr:predicateMap :pm_087 ;
+	rr:objectMap :om_087 .
+
+:pm_087 rdf:type rr:PredicateMap ;
+	rr:constant rdf:type .
+
+:om_087 rdf:type rr:ObjectMap ;
+	rr:constant <http://www.w3.org/ns/org#Organization> ;
+	rr:termType rr:IRI .
+
+:map_m_81_000 rml:logicalSource :source_044 ;
+	rdf:type rr:TriplesMap ;
+	rdfs:label "m_81" ;
+	rr:subjectMap :s_044 ;
+	rr:predicateObjectMap :pom_088, :pom_089 .
+
+:source_044 rdf:type rml:LogicalSource ;
+	rml:source "out/dummydata-a10.json" ;
+	rml:iterator "$.Hoedanigheid[*]" ;
+	rml:referenceFormulation ql:JSONPath .
+
+:s_044 rdf:type rr:SubjectMap ;
+	rml:reference "CODE[*]" .
+
+:pom_088 rdf:type rr:PredicateObjectMap ;
+	rr:predicateMap :pm_088 ;
+	rr:objectMap :om_088 .
+
+:pm_088 rdf:type rr:PredicateMap ;
+	rr:constant rdf:type .
+
+:om_088 rdf:type rr:ObjectMap ;
+	rr:constant <https://data.vlaanderen.be/ns/organisatie#Hoedanigheid> ;
+	rr:termType rr:IRI .
+
+:pom_089 rdf:type rr:PredicateObjectMap ;
+	rr:predicateMap :pm_089 ;
+	rr:objectMap :om_089 .
+
+:pm_089 rdf:type rr:PredicateMap ;
+	rr:constant <https://data.vlaanderen.be/ns/organisatie#contactinfo> .
+
+:om_089 rdf:type rr:ObjectMap ;
+	rml:reference "contactinfo[*]" ;
+	rr:termType rr:IRI .
+
+:map_m_82_000 rml:logicalSource :source_045 ;
+	rdf:type rr:TriplesMap ;
+	rdfs:label "m_82" ;
+	rr:subjectMap :s_045 ;
+	rr:predicateObjectMap :pom_090 .
+
+:source_045 rdf:type rml:LogicalSource ;
+	rml:source "out/dummydata-a10.json" ;
+	rml:iterator "$.Hoedanigheid[*]" ;
+	rml:referenceFormulation ql:JSONPath .
+
+:s_045 rdf:type rr:SubjectMap ;
+	rml:reference "contactinfo[*]" .
+
+:pom_090 rdf:type rr:PredicateObjectMap ;
+	rr:predicateMap :pm_090 ;
+	rr:objectMap :om_090 .
+
+:pm_090 rdf:type rr:PredicateMap ;
+	rr:constant rdf:type .
+
+:om_090 rdf:type rr:ObjectMap ;
+	rr:constant <http://schema.org/ContactPoint> ;
+	rr:termType rr:IRI .
+
+:map_m_83_000 rml:logicalSource :source_046 ;
+	rdf:type rr:TriplesMap ;
+	rdfs:label "m_83" ;
+	rr:subjectMap :s_046 ;
+	rr:predicateObjectMap :pom_091, :pom_092, :pom_093, :pom_094, :pom_095 .
+
+:source_046 rdf:type rml:LogicalSource ;
+	rml:source "out/dummydata-a10.json" ;
+	rml:iterator "$.Positie[*]" ;
+	rml:referenceFormulation ql:JSONPath .
+
+:s_046 rdf:type rr:SubjectMap ;
+	rml:reference "CODE[*]" .
+
+:pom_091 rdf:type rr:PredicateObjectMap ;
+	rr:predicateMap :pm_091 ;
+	rr:objectMap :om_091 .
+
+:pm_091 rdf:type rr:PredicateMap ;
+	rr:constant rdf:type .
+
+:om_091 rdf:type rr:ObjectMap ;
+	rr:constant <http://www.w3.org/ns/org#Post> ;
+	rr:termType rr:IRI .
+
+:pom_092 rdf:type rr:PredicateObjectMap ;
+	rr:predicateMap :pm_092 ;
+	rr:objectMap :om_092 .
+
+:pm_092 rdf:type rr:PredicateMap ;
+	rr:constant <http://www.w3.org/ns/org#role> .
+
+:om_092 rdf:type rr:ObjectMap ;
+	rml:reference "rol[*]" ;
+	rr:termType rr:IRI .
+
+:pom_093 rdf:type rr:PredicateObjectMap ;
+	rr:predicateMap :pm_093 ;
+	rr:objectMap :om_093 .
+
+:pm_093 rdf:type rr:PredicateMap ;
+	rr:constant <http://www.w3.org/ns/org#reportsTo> .
+
+:om_093 rdf:type rr:ObjectMap ;
+	rml:reference "rapporteertAan[*]" ;
+	rr:termType rr:IRI .
+
+:pom_094 rdf:type rr:PredicateObjectMap ;
+	rr:predicateMap :pm_094 ;
+	rr:objectMap :om_094 .
+
+:pm_094 rdf:type rr:PredicateMap ;
+	rr:constant <http://www.w3.org/ns/org#postIn> .
+
+:om_094 rdf:type rr:ObjectMap ;
+	rml:reference "isPositieIn[*]" ;
+	rr:termType rr:IRI .
+
+:pom_095 rdf:type rr:PredicateObjectMap ;
+	rr:predicateMap :pm_095 ;
+	rr:objectMap :om_095 .
+
+:pm_095 rdf:type rr:PredicateMap ;
+	rr:constant <http://www.w3.org/ns/org#heldBy> .
+
+:om_095 rdf:type rr:ObjectMap ;
+	rml:reference "wordtIngevuldDoor[*]" ;
+	rr:termType rr:IRI .
+
+:map_m_87_000 rml:logicalSource :source_047 ;
+	rdf:type rr:TriplesMap ;
+	rdfs:label "m_87" ;
+	rr:subjectMap :s_047 ;
+	rr:predicateObjectMap :pom_096 .
+
+:source_047 rdf:type rml:LogicalSource ;
+	rml:source "out/dummydata-a10.json" ;
+	rml:iterator "$.Positie[*]" ;
+	rml:referenceFormulation ql:JSONPath .
+
+:s_047 rdf:type rr:SubjectMap ;
+	rml:reference "rol[*]" .
+
+:pom_096 rdf:type rr:PredicateObjectMap ;
+	rr:predicateMap :pm_096 ;
+	rr:objectMap :om_096 .
+
+:pm_096 rdf:type rr:PredicateMap ;
+	rr:constant rdf:type .
+
+:om_096 rdf:type rr:ObjectMap ;
+	rr:constant <http://www.w3.org/ns/org#Role> ;
+	rr:termType rr:IRI .
+
+:map_m_88_000 rml:logicalSource :source_048 ;
+	rdf:type rr:TriplesMap ;
+	rdfs:label "m_88" ;
+	rr:subjectMap :s_048 ;
+	rr:predicateObjectMap :pom_097 .
+
+:source_048 rdf:type rml:LogicalSource ;
+	rml:source "out/dummydata-a10.json" ;
+	rml:iterator "$.Positie[*]" ;
+	rml:referenceFormulation ql:JSONPath .
+
+:s_048 rdf:type rr:SubjectMap ;
+	rml:reference "rapporteertAan[*]" .
+
+:pom_097 rdf:type rr:PredicateObjectMap ;
+	rr:predicateMap :pm_097 ;
+	rr:objectMap :om_097 .
+
+:pm_097 rdf:type rr:PredicateMap ;
+	rr:constant rdf:type .
+
+:om_097 rdf:type rr:ObjectMap ;
+	rr:constant <http://www.w3.org/ns/org#Post> ;
+	rr:termType rr:IRI .
+
+:map_m_89_000 rml:logicalSource :source_049 ;
+	rdf:type rr:TriplesMap ;
+	rdfs:label "m_89" ;
+	rr:subjectMap :s_049 ;
+	rr:predicateObjectMap :pom_098 .
+
+:source_049 rdf:type rml:LogicalSource ;
+	rml:source "out/dummydata-a10.json" ;
+	rml:iterator "$.Positie[*]" ;
+	rml:referenceFormulation ql:JSONPath .
+
+:s_049 rdf:type rr:SubjectMap ;
+	rml:reference "isPositieIn[*]" .
+
+:pom_098 rdf:type rr:PredicateObjectMap ;
+	rr:predicateMap :pm_098 ;
+	rr:objectMap :om_098 .
+
+:pm_098 rdf:type rr:PredicateMap ;
+	rr:constant rdf:type .
+
+:om_098 rdf:type rr:ObjectMap ;
+	rr:constant <http://www.w3.org/ns/org#Organization> ;
+	rr:termType rr:IRI .
+
+:map_m_90_000 rml:logicalSource :source_050 ;
+	rdf:type rr:TriplesMap ;
+	rdfs:label "m_90" ;
+	rr:subjectMap :s_050 ;
+	rr:predicateObjectMap :pom_099 .
+
+:source_050 rdf:type rml:LogicalSource ;
+	rml:source "out/dummydata-a10.json" ;
+	rml:iterator "$.Positie[*]" ;
+	rml:referenceFormulation ql:JSONPath .
+
+:s_050 rdf:type rr:SubjectMap ;
+	rml:reference "wordtIngevuldDoor[*]" .
+
+:pom_099 rdf:type rr:PredicateObjectMap ;
+	rr:predicateMap :pm_099 ;
+	rr:objectMap :om_099 .
+
+:pm_099 rdf:type rr:PredicateMap ;
+	rr:constant rdf:type .
+
+:om_099 rdf:type rr:ObjectMap ;
+	rr:constant dcterms:Agent ;
+	rr:termType rr:IRI .
+
+:map_m_91_000 rml:logicalSource :source_051 ;
+	rdf:type rr:TriplesMap ;
+	rdfs:label "m_91" ;
+	rr:subjectMap :s_051 ;
+	rr:predicateObjectMap :pom_100, :pom_101 .
+
+:source_051 rdf:type rml:LogicalSource ;
+	rml:source "out/dummydata-a10.json" ;
+	rml:iterator "$.Stopzetting[*]" ;
+	rml:referenceFormulation ql:JSONPath .
+
+:s_051 rdf:type rr:SubjectMap ;
+	rml:reference "CODE[*]" .
+
+:pom_100 rdf:type rr:PredicateObjectMap ;
+	rr:predicateMap :pm_100 ;
+	rr:objectMap :om_100 .
+
+:pm_100 rdf:type rr:PredicateMap ;
+	rr:constant rdf:type .
+
+:om_100 rdf:type rr:ObjectMap ;
+	rr:constant <https://data.vlaanderen.be/ns/organisatie#Stopzetting> ;
+	rr:termType rr:IRI .
+
+:pom_101 rdf:type rr:PredicateObjectMap ;
+	rr:predicateMap :pm_101 ;
+	rr:objectMap :om_101 .
+
+:pm_101 rdf:type rr:PredicateMap ;
+	rr:constant <https://data.vlaanderen.be/ns/organisatie#redenStopzetting> .
+
+:om_101 rdf:type rr:ObjectMap ;
+	rml:reference "redenStopzetting[*]" ;
+	rr:termType rr:IRI .
+
+:map_m_92_000 rml:logicalSource :source_052 ;
+	rdf:type rr:TriplesMap ;
+	rdfs:label "m_92" ;
+	rr:subjectMap :s_052 ;
+	rr:predicateObjectMap :pom_102 .
+
+:source_052 rdf:type rml:LogicalSource ;
+	rml:source "out/dummydata-a10.json" ;
+	rml:iterator "$.Stopzetting[*]" ;
+	rml:referenceFormulation ql:JSONPath .
+
+:s_052 rdf:type rr:SubjectMap ;
+	rml:reference "redenStopzetting[*]" .
+
+:pom_102 rdf:type rr:PredicateObjectMap ;
+	rr:predicateMap :pm_102 ;
+	rr:objectMap :om_102 .
+
+:pm_102 rdf:type rr:PredicateMap ;
+	rr:constant rdf:type .
+
+:om_102 rdf:type rr:ObjectMap ;
+	rr:constant skos:Concept ;
+	rr:termType rr:IRI .
+
+:map_m_93_000 rml:logicalSource :source_053 ;
+	rdf:type rr:TriplesMap ;
+	rdfs:label "m_93" ;
+	rr:subjectMap :s_053 ;
+	rr:predicateObjectMap :pom_103, :pom_104 .
+
+:source_053 rdf:type rml:LogicalSource ;
+	rml:source "out/dummydata-a10.json" ;
+	rml:iterator "$.PubliekeOrganisatie[*]" ;
+	rml:referenceFormulation ql:JSONPath .
+
+:s_053 rdf:type rr:SubjectMap ;
+	rml:reference "CODE[*]" .
+
+:pom_103 rdf:type rr:PredicateObjectMap ;
+	rr:predicateMap :pm_103 ;
+	rr:objectMap :om_103 .
+
+:pm_103 rdf:type rr:PredicateMap ;
+	rr:constant rdf:type .
+
+:om_103 rdf:type rr:ObjectMap ;
+	rr:constant <http://data.europa.eu/m8g/PublicOrganisation> ;
+	rr:termType rr:IRI .
+
+:pom_104 rdf:type rr:PredicateObjectMap ;
+	rr:predicateMap :pm_104 ;
+	rr:objectMap :om_104 .
+
+:pm_104 rdf:type rr:PredicateMap ;
+	rr:constant dcterms:spatial .
+
+:om_104 rdf:type rr:ObjectMap ;
+	rml:reference "werkingsgebied[*]" ;
+	rr:termType rr:IRI .
+
+:map_m_94_000 rml:logicalSource :source_054 ;
+	rdf:type rr:TriplesMap ;
+	rdfs:label "m_94" ;
+	rr:subjectMap :s_054 ;
+	rr:predicateObjectMap :pom_105 .
+
+:source_054 rdf:type rml:LogicalSource ;
+	rml:source "out/dummydata-a10.json" ;
+	rml:iterator "$.PubliekeOrganisatie[*]" ;
+	rml:referenceFormulation ql:JSONPath .
+
+:s_054 rdf:type rr:SubjectMap ;
+	rml:reference "werkingsgebied[*]" .
+
+:pom_105 rdf:type rr:PredicateObjectMap ;
+	rr:predicateMap :pm_105 ;
+	rr:objectMap :om_105 .
+
+:pm_105 rdf:type rr:PredicateMap ;
+	rr:constant rdf:type .
+
+:om_105 rdf:type rr:ObjectMap ;
+	rr:constant dcterms:Location ;
+	rr:termType rr:IRI .
+
+:map_m_95_000 rml:logicalSource :source_055 ;
+	rdf:type rr:TriplesMap ;
+	rdfs:label "m_95" ;
+	rr:subjectMap :s_055 ;
+	rr:predicateObjectMap :pom_106, :pom_107, :pom_108, :pom_109, :pom_110, :pom_111 .
+
+:source_055 rdf:type rml:LogicalSource ;
+	rml:source "out/dummydata-a10.json" ;
+	rml:iterator "$.GeregistreerdeOrganisatie[*]" ;
+	rml:referenceFormulation ql:JSONPath .
+
+:s_055 rdf:type rr:SubjectMap ;
+	rml:reference "CODE[*]" .
+
+:pom_106 rdf:type rr:PredicateObjectMap ;
+	rr:predicateMap :pm_106 ;
+	rr:objectMap :om_106 .
+
+:pm_106 rdf:type rr:PredicateMap ;
+	rr:constant rdf:type .
+
+:om_106 rdf:type rr:ObjectMap ;
+	rr:constant <http://www.w3.org/ns/regorg#RegisteredOrganization> ;
+	rr:termType rr:IRI .
+
+:pom_107 rdf:type rr:PredicateObjectMap ;
+	rr:predicateMap :pm_107 ;
+	rr:objectMap :om_107 .
+
+:pm_107 rdf:type rr:PredicateMap ;
+	rr:constant <https://data.vlaanderen.be/ns/organisatie#rechtspersoonlijkheid> .
+
+:om_107 rdf:type rr:ObjectMap ;
+	rml:reference "rechtspersoonlijkheid[*]" ;
+	rr:termType rr:IRI .
+
+:pom_108 rdf:type rr:PredicateObjectMap ;
+	rr:predicateMap :pm_108 ;
+	rr:objectMap :om_108 .
+
+:pm_108 rdf:type rr:PredicateMap ;
+	rr:constant <https://data.vlaanderen.be/ns/organisatie#rechtstoestand> .
+
+:om_108 rdf:type rr:ObjectMap ;
+	rml:reference "rechtstoestand[*]" ;
+	rr:termType rr:IRI .
+
+:pom_109 rdf:type rr:PredicateObjectMap ;
+	rr:predicateMap :pm_109 ;
+	rr:objectMap :om_109 .
+
+:pm_109 rdf:type rr:PredicateMap ;
+	rr:constant <https://data.vlaanderen.be/ns/organisatie#rechtsvorm> .
+
+:om_109 rdf:type rr:ObjectMap ;
+	rml:reference "rechtsvorm[*]" ;
+	rr:termType rr:IRI .
+
+:pom_110 rdf:type rr:PredicateObjectMap ;
+	rr:predicateMap :pm_110 ;
+	rr:objectMap :om_110 .
+
+:pm_110 rdf:type rr:PredicateMap ;
+	rr:constant <http://www.w3.org/ns/regorg#registration> .
+
+:om_110 rdf:type rr:ObjectMap ;
+	rml:reference "registratie[*]" ;
+	rr:termType rr:IRI .
+
+:pom_111 rdf:type rr:PredicateObjectMap ;
+	rr:predicateMap :pm_111 ;
+	rr:objectMap :om_111 .
+
+:pm_111 rdf:type rr:PredicateMap ;
+	rr:constant <http://www.w3.org/ns/regorg#legalName> .
+
+:om_111 rdf:type rr:ObjectMap ;
+	rml:reference "wettelijkeNaam[*]" ;
+	rr:termType rr:Literal ;
+	rml:languageMap :language_006 .
+
+:language_006 rr:constant "nl" .
+
+:map_m_100_000 rml:logicalSource :source_056 ;
+	rdf:type rr:TriplesMap ;
+	rdfs:label "m_100" ;
+	rr:subjectMap :s_056 ;
+	rr:predicateObjectMap :pom_112 .
+
+:source_056 rdf:type rml:LogicalSource ;
+	rml:source "out/dummydata-a10.json" ;
+	rml:iterator "$.GeregistreerdeOrganisatie[*]" ;
+	rml:referenceFormulation ql:JSONPath .
+
+:s_056 rdf:type rr:SubjectMap ;
+	rml:reference "rechtspersoonlijkheid[*]" .
+
+:pom_112 rdf:type rr:PredicateObjectMap ;
+	rr:predicateMap :pm_112 ;
+	rr:objectMap :om_112 .
+
+:pm_112 rdf:type rr:PredicateMap ;
+	rr:constant rdf:type .
+
+:om_112 rdf:type rr:ObjectMap ;
+	rr:constant skos:Concept ;
+	rr:termType rr:IRI .
+
+:map_m_101_000 rml:logicalSource :source_057 ;
+	rdf:type rr:TriplesMap ;
+	rdfs:label "m_101" ;
+	rr:subjectMap :s_057 ;
+	rr:predicateObjectMap :pom_113 .
+
+:source_057 rdf:type rml:LogicalSource ;
+	rml:source "out/dummydata-a10.json" ;
+	rml:iterator "$.GeregistreerdeOrganisatie[*]" ;
+	rml:referenceFormulation ql:JSONPath .
+
+:s_057 rdf:type rr:SubjectMap ;
+	rml:reference "rechtstoestand[*]" .
+
+:pom_113 rdf:type rr:PredicateObjectMap ;
+	rr:predicateMap :pm_113 ;
+	rr:objectMap :om_113 .
+
+:pm_113 rdf:type rr:PredicateMap ;
+	rr:constant rdf:type .
+
+:om_113 rdf:type rr:ObjectMap ;
+	rr:constant skos:Concept ;
+	rr:termType rr:IRI .
+
+:map_m_102_000 rml:logicalSource :source_058 ;
+	rdf:type rr:TriplesMap ;
+	rdfs:label "m_102" ;
+	rr:subjectMap :s_058 ;
+	rr:predicateObjectMap :pom_114 .
+
+:source_058 rdf:type rml:LogicalSource ;
+	rml:source "out/dummydata-a10.json" ;
+	rml:iterator "$.GeregistreerdeOrganisatie[*]" ;
+	rml:referenceFormulation ql:JSONPath .
+
+:s_058 rdf:type rr:SubjectMap ;
+	rml:reference "rechtsvorm[*]" .
+
+:pom_114 rdf:type rr:PredicateObjectMap ;
+	rr:predicateMap :pm_114 ;
+	rr:objectMap :om_114 .
+
+:pm_114 rdf:type rr:PredicateMap ;
+	rr:constant rdf:type .
+
+:om_114 rdf:type rr:ObjectMap ;
+	rr:constant skos:Concept ;
+	rr:termType rr:IRI .
+
+:map_m_103_000 rml:logicalSource :source_059 ;
+	rdf:type rr:TriplesMap ;
+	rdfs:label "m_103" ;
+	rr:subjectMap :s_059 ;
+	rr:predicateObjectMap :pom_115 .
+
+:source_059 rdf:type rml:LogicalSource ;
+	rml:source "out/dummydata-a10.json" ;
+	rml:iterator "$.GeregistreerdeOrganisatie[*]" ;
+	rml:referenceFormulation ql:JSONPath .
+
+:s_059 rdf:type rr:SubjectMap ;
+	rml:reference "registratie[*]" .
+
+:pom_115 rdf:type rr:PredicateObjectMap ;
+	rr:predicateMap :pm_115 ;
+	rr:objectMap :om_115 .
+
+:pm_115 rdf:type rr:PredicateMap ;
+	rr:constant rdf:type .
+
+:om_115 rdf:type rr:ObjectMap ;
+	rr:constant <http://www.w3.org/ns/adms#Identifier> ;
+	rr:termType rr:IRI .
+
+:map_m_104_000 rml:logicalSource :source_060 ;
+	rdf:type rr:TriplesMap ;
+	rdfs:label "m_104" ;
+	rr:subjectMap :s_060 ;
+	rr:predicateObjectMap :pom_116, :pom_117, :pom_118, :pom_119, :pom_120, :pom_121 .
+
+:source_060 rdf:type rml:LogicalSource ;
+	rml:source "out/dummydata-a10.json" ;
+	rml:iterator "$.Persoon[*]" ;
+	rml:referenceFormulation ql:JSONPath .
+
+:s_060 rdf:type rr:SubjectMap ;
+	rml:reference "CODE[*]" .
+
+:pom_116 rdf:type rr:PredicateObjectMap ;
+	rr:predicateMap :pm_116 ;
+	rr:objectMap :om_116 .
+
+:pm_116 rdf:type rr:PredicateMap ;
+	rr:constant rdf:type .
+
+:om_116 rdf:type rr:ObjectMap ;
+	rr:constant <http://www.w3.org/ns/person#Person> ;
+	rr:termType rr:IRI .
+
+:pom_117 rdf:type rr:PredicateObjectMap ;
+	rr:predicateMap :pm_117 ;
+	rr:objectMap :om_117 .
+
+:pm_117 rdf:type rr:PredicateMap ;
+	rr:constant <http://www.w3.org/ns/org#basedAt> .
+
+:om_117 rdf:type rr:ObjectMap ;
+	rml:reference "heeftStandplaats[*]" ;
+	rr:termType rr:IRI .
+
+:pom_118 rdf:type rr:PredicateObjectMap ;
+	rr:predicateMap :pm_118 ;
+	rr:objectMap :om_118 .
+
+:pm_118 rdf:type rr:PredicateMap ;
+	rr:constant foaf:familyName .
+
+:om_118 rdf:type rr:ObjectMap ;
+	rml:reference "achternaam[*]" ;
+	rr:termType rr:Literal ;
+	rr:datatype <http://www.w3.org/2001/XMLSchema#string> .
+
+:pom_119 rdf:type rr:PredicateObjectMap ;
+	rr:predicateMap :pm_119 ;
+	rr:objectMap :om_119 .
+
+:pm_119 rdf:type rr:PredicateMap ;
+	rr:constant foaf:givenName .
+
+:om_119 rdf:type rr:ObjectMap ;
+	rml:reference "voornaam[*]" ;
+	rr:termType rr:Literal ;
+	rr:datatype <http://www.w3.org/2001/XMLSchema#string> .
+
+:pom_120 rdf:type rr:PredicateObjectMap ;
+	rr:predicateMap :pm_120 ;
+	rr:objectMap :om_120 .
+
+:pm_120 rdf:type rr:PredicateMap ;
+	rr:constant <https://data.vlaanderen.be/ns/persoon#volledigeNaam> .
+
+:om_120 rdf:type rr:ObjectMap ;
+	rml:reference "volledigeNaam[*]" ;
+	rr:termType rr:Literal ;
+	rr:datatype <http://www.w3.org/2001/XMLSchema#string> .
+
+:pom_121 rdf:type rr:PredicateObjectMap ;
+	rr:predicateMap :pm_121 ;
+	rr:objectMap :om_121 .
+
+:pm_121 rdf:type rr:PredicateMap ;
+	rr:constant <https://data.vlaanderen.be/ns/persoon#geslacht> .
+
+:om_121 rdf:type rr:ObjectMap ;
+	rml:reference "geslacht[*]" ;
+	rr:termType rr:IRI .
+
+:map_m_109_000 rml:logicalSource :source_061 ;
+	rdf:type rr:TriplesMap ;
+	rdfs:label "m_109" ;
+	rr:subjectMap :s_061 ;
+	rr:predicateObjectMap :pom_122 .
+
+:source_061 rdf:type rml:LogicalSource ;
+	rml:source "out/dummydata-a10.json" ;
+	rml:iterator "$.Persoon[*]" ;
+	rml:referenceFormulation ql:JSONPath .
+
+:s_061 rdf:type rr:SubjectMap ;
+	rml:reference "heeftStandplaats[*]" .
+
+:pom_122 rdf:type rr:PredicateObjectMap ;
+	rr:predicateMap :pm_122 ;
+	rr:objectMap :om_122 .
+
+:pm_122 rdf:type rr:PredicateMap ;
+	rr:constant rdf:type .
+
+:om_122 rdf:type rr:ObjectMap ;
+	rr:constant <http://www.w3.org/ns/org#Site> ;
+	rr:termType rr:IRI .
+
+:map_m_110_000 rml:logicalSource :source_062 ;
+	rdf:type rr:TriplesMap ;
+	rdfs:label "m_110" ;
+	rr:subjectMap :s_062 ;
+	rr:predicateObjectMap :pom_123 .
+
+:source_062 rdf:type rml:LogicalSource ;
+	rml:source "out/dummydata-a10.json" ;
+	rml:iterator "$.Persoon[*]" ;
+	rml:referenceFormulation ql:JSONPath .
+
+:s_062 rdf:type rr:SubjectMap ;
+	rml:reference "geslacht[*]" .
+
+:pom_123 rdf:type rr:PredicateObjectMap ;
+	rr:predicateMap :pm_123 ;
+	rr:objectMap :om_123 .
+
+:pm_123 rdf:type rr:PredicateMap ;
+	rr:constant rdf:type .
+
+:om_123 rdf:type rr:ObjectMap ;
+	rr:constant skos:Concept ;
+	rr:termType rr:IRI .
+

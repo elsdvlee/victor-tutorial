@@ -1,0 +1,262 @@
+@prefix : <http://base.example.com/> .
+@prefix d2rq: <http://www.wiwiss.fu-berlin.de/suhl/bizer/D2RQ/0.1#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix ex: <http://example.org/> .
+@prefix exr: <http://example.org/relation/> .
+@prefix fnml: <http://semweb.mmlab.be/ns/fnml#> .
+@prefix fno: <https://w3id.org/function/ontology#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rml: <http://w3id.org/rml/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+
+<http://example.com/geslacht/man> a skos:Concept;
+  dc:title "Man" .
+
+<http://example.com/geslacht/niet-gespecificeerd> a skos:Concept;
+  dc:title "Niet gespecificeerd" .
+
+<http://example.com/geslacht/non-binair> a skos:Concept;
+  dc:title "Non-binair" .
+
+<http://example.com/geslacht/onbekend> a skos:Concept;
+  dc:title "Onbekend" .
+
+<http://example.com/geslacht/vrouw> a skos:Concept;
+  dc:title "Vrouw" .
+
+<http://example.com/orgtype/agentschap> a skos:Concept;
+  dc:title "Agentschap";
+  skos:broader <http://example.com/orgtype/overheid> .
+
+<http://example.com/orgtype/bank> a skos:Concept;
+  dc:title "Bank";
+  skos:broader <http://example.com/orgtype/financieel> .
+
+<http://example.com/orgtype/basisschool> a skos:Concept;
+  dc:title "Basisschool";
+  skos:broader <http://example.com/orgtype/onderwijs> .
+
+<http://example.com/orgtype/bedrijf> a skos:Concept;
+  dc:title "Privébedrijf" .
+
+<http://example.com/orgtype/belangenorganisatie> a skos:Concept;
+  dc:title "Belangenorganisatie";
+  skos:broader <http://example.com/orgtype/ngo> .
+
+<http://example.com/orgtype/cluster> a skos:Concept;
+  dc:title "Clusterorganisatie";
+  skos:broader <http://example.com/orgtype/samenwerking> .
+
+<http://example.com/orgtype/consortium> a skos:Concept;
+  dc:title "Consortium";
+  skos:broader <http://example.com/orgtype/samenwerking> .
+
+<http://example.com/orgtype/cultureel> a skos:Concept;
+  dc:title "Culturele vereniging";
+  skos:broader <http://example.com/orgtype/ngo> .
+
+<http://example.com/orgtype/cultuur> a skos:Concept;
+  dc:title "Culturele organisatie" .
+
+<http://example.com/orgtype/data-platform> a skos:Concept;
+  dc:title "Data-sharing platform";
+  skos:broader <http://example.com/orgtype/platform> .
+
+<http://example.com/orgtype/erfgoed> a skos:Concept;
+  dc:title "Erfgoedinstelling";
+  skos:broader <http://example.com/orgtype/cultuur> .
+
+<http://example.com/orgtype/familiebedrijf> a skos:Concept;
+  dc:title "Familiebedrijf";
+  skos:broader <http://example.com/orgtype/bedrijf> .
+
+<http://example.com/orgtype/federaal> a skos:Concept;
+  dc:title "Federale overheid";
+  skos:broader <http://example.com/orgtype/overheid> .
+
+<http://example.com/orgtype/federatie> a skos:Concept;
+  dc:title "Sectorfederatie";
+  skos:broader <http://example.com/orgtype/samenwerking> .
+
+<http://example.com/orgtype/festival> a skos:Concept;
+  dc:title "Festivalorganisatie";
+  skos:broader <http://example.com/orgtype/cultuur> .
+
+<http://example.com/orgtype/financieel> a skos:Concept;
+  dc:title "FinanciÃ«le organisatie" .
+
+<http://example.com/orgtype/fintech> a skos:Concept;
+  dc:title "Fintech bedrijf";
+  skos:broader <http://example.com/orgtype/financieel> .
+
+<http://example.com/orgtype/hogeschool> a skos:Concept;
+  dc:title "Hogeschool";
+  skos:broader <http://example.com/orgtype/onderwijs> .
+
+<http://example.com/orgtype/humanitair> a skos:Concept;
+  dc:title "Humanitaire organisatie";
+  skos:broader <http://example.com/orgtype/ngo> .
+
+<http://example.com/orgtype/igo> a skos:Concept;
+  dc:title "Intergouvernementele organisatie";
+  skos:broader <http://example.com/orgtype/internationaal> .
+
+<http://example.com/orgtype/internationaal> a skos:Concept;
+  dc:title "Internationale organisatie" .
+
+<http://example.com/orgtype/internationale-ngo> a skos:Concept;
+  dc:title "Internationale NGO";
+  skos:broader <http://example.com/orgtype/internationaal> .
+
+<http://example.com/orgtype/investeringsfonds> a skos:Concept;
+  dc:title "Investeringsfonds";
+  skos:broader <http://example.com/orgtype/financieel> .
+
+<http://example.com/orgtype/kmo> a skos:Concept;
+  dc:title "KMO";
+  skos:broader <http://example.com/orgtype/bedrijf> .
+
+<http://example.com/orgtype/lokaal> a skos:Concept;
+  dc:title "Lokale overheid";
+  skos:broader <http://example.com/orgtype/overheid> .
+
+<http://example.com/orgtype/marktplaats> a skos:Concept;
+  dc:title "Marktplaatsplatform";
+  skos:broader <http://example.com/orgtype/platform> .
+
+<http://example.com/orgtype/microfinanciering> a skos:Concept;
+  dc:title "Microfinanciering";
+  skos:broader <http://example.com/orgtype/financieel> .
+
+<http://example.com/orgtype/milieu> a skos:Concept;
+  dc:title "Milieuorganisatie";
+  skos:broader <http://example.com/orgtype/ngo> .
+
+<http://example.com/orgtype/multinational> a skos:Concept;
+  dc:title "Multinational";
+  skos:broader <http://example.com/orgtype/bedrijf> .
+
+<http://example.com/orgtype/museum> a skos:Concept;
+  dc:title "Museum";
+  skos:broader <http://example.com/orgtype/cultuur> .
+
+<http://example.com/orgtype/ngo> a skos:Concept;
+  dc:title "NGO";
+  skos:broader <http://example.com/orgtype/nonprofit> .
+
+<http://example.com/orgtype/nonprofit> a skos:Concept;
+  dc:title "Non-profitorganisatie" .
+
+<http://example.com/orgtype/onderwijs> a skos:Concept;
+  dc:title "Onderwijsorganisatie" .
+
+<http://example.com/orgtype/onderwijs-ngo> a skos:Concept;
+  dc:title "Onderwijsgerichte NGO";
+  skos:broader <http://example.com/orgtype/ngo> .
+
+<http://example.com/orgtype/onderzoeksinstituut> a skos:Concept;
+  dc:title "Onderzoeksinstituut";
+  skos:broader <http://example.com/orgtype/onderwijs> .
+
+<http://example.com/orgtype/onderzoeksnetwerk> a skos:Concept;
+  dc:title "Onderzoeksnetwerk";
+  skos:broader <http://example.com/orgtype/samenwerking> .
+
+<http://example.com/orgtype/ontwikkelingsorganisatie> a skos:Concept;
+  dc:title "Ontwikkelingsorganisatie";
+  skos:broader <http://example.com/orgtype/internationaal> .
+
+<http://example.com/orgtype/open-source> a skos:Concept;
+  dc:title "Open-source gemeenschap";
+  skos:broader <http://example.com/orgtype/platform> .
+
+<http://example.com/orgtype/opleidingscentrum> a skos:Concept;
+  dc:title "PrivÃ©-opleidingscentrum";
+  skos:broader <http://example.com/orgtype/onderwijs> .
+
+<http://example.com/orgtype/overheid> a skos:Concept;
+  dc:title "Overheidsinstantie" .
+
+<http://example.com/orgtype/platform> a skos:Concept;
+  dc:title "Platformorganisatie" .
+
+<http://example.com/orgtype/pps> a skos:Concept;
+  dc:title "Publiek-private samenwerking";
+  skos:broader <http://example.com/orgtype/samenwerking> .
+
+<http://example.com/orgtype/psychiatrisch> a skos:Concept;
+  dc:title "Psychiatrische instelling";
+  skos:broader <http://example.com/orgtype/zorg> .
+
+<http://example.com/orgtype/regionaal> a skos:Concept;
+  dc:title "Regionale overheid";
+  skos:broader <http://example.com/orgtype/overheid> .
+
+<http://example.com/orgtype/regulator> a skos:Concept;
+  dc:title "Regulerende autoriteit";
+  skos:broader <http://example.com/orgtype/overheid> .
+
+<http://example.com/orgtype/revalidatiecentrum> a skos:Concept;
+  dc:title "Revalidatiecentrum";
+  skos:broader <http://example.com/orgtype/zorg> .
+
+<http://example.com/orgtype/samenwerking> a skos:Concept;
+  dc:title "Samenwerkingsverband" .
+
+<http://example.com/orgtype/scaleup> a skos:Concept;
+  dc:title "Scale-up";
+  skos:broader <http://example.com/orgtype/bedrijf> .
+
+<http://example.com/orgtype/secundair> a skos:Concept;
+  dc:title "Secundair onderwijs";
+  skos:broader <http://example.com/orgtype/onderwijs> .
+
+<http://example.com/orgtype/sociale-media> a skos:Concept;
+  dc:title "Sociale media platform";
+  skos:broader <http://example.com/orgtype/platform> .
+
+<http://example.com/orgtype/sociale-onderneming> a skos:Concept;
+  dc:title "Sociale onderneming";
+  skos:broader <http://example.com/orgtype/bedrijf> .
+
+<http://example.com/orgtype/sportclub> a skos:Concept;
+  dc:title "Sportclub";
+  skos:broader <http://example.com/orgtype/cultuur> .
+
+<http://example.com/orgtype/startup> a skos:Concept;
+  dc:title "Start-up";
+  skos:broader <http://example.com/orgtype/bedrijf> .
+
+<http://example.com/orgtype/supranationaal> a skos:Concept;
+  dc:title "Supranationale organisatie";
+  skos:broader <http://example.com/orgtype/internationaal> .
+
+<http://example.com/orgtype/theater> a skos:Concept;
+  dc:title "Theatergezelschap";
+  skos:broader <http://example.com/orgtype/cultuur> .
+
+<http://example.com/orgtype/thuiszorg> a skos:Concept;
+  dc:title "Thuiszorgdienst";
+  skos:broader <http://example.com/orgtype/zorg> .
+
+<http://example.com/orgtype/universiteit> a skos:Concept;
+  dc:title "Universiteit";
+  skos:broader <http://example.com/orgtype/onderwijs> .
+
+<http://example.com/orgtype/verzekeraar> a skos:Concept;
+  dc:title "Verzekeraar";
+  skos:broader <http://example.com/orgtype/financieel> .
+
+<http://example.com/orgtype/woonzorgcentrum> a skos:Concept;
+  dc:title "Woonzorgcentrum";
+  skos:broader <http://example.com/orgtype/zorg> .
+
+<http://example.com/orgtype/ziekenhuis> a skos:Concept;
+  dc:title "Ziekenhuis";
+  skos:broader <http://example.com/orgtype/zorg> .
+
+<http://example.com/orgtype/zorg> a skos:Concept;
+  dc:title "Zorgorganisatie" .

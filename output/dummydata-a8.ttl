@@ -1,0 +1,37 @@
+@prefix : <http://base.example.com/> .
+@prefix d2rq: <http://www.wiwiss.fu-berlin.de/suhl/bizer/D2RQ/0.1#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix ex: <http://example.org/> .
+@prefix exr: <http://example.org/relation/> .
+@prefix fnml: <http://semweb.mmlab.be/ns/fnml#> .
+@prefix fno: <https://w3id.org/function/ontology#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rml: <http://w3id.org/rml/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+
+<http://example.com/a8/org/lokaal/hasselt> a <http://www.w3.org/ns/org#Organization>;
+  dc:description "lokaal bestuur van Hasselt"@nl;
+  skos:prefLabel "Stad Hasselt"@nl;
+  <http://www.w3.org/ns/org#hasSubOrganization> <http://example.com/a8/org/lokaal/hasselt/economie>;
+  <http://www.w3.org/ns/regorg#orgType> <http://example.com/orgtype/lokaal>;
+  foaf:homepage "https://www.hasselt.be" .
+
+<http://example.com/a8/org/lokaal/hasselt/economie> a <http://www.w3.org/ns/org#Organization>;
+  dc:description "lokale dienst economie van Stad Hasselt"@nl;
+  skos:prefLabel "Dienst Economie Hasselt"@nl;
+  <http://www.w3.org/ns/regorg#orgType> <http://example.com/orgtype/lokaal>;
+  foaf:homepage "https://www.hasselt.be/economie" .
+
+<http://example.com/a8/persoon/08.06.06-008.06> a dc:Agent, <http://www.w3.org/ns/person#Person>;
+  <http://www.w3.org/ns/org#memberOf> <http://example.com/a8/org/lokaal/hasselt/economie>;
+  foaf:familyName "Claes";
+  foaf:givenName "Lotte";
+  <https://data.vlaanderen.be/ns/persoon#geslacht> <http://example.com/geslacht/vrouw>;
+  <https://data.vlaanderen.be/ns/persoon#volledigeNaam> "Lotte Claes" .
+
+<http://example.com/geslacht/vrouw> a skos:Concept .
+
+<http://example.com/orgtype/lokaal> a skos:Concept .

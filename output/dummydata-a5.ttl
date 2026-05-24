@@ -1,0 +1,37 @@
+@prefix : <http://base.example.com/> .
+@prefix d2rq: <http://www.wiwiss.fu-berlin.de/suhl/bizer/D2RQ/0.1#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix ex: <http://example.org/> .
+@prefix exr: <http://example.org/relation/> .
+@prefix fnml: <http://semweb.mmlab.be/ns/fnml#> .
+@prefix fno: <https://w3id.org/function/ontology#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rml: <http://w3id.org/rml/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+
+<http://example.com/a5/org/lokaal/gent> a <http://www.w3.org/ns/org#Organization>;
+  dc:description "lokaal bestuur van Gent"@nl;
+  skos:prefLabel "Stad Gent"@nl;
+  <http://www.w3.org/ns/org#hasSubOrganization> <http://example.com/a5/org/lokaal/gent/onderwijs>;
+  <http://www.w3.org/ns/regorg#orgType> <http://example.com/orgtype/lokaal>;
+  foaf:homepage "https://www.gent.be" .
+
+<http://example.com/a5/org/lokaal/gent/onderwijs> a <http://www.w3.org/ns/org#Organization>;
+  dc:description "lokale dienst onderwijs van Stad Gent"@nl;
+  skos:prefLabel "Dienst Onderwijs Gent"@nl;
+  <http://www.w3.org/ns/regorg#orgType> <http://example.com/orgtype/lokaal>;
+  foaf:homepage "https://www.gent.be/onderwijs" .
+
+<http://example.com/a5/persoon/05.03.03-005.03> a dc:Agent, <http://www.w3.org/ns/person#Person>;
+  <http://www.w3.org/ns/org#memberOf> <http://example.com/a5/org/lokaal/gent/onderwijs>;
+  foaf:familyName "Vermeulen";
+  foaf:givenName "Thomas";
+  <https://data.vlaanderen.be/ns/persoon#geslacht> <http://example.com/geslacht/man>;
+  <https://data.vlaanderen.be/ns/persoon#volledigeNaam> "Thomas Vermeulen" .
+
+<http://example.com/geslacht/man> a skos:Concept .
+
+<http://example.com/orgtype/lokaal> a skos:Concept .

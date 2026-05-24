@@ -1,0 +1,37 @@
+@prefix : <http://base.example.com/> .
+@prefix d2rq: <http://www.wiwiss.fu-berlin.de/suhl/bizer/D2RQ/0.1#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix ex: <http://example.org/> .
+@prefix exr: <http://example.org/relation/> .
+@prefix fnml: <http://semweb.mmlab.be/ns/fnml#> .
+@prefix fno: <https://w3id.org/function/ontology#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rml: <http://w3id.org/rml/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+
+<http://example.com/a13/org/regionaal/zorg-sintniklaas> a <http://www.w3.org/ns/org#Organization>;
+  dc:description "regionale overheidsinstantie rond zorg"@nl;
+  skos:prefLabel "Vlaamse Overheid Zorg"@nl;
+  <http://www.w3.org/ns/org#hasSubOrganization> <http://example.com/a13/org/regionaal/zorg-sintniklaas/zorg>;
+  <http://www.w3.org/ns/regorg#orgType> <http://example.com/orgtype/regionaal>;
+  foaf:homepage "https://www.vlaanderen.be/zorg" .
+
+<http://example.com/a13/org/regionaal/zorg-sintniklaas/zorg> a <http://www.w3.org/ns/org#Organization>;
+  dc:description "regionaal agentschap voor zorg in Sint-Niklaas"@nl;
+  skos:prefLabel "Agentschap Zorg Sint-Niklaas"@nl;
+  <http://www.w3.org/ns/regorg#orgType> <http://example.com/orgtype/regionaal>;
+  foaf:homepage "https://www.vlaanderen.be/zorg/sintniklaas" .
+
+<http://example.com/a13/persoon/13.11.11-013.11> a dc:Agent, <http://www.w3.org/ns/person#Person>;
+  <http://www.w3.org/ns/org#memberOf> <http://example.com/a13/org/regionaal/zorg-sintniklaas/zorg>;
+  foaf:familyName "De Smet";
+  foaf:givenName "Bram";
+  <https://data.vlaanderen.be/ns/persoon#geslacht> <http://example.com/geslacht/man>;
+  <https://data.vlaanderen.be/ns/persoon#volledigeNaam> "Bram De Smet" .
+
+<http://example.com/geslacht/man> a skos:Concept .
+
+<http://example.com/orgtype/regionaal> a skos:Concept .

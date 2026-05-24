@@ -1,0 +1,37 @@
+@prefix : <http://base.example.com/> .
+@prefix d2rq: <http://www.wiwiss.fu-berlin.de/suhl/bizer/D2RQ/0.1#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix ex: <http://example.org/> .
+@prefix exr: <http://example.org/relation/> .
+@prefix fnml: <http://semweb.mmlab.be/ns/fnml#> .
+@prefix fno: <https://w3id.org/function/ontology#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rml: <http://w3id.org/rml/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+
+<http://example.com/a7/org/regionaal/digitale-zaken-brugge> a <http://www.w3.org/ns/org#Organization>;
+  dc:description "regionale overheidsinstantie rond digitale zaken"@nl;
+  skos:prefLabel "Waalse Overheid Digitale Zaken"@nl;
+  <http://www.w3.org/ns/org#hasSubOrganization> <http://example.com/a7/org/regionaal/digitale-zaken-brugge/digitale-zaken>;
+  <http://www.w3.org/ns/regorg#orgType> <http://example.com/orgtype/regionaal>;
+  foaf:homepage "https://www.vlaanderen.be/digitale-zaken" .
+
+<http://example.com/a7/org/regionaal/digitale-zaken-brugge/digitale-zaken> a <http://www.w3.org/ns/org#Organization>;
+  dc:description "regionaal agentschap voor digitale zaken in Brugge"@nl;
+  skos:prefLabel "Agentschap Digitale Zaken Brugge"@nl;
+  <http://www.w3.org/ns/regorg#orgType> <http://example.com/orgtype/regionaal>;
+  foaf:homepage "https://www.vlaanderen.be/digitale-zaken/brugge" .
+
+<http://example.com/a7/persoon/07.05.05-007.05> a dc:Agent, <http://www.w3.org/ns/person#Person>;
+  <http://www.w3.org/ns/org#memberOf> <http://example.com/a7/org/regionaal/digitale-zaken-brugge/digitale-zaken>;
+  foaf:familyName "Dubois";
+  foaf:givenName "Lucas";
+  <https://data.vlaanderen.be/ns/persoon#geslacht> <http://example.com/geslacht/man>;
+  <https://data.vlaanderen.be/ns/persoon#volledigeNaam> "Lucas Dubois" .
+
+<http://example.com/geslacht/man> a skos:Concept .
+
+<http://example.com/orgtype/regionaal> a skos:Concept .

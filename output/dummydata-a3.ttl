@@ -1,0 +1,37 @@
+@prefix : <http://base.example.com/> .
+@prefix d2rq: <http://www.wiwiss.fu-berlin.de/suhl/bizer/D2RQ/0.1#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix ex: <http://example.org/> .
+@prefix exr: <http://example.org/relation/> .
+@prefix fnml: <http://semweb.mmlab.be/ns/fnml#> .
+@prefix fno: <https://w3id.org/function/ontology#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rml: <http://w3id.org/rml/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+
+<http://example.com/a3/org/federaal/financien> a <http://www.w3.org/ns/org#Organization>;
+  dc:description "federale overheidsdienst bevoegd voor financien"@nl;
+  skos:prefLabel "Federale Overheidsdienst Financien"@nl;
+  <http://www.w3.org/ns/org#hasSubOrganization> <http://example.com/a3/org/federaal/financien/financien>;
+  <http://www.w3.org/ns/regorg#orgType> <http://example.com/orgtype/federaal>;
+  foaf:homepage "https://www.belgium.be/nl/financien" .
+
+<http://example.com/a3/org/federaal/financien/financien> a <http://www.w3.org/ns/org#Organization>;
+  dc:description "directie binnen de federale overheidsdienst financien"@nl;
+  skos:prefLabel "Directie Financien Brussel"@nl;
+  <http://www.w3.org/ns/regorg#orgType> <http://example.com/orgtype/federaal>;
+  foaf:homepage "https://www.belgium.be/nl/financien/brussel" .
+
+<http://example.com/a3/persoon/03.01.01-003.01> a dc:Agent, <http://www.w3.org/ns/person#Person>;
+  <http://www.w3.org/ns/org#memberOf> <http://example.com/a3/org/federaal/financien/financien>;
+  foaf:familyName "Janssens";
+  foaf:givenName "Pieter";
+  <https://data.vlaanderen.be/ns/persoon#geslacht> <http://example.com/geslacht/man>;
+  <https://data.vlaanderen.be/ns/persoon#volledigeNaam> "Pieter Janssens" .
+
+<http://example.com/geslacht/man> a skos:Concept .
+
+<http://example.com/orgtype/federaal> a skos:Concept .

@@ -1,0 +1,37 @@
+@prefix : <http://base.example.com/> .
+@prefix d2rq: <http://www.wiwiss.fu-berlin.de/suhl/bizer/D2RQ/0.1#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix ex: <http://example.org/> .
+@prefix exr: <http://example.org/relation/> .
+@prefix fnml: <http://semweb.mmlab.be/ns/fnml#> .
+@prefix fno: <https://w3id.org/function/ontology#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rml: <http://w3id.org/rml/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+
+<http://example.com/a9/org/federaal/cultuur> a <http://www.w3.org/ns/org#Organization>;
+  dc:description "federale overheidsdienst bevoegd voor cultuur"@nl;
+  skos:prefLabel "Federale Overheidsdienst Cultuur"@nl;
+  <http://www.w3.org/ns/org#hasSubOrganization> <http://example.com/a9/org/federaal/cultuur/cultuur>;
+  <http://www.w3.org/ns/regorg#orgType> <http://example.com/orgtype/federaal>;
+  foaf:homepage "https://www.belgium.be/nl/cultuur" .
+
+<http://example.com/a9/org/federaal/cultuur/cultuur> a <http://www.w3.org/ns/org#Organization>;
+  dc:description "directie binnen de federale overheidsdienst cultuur"@nl;
+  skos:prefLabel "Directie Cultuur Kortrijk"@nl;
+  <http://www.w3.org/ns/regorg#orgType> <http://example.com/orgtype/federaal>;
+  foaf:homepage "https://www.belgium.be/nl/cultuur/kortrijk" .
+
+<http://example.com/a9/persoon/09.07.07-009.07> a dc:Agent, <http://www.w3.org/ns/person#Person>;
+  <http://www.w3.org/ns/org#memberOf> <http://example.com/a9/org/federaal/cultuur/cultuur>;
+  foaf:familyName "Goossens";
+  foaf:givenName "Milan";
+  <https://data.vlaanderen.be/ns/persoon#geslacht> <http://example.com/geslacht/man>;
+  <https://data.vlaanderen.be/ns/persoon#volledigeNaam> "Milan Goossens" .
+
+<http://example.com/geslacht/man> a skos:Concept .
+
+<http://example.com/orgtype/federaal> a skos:Concept .

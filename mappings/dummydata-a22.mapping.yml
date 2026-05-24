@@ -1,0 +1,696 @@
+
+prefixes:
+  ex: "http://example.org/"
+  exr: "http://example.org/relation/"
+  skos: "http://www.w3.org/2004/02/skos/core#"
+  dcterms: "http://purl.org/dc/terms/"
+  rdfs: "http://www.w3.org/2000/01/rdf-schema#"
+
+base: "http://base.example.com/" 
+
+mappings:
+  m_1:
+    sources:
+      - [ "out/dummydata-a22.json~jsonpath", "$.Veranderingsgebeurtenis[*]" ]
+    s: $(CODE[*])
+    po:
+      - [rdf:type, http://www.w3.org/ns/org#ChangeEvent~iri]
+      - p: "http://purl.org/dc/terms/date"
+        o: 
+          value:  "$(datum[*])"
+          datatype: http://www.w3.org/2000/01/rdf-schema#Literal
+      - p: "http://www.w3.org/ns/org#resultingOrganization"
+        o: 
+          value:  "$(heeftResulterendeOrganisatie[*])"
+          type: iri
+      - p: "http://www.w3.org/ns/org#originalOrganization"
+        o: 
+          value:  "$(heeftOorspronkelijkeOrganisatie[*])"
+          type: iri
+      - p: "http://data.europa.eu/m8g/hasFormalFramework"
+        o: 
+          value:  "$(vindtPlaatsBinnen[*])"
+          type: iri
+
+  m_5:
+    sources:
+      - [ out/dummydata-a22.json~jsonpath, "$.Veranderingsgebeurtenis[*]" ]
+    s: $(heeftResulterendeOrganisatie[*])
+    po:
+      - [rdf:type, http://www.w3.org/ns/org#Organization~iri]
+
+  m_6:
+    sources:
+      - [ out/dummydata-a22.json~jsonpath, "$.Veranderingsgebeurtenis[*]" ]
+    s: $(heeftOorspronkelijkeOrganisatie[*])
+    po:
+      - [rdf:type, http://www.w3.org/ns/org#Organization~iri]
+
+  m_7:
+    sources:
+      - [ out/dummydata-a22.json~jsonpath, "$.Veranderingsgebeurtenis[*]" ]
+    s: $(vindtPlaatsBinnen[*])
+    po:
+      - [rdf:type, http://purl.org/vocab/cpsv#FormalFramework~iri]
+
+  m_8:
+    sources:
+      - [ "out/dummydata-a22.json~jsonpath", "$.Organisatie[*]" ]
+    s: $(CODE[*])
+    po:
+      - [rdf:type, http://www.w3.org/ns/org#Organization~iri]
+      - p: "http://xmlns.com/foaf/0.1/homepage"
+        o: 
+          value:  "$(homepage[*])"
+          datatype: http://www.w3.org/2001/XMLSchema#string
+      - p: "http://schema.org/contactPoint"
+        o: 
+          value:  "$(contactinfo[*])"
+          type: iri
+      - p: "http://www.w3.org/ns/org#purpose"
+        o: 
+          value:  "$(doel[*])"
+          language: nl
+      - p: "http://schema.org/logo"
+        o: 
+          value:  "$(logo[*])"
+          type: iri
+      - p: "http://www.w3.org/ns/regorg#orgStatus"
+        o: 
+          value:  "$(status[*])"
+          type: iri
+      - p: "http://www.w3.org/ns/regorg#orgType"
+        o: 
+          value:  "$(type[*])"
+          type: iri
+      - p: "http://www.w3.org/2004/02/skos/core#prefLabel"
+        o: 
+          value:  "$(voorkeursnaam[*])"
+          language: nl
+      - p: "http://www.w3.org/ns/regorg#orgActivity"
+        o: 
+          value:  "$(activiteit[*])"
+          type: iri
+      - p: "http://www.w3.org/2004/02/skos/core#altLabel"
+        o: 
+          value:  "$(alternatieveNaam[*])"
+          language: nl
+      - p: "http://purl.org/dc/terms/description"
+        o: 
+          value:  "$(beschrijving[*])"
+          language: nl
+      - p: "http://www.w3.org/ns/org#classification"
+        o: 
+          value:  "$(classificatie[*])"
+          type: iri
+      - p: "http://www.w3.org/ns/org#hasRegisteredSite"
+        o: 
+          value:  "$(heeftGeregistreerdeVestiging[*])"
+          type: iri
+      - p: "http://www.w3.org/ns/org#hasPrimarySite"
+        o: 
+          value:  "$(heeftPrimaireVestiging[*])"
+          type: iri
+      - p: "http://www.w3.org/ns/org#hasSubOrganization"
+        o: 
+          value:  "$(heeftSuborganisatie[*])"
+          type: iri
+      - p: "http://www.w3.org/ns/org#hasPost"
+        o: 
+          value:  "$(heeft[*])"
+          type: iri
+      - p: "http://www.w3.org/ns/org#linkedTo"
+        o: 
+          value:  "$(isGeassocieerdMet[*])"
+          type: iri
+      - p: "http://www.w3.org/ns/org#hasSite"
+        o: 
+          value:  "$(heeftVestiging[*])"
+          type: iri
+      - p: "http://www.w3.org/ns/org#subOrganizationOf"
+        o: 
+          value:  "$(isSuborganisatieVan[*])"
+          type: iri
+      - p: "http://www.w3.org/ns/org#resultedFrom"
+        o: 
+          value:  "$(isHetResultaatVan[*])"
+          type: iri
+      - p: "http://www.w3.org/ns/org#changedBy"
+        o: 
+          value:  "$(isVeranderdDoor[*])"
+          type: iri
+      - p: "http://www.w3.org/ns/org#hasUnit"
+        o: 
+          value:  "$(heeftEenheid[*])"
+          type: iri
+      - p: "http://www.w3.org/ns/org#hasMember"
+        o: 
+          value:  "$(heeftAlsLid[*])"
+          type: iri
+
+  m_30:
+    sources:
+      - [ out/dummydata-a22.json~jsonpath, "$.Organisatie[*]" ]
+    s: $(contactinfo[*])
+    po:
+      - [rdf:type, http://schema.org/ContactPoint~iri]
+
+  m_31:
+    sources:
+      - [ out/dummydata-a22.json~jsonpath, "$.Organisatie[*]" ]
+    s: $(logo[*])
+    po:
+      - [rdf:type, https://schema.org/MediaObject~iri]
+
+  m_32:
+    sources:
+      - [ out/dummydata-a22.json~jsonpath, "$.Organisatie[*]" ]
+    s: $(status[*])
+    po:
+      - [rdf:type, http://www.w3.org/2004/02/skos/core#Concept~iri]
+
+  m_33:
+    sources:
+      - [ out/dummydata-a22.json~jsonpath, "$.Organisatie[*]" ]
+    s: $(type[*])
+    po:
+      - [rdf:type, http://www.w3.org/2004/02/skos/core#Concept~iri]
+
+  m_34:
+    sources:
+      - [ out/dummydata-a22.json~jsonpath, "$.Organisatie[*]" ]
+    s: $(activiteit[*])
+    po:
+      - [rdf:type, http://www.w3.org/2004/02/skos/core#Concept~iri]
+
+  m_35:
+    sources:
+      - [ out/dummydata-a22.json~jsonpath, "$.Organisatie[*]" ]
+    s: $(classificatie[*])
+    po:
+      - [rdf:type, http://www.w3.org/2004/02/skos/core#Concept~iri]
+
+  m_36:
+    sources:
+      - [ out/dummydata-a22.json~jsonpath, "$.Organisatie[*]" ]
+    s: $(heeftGeregistreerdeVestiging[*])
+    po:
+      - [rdf:type, http://www.w3.org/ns/org#Site~iri]
+
+  m_37:
+    sources:
+      - [ out/dummydata-a22.json~jsonpath, "$.Organisatie[*]" ]
+    s: $(heeftPrimaireVestiging[*])
+    po:
+      - [rdf:type, http://www.w3.org/ns/org#Site~iri]
+
+  m_38:
+    sources:
+      - [ out/dummydata-a22.json~jsonpath, "$.Organisatie[*]" ]
+    s: $(heeftSuborganisatie[*])
+    po:
+      - [rdf:type, http://www.w3.org/ns/org#Organization~iri]
+
+  m_39:
+    sources:
+      - [ out/dummydata-a22.json~jsonpath, "$.Organisatie[*]" ]
+    s: $(heeft[*])
+    po:
+      - [rdf:type, http://www.w3.org/ns/org#Post~iri]
+
+  m_40:
+    sources:
+      - [ out/dummydata-a22.json~jsonpath, "$.Organisatie[*]" ]
+    s: $(isGeassocieerdMet[*])
+    po:
+      - [rdf:type, http://www.w3.org/ns/org#Organization~iri]
+
+  m_41:
+    sources:
+      - [ out/dummydata-a22.json~jsonpath, "$.Organisatie[*]" ]
+    s: $(heeftVestiging[*])
+    po:
+      - [rdf:type, http://www.w3.org/ns/org#Site~iri]
+
+  m_42:
+    sources:
+      - [ out/dummydata-a22.json~jsonpath, "$.Organisatie[*]" ]
+    s: $(isSuborganisatieVan[*])
+    po:
+      - [rdf:type, http://www.w3.org/ns/org#Organization~iri]
+
+  m_43:
+    sources:
+      - [ out/dummydata-a22.json~jsonpath, "$.Organisatie[*]" ]
+    s: $(isHetResultaatVan[*])
+    po:
+      - [rdf:type, http://www.w3.org/ns/org#ChangeEvent~iri]
+
+  m_44:
+    sources:
+      - [ out/dummydata-a22.json~jsonpath, "$.Organisatie[*]" ]
+    s: $(isVeranderdDoor[*])
+    po:
+      - [rdf:type, http://www.w3.org/ns/org#ChangeEvent~iri]
+
+  m_45:
+    sources:
+      - [ out/dummydata-a22.json~jsonpath, "$.Organisatie[*]" ]
+    s: $(heeftEenheid[*])
+    po:
+      - [rdf:type, http://www.w3.org/ns/org#OrganizationalUnit~iri]
+
+  m_46:
+    sources:
+      - [ out/dummydata-a22.json~jsonpath, "$.Organisatie[*]" ]
+    s: $(heeftAlsLid[*])
+    po:
+      - [rdf:type, http://purl.org/dc/terms/Agent~iri]
+
+  m_47:
+    sources:
+      - [ "out/dummydata-a22.json~jsonpath", "$.Agent[*]" ]
+    s: $(CODE[*])
+    po:
+      - [rdf:type, http://purl.org/dc/terms/Agent~iri]
+      - p: "http://www.w3.org/ns/regorg#hasRegisteredOrganization"
+        o: 
+          value:  "$(heeftGeregistreerdeOrganisatie[*])"
+          type: iri
+      - p: "http://www.w3.org/ns/org#reportsTo"
+        o: 
+          value:  "$(rapporteertAan[*])"
+          type: iri
+      - p: "http://www.w3.org/ns/org#holds"
+        o: 
+          value:  "$(houdt[*])"
+          type: iri
+      - p: "http://www.w3.org/ns/org#headOf"
+        o: 
+          value:  "$(isHoofdVan[*])"
+          type: iri
+      - p: "http://www.w3.org/ns/org#memberOf"
+        o: 
+          value:  "$(isLidVan[*])"
+          type: iri
+
+  m_52:
+    sources:
+      - [ out/dummydata-a22.json~jsonpath, "$.Agent[*]" ]
+    s: $(heeftGeregistreerdeOrganisatie[*])
+    po:
+      - [rdf:type, http://www.w3.org/ns/regorg#RegisteredOrganization~iri]
+
+  m_53:
+    sources:
+      - [ out/dummydata-a22.json~jsonpath, "$.Agent[*]" ]
+    s: $(rapporteertAan[*])
+    po:
+      - [rdf:type, http://purl.org/dc/terms/Agent~iri]
+
+  m_54:
+    sources:
+      - [ out/dummydata-a22.json~jsonpath, "$.Agent[*]" ]
+    s: $(houdt[*])
+    po:
+      - [rdf:type, http://www.w3.org/ns/org#Post~iri]
+
+  m_55:
+    sources:
+      - [ out/dummydata-a22.json~jsonpath, "$.Agent[*]" ]
+    s: $(isHoofdVan[*])
+    po:
+      - [rdf:type, http://www.w3.org/ns/org#Organization~iri]
+
+  m_56:
+    sources:
+      - [ out/dummydata-a22.json~jsonpath, "$.Agent[*]" ]
+    s: $(isLidVan[*])
+    po:
+      - [rdf:type, http://www.w3.org/ns/org#Organization~iri]
+
+  m_57:
+    sources:
+      - [ "out/dummydata-a22.json~jsonpath", "$.Vestiging[*]" ]
+    s: $(CODE[*])
+    po:
+      - [rdf:type, http://www.w3.org/ns/org#Site~iri]
+      - p: "http://www.w3.org/ns/org#siteAddress"
+        o: 
+          value:  "$(vestigingsadres[*])"
+          type: iri
+      - p: "http://www.w3.org/ns/org#hasRegisteredSite"
+        o: 
+          value:  "$(heeftGeregistreerdeVestiging[*])"
+          type: iri
+      - p: "http://www.w3.org/ns/org#hasPrimarySite"
+        o: 
+          value:  "$(heeftPrimaireVestiging[*])"
+          type: iri
+      - p: "http://www.w3.org/ns/org#hasSite"
+        o: 
+          value:  "$(heeftVestiging[*])"
+          type: iri
+      - p: "https://data.vlaanderen.be/ns/organisatie#bestaatUit"
+        o: 
+          value:  "$(bestaatUit[*])"
+          type: iri
+
+  m_62:
+    sources:
+      - [ out/dummydata-a22.json~jsonpath, "$.Vestiging[*]" ]
+    s: $(vestigingsadres[*])
+    po:
+      - [rdf:type, http://schema.org/ContactPoint~iri]
+
+  m_63:
+    sources:
+      - [ out/dummydata-a22.json~jsonpath, "$.Vestiging[*]" ]
+    s: $(heeftGeregistreerdeVestiging[*])
+    po:
+      - [rdf:type, http://www.w3.org/ns/org#Organization~iri]
+
+  m_64:
+    sources:
+      - [ out/dummydata-a22.json~jsonpath, "$.Vestiging[*]" ]
+    s: $(heeftPrimaireVestiging[*])
+    po:
+      - [rdf:type, http://www.w3.org/ns/org#Organization~iri]
+
+  m_65:
+    sources:
+      - [ out/dummydata-a22.json~jsonpath, "$.Vestiging[*]" ]
+    s: $(heeftVestiging[*])
+    po:
+      - [rdf:type, http://www.w3.org/ns/org#Organization~iri]
+
+  m_66:
+    sources:
+      - [ out/dummydata-a22.json~jsonpath, "$.Vestiging[*]" ]
+    s: $(bestaatUit[*])
+    po:
+      - [rdf:type, https://data.vlaanderen.be/ns/adres#AdresseerbaarObject~iri]
+
+  m_67:
+    sources:
+      - [ "out/dummydata-a22.json~jsonpath", "$.Lidmaatschap[*]" ]
+    s: $(CODE[*])
+    po:
+      - [rdf:type, http://www.w3.org/ns/org#Membership~iri]
+      - p: "http://www.w3.org/ns/org#memberDuring"
+        o: 
+          value:  "$(lidVanTot[*])"
+          type: iri
+      - p: "http://www.w3.org/ns/org#role"
+        o: 
+          value:  "$(rol[*])"
+          type: iri
+      - p: "http://www.w3.org/ns/org#member"
+        o: 
+          value:  "$(lid[*])"
+          type: iri
+      - p: "http://www.w3.org/ns/org#organization"
+        o: 
+          value:  "$(isLidmaatschapBij[*])"
+          type: iri
+
+  m_71:
+    sources:
+      - [ out/dummydata-a22.json~jsonpath, "$.Lidmaatschap[*]" ]
+    s: $(lidVanTot[*])
+    po:
+      - [rdf:type, http://data.europa.eu/m8g/PeriodOfTime~iri]
+
+  m_72:
+    sources:
+      - [ out/dummydata-a22.json~jsonpath, "$.Lidmaatschap[*]" ]
+    s: $(rol[*])
+    po:
+      - [rdf:type, http://www.w3.org/ns/org#Role~iri]
+
+  m_73:
+    sources:
+      - [ out/dummydata-a22.json~jsonpath, "$.Lidmaatschap[*]" ]
+    s: $(lid[*])
+    po:
+      - [rdf:type, http://purl.org/dc/terms/Agent~iri]
+
+  m_74:
+    sources:
+      - [ out/dummydata-a22.json~jsonpath, "$.Lidmaatschap[*]" ]
+    s: $(isLidmaatschapBij[*])
+    po:
+      - [rdf:type, http://www.w3.org/ns/org#Organization~iri]
+
+  m_75:
+    sources:
+      - [ "out/dummydata-a22.json~jsonpath", "$.FormeelKader[*]" ]
+    s: $(CODE[*])
+    po:
+      - [rdf:type, http://purl.org/vocab/cpsv#FormalFramework~iri]
+      - p: "http://purl.org/dc/terms/title"
+        o: 
+          value:  "$(naam[*])"
+          language: nl
+
+  m_76:
+    sources:
+      - [ "out/dummydata-a22.json~jsonpath", "$.Plaats[*]" ]
+    s: $(CODE[*])
+    po:
+      - [rdf:type, http://purl.org/dc/terms/Location~iri]
+      - p: "http://www.w3.org/2000/01/rdf-schema#label"
+        o: 
+          value:  "$(plaatsnaam[*])"
+          language: nl
+      - p: "http://www.w3.org/ns/locn#geometry"
+        o: 
+          value:  "$(geometrie[*])"
+          type: iri
+
+  m_78:
+    sources:
+      - [ out/dummydata-a22.json~jsonpath, "$.Plaats[*]" ]
+    s: $(geometrie[*])
+    po:
+      - [rdf:type, http://www.w3.org/ns/locn#Geometry~iri]
+
+  m_79:
+    sources:
+      - [ "out/dummydata-a22.json~jsonpath", "$.Organisatieeenheid[*]" ]
+    s: $(CODE[*])
+    po:
+      - [rdf:type, http://www.w3.org/ns/org#OrganizationalUnit~iri]
+      - p: "http://www.w3.org/ns/org#unitOf"
+        o: 
+          value:  "$(isEenheidVan[*])"
+          type: iri
+
+  m_80:
+    sources:
+      - [ out/dummydata-a22.json~jsonpath, "$.Organisatieeenheid[*]" ]
+    s: $(isEenheidVan[*])
+    po:
+      - [rdf:type, http://www.w3.org/ns/org#Organization~iri]
+
+  m_81:
+    sources:
+      - [ "out/dummydata-a22.json~jsonpath", "$.Hoedanigheid[*]" ]
+    s: $(CODE[*])
+    po:
+      - [rdf:type, https://data.vlaanderen.be/ns/organisatie#Hoedanigheid~iri]
+      - p: "https://data.vlaanderen.be/ns/organisatie#contactinfo"
+        o: 
+          value:  "$(contactinfo[*])"
+          type: iri
+
+  m_82:
+    sources:
+      - [ out/dummydata-a22.json~jsonpath, "$.Hoedanigheid[*]" ]
+    s: $(contactinfo[*])
+    po:
+      - [rdf:type, http://schema.org/ContactPoint~iri]
+
+  m_83:
+    sources:
+      - [ "out/dummydata-a22.json~jsonpath", "$.Positie[*]" ]
+    s: $(CODE[*])
+    po:
+      - [rdf:type, http://www.w3.org/ns/org#Post~iri]
+      - p: "http://www.w3.org/ns/org#role"
+        o: 
+          value:  "$(rol[*])"
+          type: iri
+      - p: "http://www.w3.org/ns/org#reportsTo"
+        o: 
+          value:  "$(rapporteertAan[*])"
+          type: iri
+      - p: "http://www.w3.org/ns/org#postIn"
+        o: 
+          value:  "$(isPositieIn[*])"
+          type: iri
+      - p: "http://www.w3.org/ns/org#heldBy"
+        o: 
+          value:  "$(wordtIngevuldDoor[*])"
+          type: iri
+
+  m_87:
+    sources:
+      - [ out/dummydata-a22.json~jsonpath, "$.Positie[*]" ]
+    s: $(rol[*])
+    po:
+      - [rdf:type, http://www.w3.org/ns/org#Role~iri]
+
+  m_88:
+    sources:
+      - [ out/dummydata-a22.json~jsonpath, "$.Positie[*]" ]
+    s: $(rapporteertAan[*])
+    po:
+      - [rdf:type, http://www.w3.org/ns/org#Post~iri]
+
+  m_89:
+    sources:
+      - [ out/dummydata-a22.json~jsonpath, "$.Positie[*]" ]
+    s: $(isPositieIn[*])
+    po:
+      - [rdf:type, http://www.w3.org/ns/org#Organization~iri]
+
+  m_90:
+    sources:
+      - [ out/dummydata-a22.json~jsonpath, "$.Positie[*]" ]
+    s: $(wordtIngevuldDoor[*])
+    po:
+      - [rdf:type, http://purl.org/dc/terms/Agent~iri]
+
+  m_91:
+    sources:
+      - [ "out/dummydata-a22.json~jsonpath", "$.Stopzetting[*]" ]
+    s: $(CODE[*])
+    po:
+      - [rdf:type, https://data.vlaanderen.be/ns/organisatie#Stopzetting~iri]
+      - p: "https://data.vlaanderen.be/ns/organisatie#redenStopzetting"
+        o: 
+          value:  "$(redenStopzetting[*])"
+          type: iri
+
+  m_92:
+    sources:
+      - [ out/dummydata-a22.json~jsonpath, "$.Stopzetting[*]" ]
+    s: $(redenStopzetting[*])
+    po:
+      - [rdf:type, http://www.w3.org/2004/02/skos/core#Concept~iri]
+
+  m_93:
+    sources:
+      - [ "out/dummydata-a22.json~jsonpath", "$.PubliekeOrganisatie[*]" ]
+    s: $(CODE[*])
+    po:
+      - [rdf:type, http://data.europa.eu/m8g/PublicOrganisation~iri]
+      - p: "http://purl.org/dc/terms/spatial"
+        o: 
+          value:  "$(werkingsgebied[*])"
+          type: iri
+
+  m_94:
+    sources:
+      - [ out/dummydata-a22.json~jsonpath, "$.PubliekeOrganisatie[*]" ]
+    s: $(werkingsgebied[*])
+    po:
+      - [rdf:type, http://purl.org/dc/terms/Location~iri]
+
+  m_95:
+    sources:
+      - [ "out/dummydata-a22.json~jsonpath", "$.GeregistreerdeOrganisatie[*]" ]
+    s: $(CODE[*])
+    po:
+      - [rdf:type, http://www.w3.org/ns/regorg#RegisteredOrganization~iri]
+      - p: "https://data.vlaanderen.be/ns/organisatie#rechtspersoonlijkheid"
+        o: 
+          value:  "$(rechtspersoonlijkheid[*])"
+          type: iri
+      - p: "https://data.vlaanderen.be/ns/organisatie#rechtstoestand"
+        o: 
+          value:  "$(rechtstoestand[*])"
+          type: iri
+      - p: "https://data.vlaanderen.be/ns/organisatie#rechtsvorm"
+        o: 
+          value:  "$(rechtsvorm[*])"
+          type: iri
+      - p: "http://www.w3.org/ns/regorg#registration"
+        o: 
+          value:  "$(registratie[*])"
+          type: iri
+      - p: "http://www.w3.org/ns/regorg#legalName"
+        o: 
+          value:  "$(wettelijkeNaam[*])"
+          language: nl
+
+  m_100:
+    sources:
+      - [ out/dummydata-a22.json~jsonpath, "$.GeregistreerdeOrganisatie[*]" ]
+    s: $(rechtspersoonlijkheid[*])
+    po:
+      - [rdf:type, http://www.w3.org/2004/02/skos/core#Concept~iri]
+
+  m_101:
+    sources:
+      - [ out/dummydata-a22.json~jsonpath, "$.GeregistreerdeOrganisatie[*]" ]
+    s: $(rechtstoestand[*])
+    po:
+      - [rdf:type, http://www.w3.org/2004/02/skos/core#Concept~iri]
+
+  m_102:
+    sources:
+      - [ out/dummydata-a22.json~jsonpath, "$.GeregistreerdeOrganisatie[*]" ]
+    s: $(rechtsvorm[*])
+    po:
+      - [rdf:type, http://www.w3.org/2004/02/skos/core#Concept~iri]
+
+  m_103:
+    sources:
+      - [ out/dummydata-a22.json~jsonpath, "$.GeregistreerdeOrganisatie[*]" ]
+    s: $(registratie[*])
+    po:
+      - [rdf:type, http://www.w3.org/ns/adms#Identifier~iri]
+
+  m_104:
+    sources:
+      - [ "out/dummydata-a22.json~jsonpath", "$.Persoon[*]" ]
+    s: $(CODE[*])
+    po:
+      - [rdf:type, http://www.w3.org/ns/person#Person~iri]
+      - p: "http://www.w3.org/ns/org#basedAt"
+        o: 
+          value:  "$(heeftStandplaats[*])"
+          type: iri
+      - p: "http://xmlns.com/foaf/0.1/familyName"
+        o: 
+          value:  "$(achternaam[*])"
+          datatype: http://www.w3.org/2001/XMLSchema#string
+      - p: "http://xmlns.com/foaf/0.1/givenName"
+        o: 
+          value:  "$(voornaam[*])"
+          datatype: http://www.w3.org/2001/XMLSchema#string
+      - p: "https://data.vlaanderen.be/ns/persoon#volledigeNaam"
+        o: 
+          value:  "$(volledigeNaam[*])"
+          datatype: http://www.w3.org/2001/XMLSchema#string
+      - p: "https://data.vlaanderen.be/ns/persoon#geslacht"
+        o: 
+          value:  "$(geslacht[*])"
+          type: iri
+
+  m_109:
+    sources:
+      - [ out/dummydata-a22.json~jsonpath, "$.Persoon[*]" ]
+    s: $(heeftStandplaats[*])
+    po:
+      - [rdf:type, http://www.w3.org/ns/org#Site~iri]
+
+  m_110:
+    sources:
+      - [ out/dummydata-a22.json~jsonpath, "$.Persoon[*]" ]
+    s: $(geslacht[*])
+    po:
+      - [rdf:type, http://www.w3.org/2004/02/skos/core#Concept~iri]
+

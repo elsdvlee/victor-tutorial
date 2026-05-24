@@ -1,9 +1,0 @@
-# Persoon 
-SELECT DISTINCT ?Persoon_url ?achternaam ?voornaam ?volledigeNaam ?geslacht WHERE {
-  ?Persoon_url a <http://www.w3.org/ns/person#Person> .
-  ?Persoon_url <http://xmlns.com/foaf/0.1/familyName> ?achternaam . 
-  ?Persoon_url <http://xmlns.com/foaf/0.1/givenName> ?voornaam . 
-  ?Persoon_url <https://data.vlaanderen.be/ns/persoon#volledigeNaam> ?volledigeNaam . 
-  ?Persoon_url <https://data.vlaanderen.be/ns/persoon#geslacht> ?geslachturl . 
-  ?geslachturl <http://purl.org/dc/terms/title> ?geslacht .
-}

@@ -1,8 +1,0 @@
-# Aantal organisaties per organisatietype
-SELECT ?type (COUNT(DISTINCT ?Organisatie_url) AS ?aantalOrganisaties) WHERE {
-  ?Organisatie_url a <http://www.w3.org/ns/org#Organization> .
-  ?Organisatie_url <http://www.w3.org/ns/regorg#orgType> ?typeurl .
-  ?typeurl <http://purl.org/dc/terms/title> ?type .
-}
-GROUP BY ?type
-ORDER BY ?type
